@@ -1,0 +1,14 @@
+.main-title {
+  color: var(--lys-orange);
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 2rem;
+}
+
+.contact-list a {
+  color: #5b21b6;
+  font-weight: 800;
+}

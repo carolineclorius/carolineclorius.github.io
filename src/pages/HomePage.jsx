@@ -1,47 +1,72 @@
-import { Link } from "react-router";
+import "./HomePage.css";
 import projects from "../data/projects";
+import carolineImage from "../assets/images/caroline-homepage.png";
+import FeaturedProject from "../components/FeaturedProject";
 
 function HomePage() {
-  const featuredProjects = projects.slice(0, 2);
+  const featuredProjects = projects;
 
   return (
     <div className="page">
       <section className="hero-section">
-        <p className="eyebrow">Portfolio</p>
-        <h1>Hej, jeg hedder Caroline.</h1>
-        <p className="hero-text">
-          Jeg arbejder med frontend, design og digitale produkter. Her samler
-          jeg projekter, proces og det, jeg lærer undervejs.
-        </p>
-        <div className="actions">
-          <Link className="button" to="/projects">
-            Se projekter
-          </Link>
-          <Link className="button secondary" to="/contact">
-            Kontakt mig
-          </Link>
+        <h3 className="hero-text">Caroline Majlandt Clorius</h3>
+        <h1>
+          Designing <span className="fed-h1">intuitive</span> interfaces and
+          <br />
+          <span className="fed-h1">meaningful</span> experiences
+        </h1>
+      </section>
+
+      <section className="designer-section">
+        <div className="designer-visual">
+          <div className="designer-blob" />
+
+          <img
+            src={carolineImage}
+            alt="Caroline Majlandt Clorius"
+            className="designer-image"
+          />
+        </div>
+
+        <div className="designer-content">
+          <h2>Who am I as a UX/UI designer</h2>
+          <h3>
+            I’m passionate about{" "}
+            <span className="fed-h3">UX, UI and branding</span>, with a
+            particular interest in transforming ideas into intuitive and
+            engaging digital experiences. Through{" "}
+            <span className="fed-h3">
+              research, visual design and interactive prototyping
+            </span>
+            , I enjoy creating solutions that are both{" "}
+            <span className="fed-h3">meaningful and user-friendly.</span>
+          </h3>
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">Udvalgte projekter</p>
-          <h2>Start med få projekter og gør dem stærke.</h2>
+      <section className="featured-projects-section">
+        <div className="featured-projects-intro">
+          <h2 className="projects-intro-title">Ideas I’ve brought to life</h2>
+
+          <h3>
+            A selection of my work, where strategy, design and content come
+            together to create <span className="fed-h3">meaningful</span>{" "}
+            digital platforms.
+          </h3>
         </div>
 
-        <div className="project-grid">
-          {featuredProjects.map((project) => (
-            <article className="project-card" key={project.slug}>
-              <img src={project.image} alt={`Preview af ${project.title}`} />
-              <div className="project-card-content">
-                <p className="eyebrow">{project.year}</p>
-                <h3>{project.title}</h3>
-                <p>{project.summary}</p>
-                <Link to={`/projects/${project.slug}`}>Læs mere</Link>
-              </div>
-            </article>
-          ))}
-        </div>
+        {featuredProjects.map((project, index) => (
+          <FeaturedProject
+            key={project.slug}
+            number={String(index + 1).padStart(2, "0")}
+            title={project.title}
+            description={project.summary}
+            image={project.image}
+            imageAlt={`Preview af ${project.title}`}
+            slug={project.slug}
+            reverse={index % 2 === 1}
+          />
+        ))}
       </section>
     </div>
   );

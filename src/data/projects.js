@@ -1,13 +1,18 @@
+import rumlyImage from "../assets/images/rumly.svg";
+import littleloomsImage from "../assets/images/littlelooms.svg";
+import luminaImage from "../assets/images/lumina.svg";
+
 const projects = [
   {
-    slug: "portfolio",
-    title: "Portfolio",
+    slug: "rumly",
+    title: "Rumly",
     year: "2026",
-    summary: "En personlig portfolio bygget med React, Vite og GitHub Pages.",
+    summary:
+      "A roommate-matching app that helps users find compatible roommates through a personalized quiz.",
     description:
-      "Portfolioen viser udvalgte projekter og fungerer som et udgangspunkt for at arbejde med komponenter, routing, styling og deployment.",
-    tags: ["React", "Vite", "GitHub Pages"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+      "A roommate-matching app that helps users find compatible roommates through a personalized quiz.",
+    tags: ["UX/UI", "Research", "Prototyping"],
+    image: rumlyImage,
     links: [
       {
         label: "Live site",
@@ -20,18 +25,40 @@ const projects = [
     ],
   },
   {
-    slug: "case-study",
-    title: "Case study",
+    slug: "little-looms",
+    title: "Little Looms",
     year: "2026",
-    summary: "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
+    summary:
+      "A retail concept bringing together carefully selected children's fashion brands.",
     description:
-      "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
-    tags: ["Design", "Frontend", "Proces"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+      "A retail concept bringing together carefully selected children's fashion brands",
+    tags: ["Branding", "UI", "Visual design"],
+    image: littleloomsImage,
     links: [
       {
         label: "Eksempel-link",
         href: "https://github.com",
+      },
+    ],
+  },
+  {
+    slug: "lumina-audio",
+    title: "Lumina Audio",
+    year: "2026",
+    summary:
+      "A product landing page designed to showcase and sell the Lumina One speaker.",
+    description:
+      "A product landing page designed to showcase and sell the Lumina One speaker.",
+    tags: ["UX", "Frontend", "Interaction design"],
+    image: luminaImage,
+    links: [
+      {
+        label: "Live site",
+        href: "https://username.github.io",
+      },
+      {
+        label: "GitHub repo",
+        href: "https://github.com/username/username.github.io",
       },
     ],
   },

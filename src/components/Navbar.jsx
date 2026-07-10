@@ -1,19 +1,19 @@
 import { NavLink } from "react-router";
+import "./Navbar.css";
 
 function Navbar() {
   return (
     <header className="site-header">
-      <NavLink className="brand" to="/">
-        Dit Navn
+      <NavLink to="/">
+        <img src="/logo.svg" alt="Caroline logo" className="logo" />
       </NavLink>
 
       <nav className="site-nav" aria-label="Primær navigation">
-        <NavLink to="/" end>
-          Forside
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact" className="contact-link">
+          Contact
         </NavLink>
-        <NavLink to="/projects">Projekter</NavLink>
-        <NavLink to="/about">Om mig</NavLink>
-        <NavLink to="/contact">Kontakt</NavLink>
       </nav>
     </header>
   );

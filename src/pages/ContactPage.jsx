@@ -1,8 +1,9 @@
+import "./ContactPage.css";
+
 function ContactPage() {
   return (
     <div className="page narrow">
-      <p className="eyebrow">Kontakt</p>
-      <h1>Lad os tale sammen.</h1>
+      <h1 className="main-title">Contact</h1>
       <p className="lead">
         Tilpas links og mailadresse, så siden peger på dine egne profiler.
       </p>
@@ -12,7 +13,11 @@ function ContactPage() {
           <a href="mailto:dinmail@example.com">dinmail@example.com</a>
         </li>
         <li>
-          <a href="https://github.com/username" rel="noreferrer" target="_blank">
+          <a
+            href="https://github.com/username"
+            rel="noreferrer"
+            target="_blank"
+          >
             GitHub
           </a>
         </li>

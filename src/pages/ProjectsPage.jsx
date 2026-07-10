@@ -1,34 +1,33 @@
-import { Link } from "react-router";
+import FeaturedProject from "../components/FeaturedProject";
 import projects from "../data/projects";
+import "./ProjectsPage.css";
 
 function ProjectsPage() {
   return (
     <div className="page">
-      <section className="section intro">
-        <p className="eyebrow">Projekter</p>
-        <h1>Mine projekter</h1>
-        <p>
-          Udskift eksemplerne med dine egne projekter. Brug korte beskrivelser,
-          tydelige billeder og links til live versioner eller GitHub repos.
-        </p>
+      <section className="projects-intro">
+        <h1 className="main-title">Projects</h1>
+
+        <h2 className="below-title">Ideas I've brought to life</h2>
+        <h3>
+          A selection of my work, where strategy, design and content come
+          together to create{" "}
+          <span className="fed-h3">meaningful digital platforms.</span>
+        </h3>
       </section>
 
-      <section className="project-grid" aria-label="Projektliste">
-        {projects.map((project) => (
-          <article className="project-card" key={project.slug}>
-            <img src={project.image} alt={`Preview af ${project.title}`} />
-            <div className="project-card-content">
-              <p className="eyebrow">{project.year}</p>
-              <h2>{project.title}</h2>
-              <p>{project.summary}</p>
-              <ul className="tag-list">
-                {project.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-              <Link to={`/projects/${project.slug}`}>Se projekt</Link>
-            </div>
-          </article>
+      <section className="featured-projects-section" aria-label="Project list">
+        {projects.map((project, index) => (
+          <FeaturedProject
+            key={project.slug}
+            number={String(index + 1).padStart(2, "0")}
+            title={project.title}
+            description={project.summary}
+            image={project.image}
+            imageAlt={`Preview of ${project.title}`}
+            slug={project.slug}
+            reverse={index % 2 === 1}
+          />
         ))}
       </section>
     </div>
