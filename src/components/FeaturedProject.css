@@ -52,13 +52,6 @@
   text-decoration: none;
 }
 
-/* Scale the project image */
-.featured-project__image {
-  width: 100%;
-  max-width: none;
-  height: auto;
-}
-
 /* Style the project link as a button */
 .featured-project__button {
   display: inline-flex;
@@ -95,7 +88,6 @@
   .featured-project__content,
   .featured-project__visual {
     width: 100%;
-    max-width: none;
   }
 
   /* Allow the description to use the available width */

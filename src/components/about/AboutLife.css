@@ -44,10 +44,6 @@
 .interest-item__frame {
   position: absolute;
   inset: 0;
-
-  width: 100%;
-  height: 100%;
-  max-width: none;
 }
 
 /* Keep the label text above the decorative frame */
@@ -74,14 +70,6 @@
 /* Set the gallery width and spacing */
 .about-gallery {
   margin-top: 4rem;
-}
-
-/* Make the collage responsive */
-.about-gallery__image {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
 }
 
 /* Mobile layout */

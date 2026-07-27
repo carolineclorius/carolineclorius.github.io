@@ -24,7 +24,6 @@
   width: calc(72% + 5rem);
   height: calc(100% + 2rem);
 
-  max-width: none;
   pointer-events: none;
 }
 
