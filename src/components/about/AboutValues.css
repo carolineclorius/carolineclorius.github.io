@@ -1,0 +1,65 @@
+/* Add spacing and borders around the section */
+.about-values {
+  margin-top: 5rem;
+  padding: 4rem 0;
+  border-top: 1px solid var(--graa);
+  border-bottom: 1px solid var(--graa);
+}
+
+/* Add spacing below the section heading */
+.about-values h2 {
+  margin-bottom: 2rem;
+}
+
+/* Display the value cards in a horizontal scroll layout */
+.about-values__scroller {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+}
+
+/* Style the individual value cards */
+.about-value-card {
+  display: flex;
+  gap: 0.5rem;
+  min-width: 38rem;
+}
+
+/* Set the size of the value icon */
+.about-value-card__icon {
+  width: 10rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+/* Scale the icon to fill its container */
+.about-value-card__icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Limit the width of the text content */
+.about-value-card__content {
+  max-width: 27rem;
+}
+
+/* Add spacing below the value title */
+.about-value-card__content h3 {
+  margin-bottom: 1rem;
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  /* Stack the card content vertically */
+  .about-value-card {
+    min-width: 85vw;
+    flex-direction: column;
+  }
+
+  /* Add spacing at the end of the horizontal scroll */
+  .about-values__scroller {
+    padding-right: 4rem;
+  }
+}

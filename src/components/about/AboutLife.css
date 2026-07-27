@@ -1,0 +1,94 @@
+/* Add vertical spacing around the section */
+.about-life {
+  padding: 5rem 0;
+}
+
+/* Add spacing below the section headings */
+.title {
+  margin-bottom: 1rem;
+}
+
+/* Display the text content in two columns */
+.about-life__text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Arrange the interest labels in a flexible row */
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+
+/* Position the label text inside its decorative frame */
+.interest-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 9.5rem;
+  height: 4.5rem;
+}
+
+/* Place the decorative frame behind the label */
+.interest-item__frame {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+/* Keep the label text above the decorative frame */
+.interest-item p {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+/* Make the longer interest labels wider */
+.interest-item:nth-child(5) {
+  width: 12rem;
+}
+
+.interest-item:nth-child(6) {
+  width: 14rem;
+}
+
+.interest-item:nth-child(7) {
+  width: 12rem;
+}
+
+/* Set the gallery width and spacing */
+.about-gallery {
+  margin-top: 4rem;
+}
+
+/* Make the collage responsive */
+.about-gallery__image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  /* Stack the text sections vertically */
+  .about-life__text {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

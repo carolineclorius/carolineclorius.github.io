@@ -1,30 +1,32 @@
+// Import the sections used on the About page
+import AboutHero from "../components/about/AboutHero";
+import AboutValues from "../components/about/AboutValues";
+import AboutLife from "../components/about/AboutLife";
+import AboutQuotes from "../components/about/AboutQuotes";
+
+// Import page styles
 import "./AboutPage.css";
 
+/* About Page */
 function AboutPage() {
   return (
-    <div className="page narrow">
-      <h1 className="main-title">About</h1>
-      <p className="lead">
-        Skriv kort om din faglige retning, dine interesser og hvad du gerne vil
-        blive bedre til. Hold teksten konkret og personlig.
-      </p>
+    // Main content of the page
+    <main className="page about-page">
+      {/* Page heading */}
+      <h1>About</h1>
 
-      <section className="info-list" aria-label="Om mig detaljer">
-        <div>
-          <h2>Jeg arbejder med</h2>
-          <p>
-            React, HTML, CSS, JavaScript, designproces og digitale produkter.
-          </p>
-        </div>
-        <div>
-          <h2>Jeg er nysgerrig på</h2>
-          <p>
-            Brugeroplevelser, visuel identitet og hvordan kode bliver til noget
-            brugbart.
-          </p>
-        </div>
-      </section>
-    </div>
+      {/* Hero section */}
+      <AboutHero />
+
+      {/* Personal values section */}
+      <AboutValues />
+
+      {/* Life and interests section */}
+      <AboutLife />
+
+      {/* Quotes and recommendations section */}
+      <AboutQuotes />
+    </main>
   );
 }
 

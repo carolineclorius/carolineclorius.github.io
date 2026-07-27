@@ -1,22 +1,15 @@
-/* Projects Intro */
-.projects-intro > p {
-  margin-bottom: 1.5rem;
-}
-
+/* Style the page heading */
 .projects-intro h1 {
   margin-bottom: 1.5rem;
+  color: var(--lys-orange);
 }
 
+/* Limit the width of the introduction text */
 .projects-intro h3 {
   max-width: 32rem;
 }
 
-/* Titles */
-.main-title {
-  color: var(--lys-orange);
-}
-
+/* Add spacing below the secondary heading */
 .below-title {
   margin-bottom: 1rem;
-  color: var(--lys-orange);
 }

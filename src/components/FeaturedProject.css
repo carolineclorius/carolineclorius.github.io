@@ -1,4 +1,4 @@
-/* Featured Project Styles */
+/* Display the project content and image side by side */
 .featured-project {
   position: relative;
   z-index: 1;
@@ -10,56 +10,56 @@
   padding: 5rem 0;
 }
 
-.featured-project__content {
-  width: 40%;
-}
-
-.featured-project__visual {
-  width: 60%;
-}
-
+/* Reverse the project layout for alternating sections */
 .featured-project--reverse {
   flex-direction: row-reverse;
 }
 
+/* Control the width of the project text */
 .featured-project__content {
+  width: 40%;
   max-width: 34rem;
   justify-self: end;
 }
 
+/* Add spacing below the project number */
 .featured-project__number {
   margin-bottom: 1.5rem;
 }
 
+/* Add spacing below the project title */
 .featured-project__content h2 {
   margin-bottom: 1rem;
 }
 
+/* Limit the width of the project description */
 .featured-project__description {
   max-width: 30rem;
 }
 
+/* Arrange the project image and button vertically */
 .featured-project__visual {
   display: grid;
   justify-items: center;
   gap: 1.5rem;
+  width: 60%;
 }
 
-/* Featured Project Image Link */
+/* Control the size of the project image link */
 .featured-project__image-link {
   display: block;
   width: min(100%, 34rem);
   text-decoration: none;
 }
 
-/* Featured Project Image */
+/* Scale the project image */
 .featured-project__image {
   width: 100%;
   max-width: none;
   height: auto;
 }
 
-/* Featured Project Button */
+/* Style the project link as a button */
 .featured-project__button {
   display: inline-flex;
   align-items: center;
@@ -75,22 +75,31 @@
   box-shadow: var(--box-shadow);
 }
 
+/* Change the button color on hover */
 .featured-project__button:hover {
   background: var(--moerk-orange);
 }
 
+/* Mobile layout */
 @media (max-width: 720px) {
+  /* Stack the project content vertically */
   .featured-project,
   .featured-project--reverse {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
     gap: 2.5rem;
-    min-height: auto;
     padding: 4rem 0;
   }
 
-  .featured-project--reverse .featured-project__content,
-  .featured-project--reverse .featured-project__visual {
-    grid-column: auto;
-    grid-row: auto;
+  /* Allow both sections to use the full width */
+  .featured-project__content,
+  .featured-project__visual {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Allow the description to use the available width */
+  .featured-project__description {
+    max-width: 100%;
   }
 }

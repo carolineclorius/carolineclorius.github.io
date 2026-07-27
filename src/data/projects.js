@@ -1,7 +1,9 @@
+// Import project images
 import rumlyImage from "../assets/images/rumly.svg";
 import littleloomsImage from "../assets/images/littlelooms.svg";
 import luminaImage from "../assets/images/lumina.svg";
 
+// Project data used across the portfolio
 const projects = [
   {
     slug: "rumly",

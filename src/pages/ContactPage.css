@@ -1,14 +1,97 @@
-.main-title {
+/* Set the height and spacing of the contact page */
+.contact {
+  min-height: calc(100vh - 80px);
+  padding: 0rem 5rem;
+  overflow: hidden;
+}
+
+/* Style the page heading */
+.contact h1 {
+  margin: 0 0 2rem;
   color: var(--lys-orange);
 }
 
-.contact-list {
+/* Display the contact content in two columns */
+.contact__content {
   display: grid;
-  gap: 0.75rem;
-  padding-left: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
-.contact-list a {
-  color: #5b21b6;
-  font-weight: 800;
+/* Add spacing above the contact text */
+.contact__left {
+  margin-top: 2rem;
+}
+
+/* Control the spacing between the headings */
+.contact__left h3 {
+  margin: 0 0 0.75rem;
+}
+
+/* Arrange the contact details vertically */
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4.5rem;
+}
+
+/* Align the contact icons and text */
+.contact__info a,
+.contact__info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--sort);
+  text-decoration: none;
+}
+
+/* Set a consistent size for the contact icons */
+.contact__info img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Center the contact illustration */
+.contact__right {
+  display: flex;
+  justify-content: center;
+}
+
+/* Set the size and position of the contact illustration */
+.contact__right img {
+  width: 28rem;
+  margin-top: -4rem;
+  display: block;
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  /* Stack the content vertically */
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Remove the top spacing */
+  .contact__left {
+    margin-top: 0;
+  }
+
+  /* Reduce the spacing above the contact details */
+  .contact__info {
+    margin-top: 2.5rem;
+  }
+
+  /* Place the illustration above the contact information */
+  .contact__right {
+    order: -1;
+  }
+
+  /* Scale and reposition the illustration */
+  .contact__right img {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
 }

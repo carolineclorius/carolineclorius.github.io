@@ -1,0 +1,55 @@
+/* Hero section layout */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 6rem;
+  row-gap: 3rem;
+}
+
+/* Image container */
+.about-hero__visual {
+  position: relative;
+  min-height: 44rem;
+}
+
+/* Hero image */
+.about-hero__image {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 82%;
+  transform: translateX(-50%);
+}
+
+/* Text content */
+.about-hero__content {
+  max-width: 38rem;
+}
+
+/* Heading spacing and paragraph spacing */
+.about-hero__content h2,
+.about-hero__content p {
+  margin-bottom: 1rem;
+}
+
+/* Highlight the personal statement */
+.about-hero__statement {
+  margin-top: 1rem;
+  color: var(--lys-orange);
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  /* Stack the content vertically */
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Reduce the image container height */
+  .about-hero__visual {
+    min-height: 34rem;
+  }
+}

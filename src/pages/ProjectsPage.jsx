@@ -1,10 +1,16 @@
+// Import the reusable project component
 import FeaturedProject from "../components/FeaturedProject";
+
+// Import project data
 import projects from "../data/projects";
+
+// Import page styles
 import "./ProjectsPage.css";
 
 function ProjectsPage() {
   return (
     <div className="page">
+      {/* Introduce the projects page */}
       <section className="projects-intro">
         <h1 className="main-title">Projects</h1>
 
@@ -16,6 +22,7 @@ function ProjectsPage() {
         </h3>
       </section>
 
+      {/* Display all projects using the reusable component */}
       <section className="featured-projects-section" aria-label="Project list">
         {projects.map((project, index) => (
           <FeaturedProject

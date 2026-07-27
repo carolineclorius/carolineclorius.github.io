@@ -1,3 +1,4 @@
+/* Display the header content horizontally */
 .site-header {
   display: flex;
   align-items: center;
@@ -11,12 +12,14 @@
   box-shadow: var(--box-shadow);
 }
 
+/* Scale the logo */
 .logo {
   height: 4rem;
   width: auto;
   display: block;
 }
 
+/* Arrange the navigation links */
 .site-nav {
   display: flex;
   align-items: center;
@@ -24,6 +27,7 @@
   margin-right: 5rem;
 }
 
+/* Style the navigation links */
 .site-nav a {
   padding: 0;
   color: var(--sort);
@@ -36,6 +40,7 @@
   text-decoration: none;
 }
 
+/* Highlight the active and hovered links */
 .site-nav a.active,
 .site-nav a:hover {
   color: var(--sort);
@@ -45,6 +50,7 @@
   text-underline-offset: 0.3rem;
 }
 
+/* Style the contact button */
 .site-nav .contact-link {
   padding: 0.55rem 1rem;
   border: 2px solid var(--lys-orange);
@@ -54,6 +60,7 @@
   background: transparent;
 }
 
+/* Keep the contact button text color consistent */
 .site-nav .contact-link:hover,
 .site-nav .contact-link.active {
   color: var(--sort);

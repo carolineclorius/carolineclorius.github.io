@@ -1,0 +1,99 @@
+/* Add spacing around the footer */
+.footer {
+  margin-top: 1rem;
+  padding: 4rem 5rem;
+}
+
+/* Display the divider above the footer */
+.footer__top {
+  height: 1px;
+  background: var(--graa);
+}
+
+/* Arrange the footer content in a grid */
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 1rem;
+}
+
+/* Position the footer heading */
+.footer__title {
+  margin-top: 3rem;
+  grid-column: 1 / -1;
+}
+
+/* Align the footer links across the grid */
+.footer__item:first-of-type {
+  justify-self: start;
+}
+
+.footer__item:nth-of-type(2) {
+  justify-self: center;
+}
+
+.footer__item:nth-of-type(3) {
+  justify-self: center;
+}
+
+.footer__item:last-of-type {
+  justify-self: end;
+}
+
+/* Style the footer heading */
+.footer__title h3 {
+  display: inline-block;
+
+  padding: 0.5rem;
+
+  border: 2px solid var(--lys-orange);
+  border-radius: 1rem;
+
+  margin: 0;
+}
+
+/* Align the footer icons and text */
+.footer__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+/* Set a consistent size for the footer icons */
+.footer__item img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Highlight links on hover */
+.footer__item:hover {
+  color: var(--lys-orange);
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  /* Reduce the footer padding */
+  .footer {
+    padding: 3rem 2rem;
+  }
+
+  /* Stack the footer content */
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Reduce the spacing above the heading */
+  .footer__title {
+    margin-top: 2rem;
+  }
+
+  /* Align all footer items to the left */
+  .footer__item:first-of-type,
+  .footer__item:nth-of-type(2),
+  .footer__item:nth-of-type(3),
+  .footer__item:last-of-type {
+    justify-self: start;
+  }
+}
