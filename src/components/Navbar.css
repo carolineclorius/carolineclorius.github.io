@@ -1,5 +1,10 @@
 /* Display the header content horizontally */
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,6 +14,7 @@
   margin: 0;
   padding: 0.5rem 5rem;
 
+  background: var(--lysegraa);
   box-shadow: var(--box-shadow);
 }
 
@@ -64,4 +70,24 @@
 .site-nav .contact-link:hover,
 .site-nav .contact-link.active {
   color: var(--sort);
+}
+
+@media (max-width: 720px) {
+  body {
+    padding-top: 8.5rem;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.25rem 2rem;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .page {
+    padding: 2rem 2rem 5rem;
+  }
 }

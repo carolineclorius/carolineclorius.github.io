@@ -1,0 +1,34 @@
+.scroll-to-top-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  position: fixed;
+  right: 5rem;
+  bottom: 2rem;
+  z-index: 1000;
+
+  padding: 1rem 1rem;
+
+  border: none;
+  border-radius: 1rem;
+
+  background: var(--lysegraa);
+  color: var(--lys-orange);
+
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+/* Move the button up when the footer becomes visible */
+.scroll-to-top-button--footer {
+  bottom: 14rem;
+}
+
+.scroll-to-top-button img {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}

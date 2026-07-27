@@ -38,7 +38,8 @@
 /* Set the default page layout */
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 20rem;
+  padding-top: 5rem;
 }
 
 /* Inherit link colors */

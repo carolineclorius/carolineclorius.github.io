@@ -1,0 +1,28 @@
+/* Arrange the project overview */
+.project-overview {
+  width: 100%;
+}
+
+/* Style each overview row */
+.project-overview__row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+  gap: 1.5rem;
+
+  min-height: 4.5rem;
+  padding: 0.5rem 0;
+
+  border-top: 1px solid var(--graa);
+}
+
+/* Add the final divider */
+.project-overview__row:last-child {
+  border-bottom: 1px solid var(--graa);
+}
+
+/* Align the overview value */
+.project-overview__value {
+  text-align: right;
+  line-height: 1.5;
+}

@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from "react-router";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar />
-
+      <ScrollToTop />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />

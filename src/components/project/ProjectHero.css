@@ -1,0 +1,51 @@
+/* Arrange the project hero */
+.project-hero {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+/* Style the project number */
+.project-hero__number {
+  margin-bottom: 1.5rem;
+
+  color: var(--lys-orange);
+}
+
+/* Place the image and information side by side */
+.project-hero__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
+  align-items: start;
+  gap: 4rem;
+}
+
+/* Position the project image */
+.project-hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Scale the project image */
+.project-hero__image {
+  width: 100%;
+  max-width: 28rem;
+  height: 38rem;
+  object-fit: contain;
+}
+
+/* Arrange the project information */
+.project-hero__information {
+  padding-top: 1rem;
+}
+
+/* Add space below the project title */
+.project-hero__information h1 {
+  margin-bottom: 0.75rem;
+}
+
+/* Style the project summary */
+.project-hero__information > p {
+  max-width: 28rem;
+  margin-bottom: 3.5rem;
+}
