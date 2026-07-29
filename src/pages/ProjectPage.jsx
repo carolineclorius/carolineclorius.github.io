@@ -7,7 +7,10 @@ import projectDetails from "../data/projectDetails";
 // Import project components
 import ProjectHero from "../components/project/ProjectHero";
 import ProjectProcess from "../components/project/ProjectProcess";
-import ProcessMarker from "../components/project/ProcessMarker";
+import DiscoverSection from "../components/project/sections/DiscoverSection";
+import DefineSection from "../components/project/sections/DefineSection";
+import DevelopSection from "../components/project/sections/DevelopSection";
+import DeliverSection from "../components/project/sections/DeliverSection";
 import ScrollToTopButton from "../components/project/ScrollToTopButton";
 
 // Import page styles
@@ -38,39 +41,17 @@ function ProjectPage() {
     <main className="page project-page">
       <ProjectHero project={project} />
 
-      {project.process && <ProjectProcess steps={project.process} />}
-
-      {project.discover && (
-        <>
-          <ProcessMarker title="Discover" number="01" progress={25} />
-
-          {/* Discover content will be added here */}
-        </>
+      {project.process?.length > 0 && (
+        <ProjectProcess steps={project.process} />
       )}
 
-      {project.define && (
-        <>
-          <ProcessMarker title="Define" number="02" progress={50} />
+      {project.discover && <DiscoverSection data={project.discover} />}
 
-          {/* Define content will be added here */}
-        </>
-      )}
+      {project.define && <DefineSection data={project.define} />}
 
-      {project.develop && (
-        <>
-          <ProcessMarker title="Develop" number="03" progress={75} />
+      {project.develop && <DevelopSection data={project.develop} />}
 
-          {/* Develop content will be added here */}
-        </>
-      )}
-
-      {project.deliver && (
-        <>
-          <ProcessMarker title="Deliver" number="04" progress={100} />
-
-          {/* Deliver content will be added here */}
-        </>
-      )}
+      {project.deliver && <DeliverSection data={project.deliver} />}
 
       <ScrollToTopButton />
     </main>

@@ -1,31 +1,80 @@
+import { useState } from "react";
+import "./FindingCard.css";
+
+import quoteFrame from "../../assets/images/shared/quote-frame.svg";
+import arrowDown from "../../assets/images/shared/arrow-down.svg";
+import arrowUp from "../../assets/images/shared/arrow-up.svg";
+
 function FindingCard({ finding }) {
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleQuotes = expanded ? finding.quotes : finding.quotes?.slice(0, 1);
+
   return (
     <article className="finding-card">
-      <div className="finding-card__heading">
-        {finding.icon && <img src={finding.icon} alt="" aria-hidden="true" />}
+      <div className="finding-card__label">
+        {finding.icon && (
+          <img
+            className="finding-card__icon"
+            src={finding.icon}
+            alt=""
+            aria-hidden="true"
+          />
+        )}
 
-        <h3>{finding.title}</h3>
+        <h3 className="finding-card__title">{finding.title}</h3>
       </div>
 
-      <p className="finding-card__summary">{finding.summary}</p>
+      <p>{finding.heading}</p>
 
-      {finding.quote && (
-        <blockquote className="finding-card__quote">
-          <p>{finding.quote}</p>
-          {finding.participant && <cite>{finding.participant}</cite>}
-        </blockquote>
+      {finding.statistic && (
+        <p className="finding-card__statistic">{finding.statistic}</p>
       )}
 
-      <p>{finding.explanation}</p>
+      {visibleQuotes?.map((quote) => (
+        <blockquote
+          className="finding-card__quote"
+          key={`${quote.participant ?? "anonymous"}-${quote.text}`}
+        >
+          <img
+            className="finding-card__quote-frame"
+            src={quoteFrame}
+            alt=""
+            aria-hidden="true"
+          />
 
-      {finding.moreQuotes?.length > 0 && (
-        <details className="finding-card__details">
-          <summary>Read more quotes</summary>
+          <div className="finding-card__quote-content">
+            <p>{quote.text}</p>
 
-          {finding.moreQuotes.map((quote) => (
-            <blockquote key={quote}>{quote}</blockquote>
-          ))}
-        </details>
+            {quote.participant && (
+              <small className="finding-card__participant">
+                {quote.participant}
+              </small>
+            )}
+          </div>
+        </blockquote>
+      ))}
+
+      {finding.summary && (
+        <p className="finding-card__summary">{finding.summary}</p>
+      )}
+
+      {finding.quotes?.length > 1 && (
+        <button
+          className="finding-card__toggle"
+          type="button"
+          onClick={() => setExpanded((current) => !current)}
+          aria-expanded={expanded}
+        >
+          <span>{expanded ? "Show fewer quotes" : "Read more quotes"}</span>
+
+          <img
+            src={expanded ? arrowUp : arrowDown}
+            alt=""
+            aria-hidden="true"
+            className="finding-card__toggle-icon"
+          />
+        </button>
       )}
     </article>
   );

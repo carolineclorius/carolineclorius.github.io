@@ -1,0 +1,42 @@
+.discover-section {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+  width: 100%;
+  padding-bottom: 7.5rem;
+}
+
+.discover-section
+  > *:not(
+    .section-divider,
+    .process-marker,
+    .content-card,
+    .research-finding,
+    .research-summary
+  ) {
+  width: min(100%, 75rem);
+}
+
+.discover-section > .research-findings {
+  width: 100%;
+  max-width: none;
+}
+
+.discover-section__problem h2 {
+  margin-bottom: 1rem;
+}
+
+.discover-section__problem p {
+  margin: 0;
+}
+
+.discover-section__problem .fed-h3 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 48rem) {
+  .discover-section {
+    gap: 5rem;
+    padding-bottom: 5rem;
+  }
+}

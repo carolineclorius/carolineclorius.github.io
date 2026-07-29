@@ -1,0 +1,173 @@
+:root {
+  --wireframe-screen-width: 7.5rem;
+}
+
+.wireframes-section {
+  position: relative;
+  isolation: isolate;
+  padding-block: 4rem;
+}
+
+.wireframes-section::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 50vw);
+
+  width: 100vw;
+
+  background: var(--sand);
+  border-radius: 5.5rem;
+
+  z-index: -1;
+}
+
+.wireframes-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wireframes-section__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wireframes-section__header h2,
+.wireframes-section__header p {
+  margin: 0;
+}
+
+.wireframes-section__description {
+  max-width: 68rem;
+}
+
+.wireframes-section__group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wireframes-section__group-title {
+  margin: 0;
+  text-align: center;
+}
+
+/* Arrange the onboarding wireframes */
+.wireframes-section__onboarding {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "preboarding signup"
+    "personalisation personalisation";
+
+  justify-content: center;
+  align-items: start;
+
+  column-gap: 6rem;
+  row-gap: 2rem;
+}
+
+.wireframes-section__item {
+  margin: 0;
+}
+
+.wireframes-section__item figcaption {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* One screen */
+.wireframes-section__item--preboarding {
+  grid-area: preboarding;
+
+  width: 7rem;
+  justify-self: center;
+}
+
+/* Four screens */
+.wireframes-section__item--signup {
+  grid-area: signup;
+
+  width: calc(var(--wireframe-screen-width) * 4);
+  max-width: 100%;
+  justify-self: center;
+}
+
+/* Five screens */
+.wireframes-section__item--personalisation {
+  grid-area: personalisation;
+
+  width: calc(var(--wireframe-screen-width) * 5);
+  max-width: 100%;
+  justify-self: center;
+}
+
+/* Generic wireframe layout used by projects such as Little Looms */
+.wireframes-section__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* In-app overview */
+.wireframes-section__item--in-app {
+  width: min(100%, 58rem);
+  margin-inline: auto;
+}
+
+.wireframes-section__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wireframes-section__group--phone .wireframes-section__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.wireframes-section__group--phone .wireframes-section__image {
+  width: 10rem;
+  max-width: none;
+}
+
+.wireframes-section__group--phone
+  .wireframes-section__item--phone-product
+  .wireframes-section__image {
+  width: 20rem;
+}
+
+@media (max-width: 720px) {
+  .wireframes-section {
+    padding-block: 3rem;
+  }
+
+  .wireframes-section::before {
+    border-radius: 3rem;
+  }
+
+  .wireframes-section__onboarding {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "preboarding"
+      "signup"
+      "personalisation";
+
+    gap: 2rem;
+  }
+
+  .wireframes-section__item--signup,
+  .wireframes-section__item--personalisation,
+  .wireframes-section__item--in-app {
+    width: 100%;
+  }
+
+  .wireframes-section__grid {
+    grid-template-columns: 1fr;
+  }
+}

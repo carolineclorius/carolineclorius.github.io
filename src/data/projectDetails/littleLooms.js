@@ -1,13 +1,60 @@
 import littleLoomsHero from "../../assets/images/littlelooms.svg";
-import economistLogo from "../../assets/images/littlelooms/economist-logo.svg";
-import statisticsLogo from "../../assets/images/littlelooms/statistics-logo.png";
-import oneFindingIcon from "../../assets/images/littlelooms/1finding.svg";
-import twoFindingIcon from "../../assets/images/littlelooms/2finding.svg";
-import threeFindingIcon from "../../assets/images/littlelooms/3finding.svg";
-import fourFindingIcon from "../../assets/images/littlelooms/4finding.svg";
+
+//Disover
+import economistLogo from "../../assets/images/littlelooms/discover/economist-logo.svg";
+import statisticsLogo from "../../assets/images/littlelooms/discover/statistics-logo.png";
+import oneFindingIcon from "../../assets/images/littlelooms/discover/1finding.svg";
+import twoFindingIcon from "../../assets/images/littlelooms/discover/2finding.svg";
+import threeFindingIcon from "../../assets/images/littlelooms/discover/3finding.svg";
+import fourFindingIcon from "../../assets/images/littlelooms/discover/4finding.svg";
 import participantsIcon from "../../assets/images/shared/participants.svg";
 import timeIcon from "../../assets/images/shared/time.svg";
 import agedIcon from "../../assets/images/shared/aged.svg";
+
+//Develop
+//Wireframes
+import littleLoomsDesktopLandingpage from "../../assets/images/littlelooms/develop/wireframes/desktop-landingpage.svg";
+import littleLoomsDesktopProductPage from "../../assets/images/littlelooms/develop/wireframes/desktop-product-page.svg";
+import littleLoomsDesktopDetailPage from "../../assets/images/littlelooms/develop/wireframes/desktop-detail-page.svg";
+import littleLoomsDesktopCheckoutPage from "../../assets/images/littlelooms/develop/wireframes/desktop-checkout-page.svg";
+
+import littleLoomsPhoneLandingpage from "../../assets/images/littlelooms/develop/wireframes/phone-landingpage.svg";
+import littleLoomsPhoneProductPage from "../../assets/images/littlelooms/develop/wireframes/phone-product-page.svg";
+import littleLoomsPhoneDetailPage from "../../assets/images/littlelooms/develop/wireframes/phone-detail-page.svg";
+import littleLoomsPhoneCheckoutPage from "../../assets/images/littlelooms/develop/wireframes/phone-checkout-page.svg";
+
+//visual identity
+import littleLoomsMoodboard from "../../assets/images/littlelooms/develop/visual-identity/moodboard.svg";
+
+import littleLoomsPrimaryColors from "../../assets/images/littlelooms/develop/visual-identity/primary-colors.svg";
+import littleLoomsSecondaryColors from "../../assets/images/littlelooms/develop/visual-identity/secondary-colors.svg";
+
+import littleLoomsPrimaryButtons from "../../assets/images/littlelooms/develop/visual-identity/primary-buttons.svg";
+import littleLoomsSecondaryButtons from "../../assets/images/littlelooms/develop/visual-identity/secondary-buttons.svg";
+import littleLoomsInputField from "../../assets/images/littlelooms/develop/visual-identity/input-field.svg";
+
+import littleLoomsTopNavIcons from "../../assets/images/littlelooms/develop/visual-identity/top-nav-icons.svg";
+import littleLoomsFilteringIcon from "../../assets/images/littlelooms/develop/visual-identity/filtering-icon.svg";
+import littleLoomsOtherIcons from "../../assets/images/littlelooms/develop/visual-identity/other-icons.svg";
+
+import littleLoomsProductCard from "../../assets/images/littlelooms/develop/visual-identity/product-card.svg";
+import littleLoomsProductCardHover from "../../assets/images/littlelooms/develop/visual-identity/product-card-hover.svg";
+
+import littleLoomsGraphicElements from "../../assets/images/littlelooms/develop/visual-identity/graphic-elements.svg";
+
+import littleLoomsPrimaryLogo from "../../assets/images/littlelooms/develop/visual-identity/logo-primary.svg";
+import littleLoomsSecondaryLogo from "../../assets/images/littlelooms/develop/visual-identity/logo-secondary.svg";
+import littleLoomsSubmarkLogo from "../../assets/images/littlelooms/develop/visual-identity/logo-submark.svg";
+import littleLoomsFavicon from "../../assets/images/littlelooms/develop/visual-identity/favicon.svg";
+
+//Design process
+import littleLoomsSketching from "../../assets/images/littlelooms/develop/design-process/sketch.svg";
+import littleLoomsDesignWireframe from "../../assets/images/littlelooms/develop/design-process/wireframe.svg";
+import littleLoomsPrototype from "../../assets/images/littlelooms/develop/design-process/prototype.svg";
+
+//Testing
+import littleLoomsTestingBefore from "../../assets/images/littlelooms/develop/testing/before.svg";
+import littleLoomsTestingAfter from "../../assets/images/littlelooms/develop/testing/after.svg";
 
 const littleLooms = {
   slug: "little-looms",
@@ -127,11 +174,11 @@ const littleLooms = {
         },
         {
           icon: timeIcon,
-          value: "15–20 min.",
+          value: "15-20 min.",
         },
         {
           icon: agedIcon,
-          value: "Aged 25–40",
+          value: "Aged 25-40",
         },
       ],
 
@@ -246,10 +293,286 @@ const littleLooms = {
   },
 
   develop: {
-    wireframes: [],
-    visualIdentity: {},
-    graphicElements: [],
-    testing: {},
+    wireframes: {
+      title: "Wireframes",
+      description:
+        "Low-fidelity wireframes were used to explore the webshop structure, responsive layouts and the user flow before moving into visual design.",
+
+      groups: [
+        {
+          title: "Desktop",
+
+          images: [
+            {
+              src: littleLoomsDesktopLandingpage,
+              alt: "Little Looms desktop landing page wireframe",
+              caption: "Landing page",
+            },
+            {
+              src: littleLoomsDesktopProductPage,
+              alt: "Little Looms desktop product page wireframe",
+              caption: "Product page",
+            },
+            {
+              src: littleLoomsDesktopDetailPage,
+              alt: "Little Looms desktop product detail page wireframe",
+              caption: "Detail product page",
+            },
+            {
+              src: littleLoomsDesktopCheckoutPage,
+              alt: "Little Looms desktop checkout page wireframe",
+              caption: "Checkout page",
+            },
+          ],
+        },
+
+        {
+          title: "Phone",
+
+          images: [
+            {
+              src: littleLoomsPhoneLandingpage,
+              alt: "Little Looms mobile landing page wireframe",
+              caption: "Landing page",
+            },
+            {
+              src: littleLoomsPhoneProductPage,
+              alt: "Little Looms mobile product page wireframe",
+              caption: "Product page",
+            },
+            {
+              src: littleLoomsPhoneDetailPage,
+              alt: "Little Looms mobile product detail page wireframe",
+              caption: "Detail page",
+            },
+            {
+              src: littleLoomsPhoneCheckoutPage,
+              alt: "Little Looms mobile checkout page wireframe",
+              caption: "Checkout page",
+            },
+          ],
+        },
+      ],
+    },
+
+    visualIdentity: {
+      project: "little-looms",
+      title: "Visual identity",
+      description:
+        "The visual identity combines a playful, harmonious and naïve expression with a clear and easy-to-navigate shopping experience.",
+
+      moodboard: {
+        title: "Moodboard",
+        image: {
+          src: littleLoomsMoodboard,
+          alt: "Little Looms moodboard expressing a playful, harmonious and naïve visual direction",
+        },
+      },
+
+      typography: {
+        title: "Typography",
+
+        items: [
+          {
+            label: "Heading",
+            font: "Schoolbell",
+            description:
+              "Adds a playful and childlike feel to the visual identity.",
+          },
+          {
+            label: "Body",
+            font: "Inter",
+            description:
+              "Keeps body text clear and easy to read throughout the shopping experience.",
+          },
+        ],
+      },
+
+      colors: {
+        primary: {
+          title: "Primary colors",
+          image: {
+            src: littleLoomsPrimaryColors,
+            alt: "Little Looms primary color palette",
+          },
+        },
+
+        secondary: {
+          title: "Secondary colors",
+          image: {
+            src: littleLoomsSecondaryColors,
+            alt: "Little Looms secondary color palette",
+          },
+        },
+      },
+
+      uiComponents: {
+        title: "UI components",
+
+        items: [
+          {
+            title: "Primary buttons",
+            image: {
+              src: littleLoomsPrimaryButtons,
+              alt: "Little Looms primary buttons",
+            },
+          },
+          {
+            title: "Secondary buttons",
+            image: {
+              src: littleLoomsSecondaryButtons,
+              alt: "Little Looms secondary buttons",
+            },
+          },
+          {
+            title: "Input field",
+            image: {
+              src: littleLoomsInputField,
+              alt: "Little Looms search input field",
+            },
+          },
+          {
+            title: "Profile card",
+            image: {
+              src: littleLoomsProductCard,
+              alt: "Little Looms product card",
+            },
+          },
+          {
+            title: "Icon style",
+            items: [
+              {
+                title: "Top-nav",
+                image: {
+                  src: littleLoomsTopNavIcons,
+                  alt: "Little Looms top navigation icons",
+                },
+              },
+              {
+                title: "Filtering",
+                image: {
+                  src: littleLoomsFilteringIcon,
+                  alt: "Little Looms filtering icon",
+                },
+              },
+              {
+                title: "Other examples",
+                image: {
+                  src: littleLoomsOtherIcons,
+                  alt: "Additional Little Looms interface icons",
+                },
+              },
+            ],
+          },
+          {
+            title: "With hover effect",
+            image: {
+              src: littleLoomsProductCardHover,
+              alt: "Little Looms product card with hover effect",
+            },
+          },
+        ],
+      },
+
+      graphicElements: {
+        title: "Graphic elements",
+        description:
+          "Hand-drawn graphic elements used across the website and social media to support the playful and naïve visual identity.",
+
+        image: {
+          src: littleLoomsGraphicElements,
+          alt: "Hand-drawn graphic elements used in the Little Looms visual identity",
+        },
+      },
+
+      logos: {
+        title: "Logo variations",
+
+        items: [
+          {
+            title: "Primary logo",
+            description:
+              "The complete logo with the hand-drawn icons integrated. Used for website hero sections and larger brand applications.",
+            image: {
+              src: littleLoomsPrimaryLogo,
+              alt: "Little Looms primary logo",
+            },
+          },
+          {
+            title: "Secondary logo",
+            description:
+              "A simplified version with a more compact composition. Used in onboarding and smaller interface elements.",
+            image: {
+              src: littleLoomsSecondaryLogo,
+              alt: "Little Looms secondary logo",
+            },
+          },
+          {
+            title: "Submark logo",
+            description:
+              "The “LOOMS” wordmark with the icon. Used where space is limited.",
+            image: {
+              src: littleLoomsSubmarkLogo,
+              alt: "Little Looms submark logo",
+            },
+          },
+          {
+            title: "Favicon",
+            description:
+              "The hand-drawn icon. Used as a favicon, app icon and for small-scale branding.",
+            image: {
+              src: littleLoomsFavicon,
+              alt: "Little Looms favicon",
+            },
+          },
+        ],
+      },
+    },
+
+    designProcess: {
+      title: "From sketching to finished design",
+
+      items: [
+        {
+          title: "Sketching",
+          image: littleLoomsSketching,
+          alt: "Initial Little Looms landing page sketch",
+        },
+        {
+          title: "Wireframes",
+          image: littleLoomsDesignWireframe,
+          alt: "Little Looms landing page wireframe",
+        },
+        {
+          title: "Prototyping",
+          image: littleLoomsPrototype,
+          alt: "Finished Little Looms landing page design",
+        },
+      ],
+    },
+
+    testing: {
+      title: "Testing",
+      description:
+        "We conducted multiple Think Aloud tests with different participants throughout the design process.",
+
+      feedback: ["The size guide was difficult to scan and compare."],
+
+      changes: [
+        "Added clear sections and a more structured table layout.",
+        "Improved readability while keeping the visual identity consistent.",
+      ],
+
+      before: {
+        src: littleLoomsTestingBefore,
+        alt: "Little Looms size guide before usability testing",
+      },
+
+      after: {
+        src: littleLoomsTestingAfter,
+        alt: "Little Looms size guide after usability testing with clearer sections",
+      },
+    },
   },
 
   deliver: {

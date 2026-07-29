@@ -20,7 +20,11 @@ function ProjectProcess({ steps }) {
 
         <div className="project-process__grid">
           {steps.map((step) => (
-            <article className="process-card" key={step.title}>
+            <a
+              className="process-card"
+              href={`#${step.title.toLowerCase()}`}
+              key={step.title}
+            >
               <img
                 className="process-card__graphic"
                 src={processGraphics[step.title]}
@@ -37,7 +41,7 @@ function ProjectProcess({ steps }) {
                   ))}
                 </ul>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

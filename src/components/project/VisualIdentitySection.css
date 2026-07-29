@@ -1,0 +1,367 @@
+.visual-identity {
+  position: relative;
+  padding-block: 4rem;
+}
+
+.visual-identity::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 50vw);
+
+  width: 100vw;
+
+  background-color: var(--sand);
+  border-radius: 5.5rem;
+
+  z-index: 0;
+}
+
+.visual-identity__inner {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.visual-identity__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.visual-identity__header h2,
+.visual-identity__header p {
+  margin: 0;
+}
+
+.visual-identity__description {
+  max-width: 68rem;
+}
+
+/* Main two-column layout */
+.visual-identity__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(11rem, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.visual-identity__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.visual-identity__graphic-elements {
+  padding: 2rem;
+
+  background: var(--lysegraa);
+  border-radius: 3rem;
+}
+
+.visual-identity__graphic-elements h3 {
+  margin-bottom: 1.5rem;
+}
+
+.visual-identity__graphic-elements p {
+  max-width: 65rem;
+  margin-bottom: 2rem;
+}
+
+.visual-identity__graphic-elements-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 12rem;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Shared white cards */
+.visual-identity__card,
+.visual-identity__colors,
+.visual-identity__logos {
+  background: var(--lysegraa);
+  border-radius: 3rem;
+}
+
+.visual-identity__card {
+  padding: 2rem;
+}
+
+.visual-identity__card h3 {
+  margin: 0 0 1.5rem;
+}
+
+/* Moodboard */
+.visual-identity__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Typography */
+.visual-identity__typography {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+}
+
+.visual-identity__type h4,
+.visual-identity__type p {
+  margin: 0;
+}
+
+.visual-identity__font-name {
+  margin-top: 0.75rem !important;
+}
+
+.visual-identity__type-description {
+  margin-top: 1rem !important;
+  max-width: 26rem;
+}
+
+/* UI components */
+.visual-identity__components {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(10rem, 0.8fr);
+
+  grid-template-areas:
+    "primary icons"
+    "secondary icons"
+    "input profile"
+    "match profile";
+
+  gap: 4rem 4rem;
+  align-items: start;
+}
+
+/* Primary button */
+.visual-identity__component:nth-child(1) {
+  grid-area: primary;
+}
+
+/* Secondary buttons */
+.visual-identity__component:nth-child(2) {
+  grid-area: secondary;
+}
+
+/* Input field */
+.visual-identity__component:nth-child(3) {
+  grid-area: input;
+}
+
+/* Match score */
+.visual-identity__component:nth-child(4) {
+  grid-area: match;
+}
+
+/* Icon style */
+.visual-identity__component:nth-child(5) {
+  grid-area: icons;
+}
+
+/* Profile card */
+.visual-identity__component:nth-child(6) {
+  grid-area: profile;
+}
+
+.visual-identity__component h4 {
+  margin: 0 0 0.75rem;
+}
+
+.visual-identity__component-image,
+.visual-identity__subcomponent-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.visual-identity__component:nth-child(1) .visual-identity__component-image,
+.visual-identity__component:nth-child(2) .visual-identity__component-image {
+  width: min(100%, 24rem);
+}
+
+.visual-identity__component:nth-child(3) .visual-identity__component-image {
+  width: min(100%, 28rem);
+}
+
+.visual-identity__component:nth-child(4) .visual-identity__component-image {
+  width: min(100%, 26rem);
+}
+
+.visual-identity__component:nth-child(5) {
+  justify-self: start;
+}
+
+.visual-identity__component:nth-child(6) {
+  justify-self: start;
+}
+
+.visual-identity__component:nth-child(6) .visual-identity__component-image {
+  width: min(100%, 10rem);
+}
+
+.visual-identity__subcomponents {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.visual-identity__subcomponent h5 {
+  margin: 0 0 0.5rem;
+}
+
+/* Colors sidebar */
+.visual-identity__colors {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+
+  padding: 3rem 2rem;
+}
+
+.visual-identity__color-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visual-identity__color-group h3 {
+  align-self: flex-start;
+  margin: 0 0 1.5rem;
+}
+
+.visual-identity__color-image {
+  display: block;
+  width: min(100%, 8rem);
+  height: auto;
+}
+
+/* Logo variations */
+.visual-identity__logos {
+  padding: 2rem;
+}
+
+.visual-identity__logos > h3 {
+  margin: 0 0 2rem;
+}
+
+.visual-identity__logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.visual-identity__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.visual-identity__logo-image {
+  display: block;
+  width: 100%;
+  max-height: 5rem;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 1.5rem;
+}
+
+.visual-identity__logo h4,
+.visual-identity__logo p {
+  margin: 0;
+}
+
+.visual-identity__logo p {
+  margin-top: 0.5rem;
+}
+
+/* Little Looms only */
+.visual-identity--little-looms .visual-identity__components {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-areas:
+    "primary icons"
+    "secondary icons"
+    "input icons"
+    "profile hover";
+  column-gap: 3rem;
+  row-gap: 3rem;
+  justify-content: start;
+  align-items: start;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(1) {
+  grid-area: primary;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(2) {
+  grid-area: secondary;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(3) {
+  grid-area: input;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(4) {
+  grid-area: profile;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(5) {
+  grid-area: icons;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(6) {
+  grid-area: hover;
+}
+
+.visual-identity--little-looms .visual-identity__component:nth-child(4),
+.visual-identity--little-looms .visual-identity__component:nth-child(6) {
+  width: 16rem;
+}
+
+.visual-identity--little-looms
+  .visual-identity__component:nth-child(4)
+  .visual-identity__component-image,
+.visual-identity--little-looms
+  .visual-identity__component:nth-child(6)
+  .visual-identity__component-image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .visual-identity {
+    padding-block: 3rem;
+  }
+
+  .visual-identity::before {
+    border-radius: 3rem;
+  }
+
+  .visual-identity__layout,
+  .visual-identity__typography,
+  .visual-identity__components,
+  .visual-identity__logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-identity__colors {
+    gap: 3rem;
+  }
+
+  .visual-identity__card,
+  .visual-identity__colors,
+  .visual-identity__logos {
+    border-radius: 2rem;
+  }
+}

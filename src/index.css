@@ -35,6 +35,11 @@
   box-sizing: border-box;
 }
 
+/* Enable smooth scrolling between page sections */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Set the default page layout */
 body {
   margin: 0;
@@ -59,6 +64,13 @@ img {
   width: 100%;
   margin: 0;
   padding: 3rem 5rem 5rem;
+}
+
+#discover,
+#define,
+#develop,
+#deliver {
+  scroll-margin-top: 6rem;
 }
 
 /* Limit the width of narrow content */

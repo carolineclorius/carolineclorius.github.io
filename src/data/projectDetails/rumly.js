@@ -1,4 +1,6 @@
 import rumlyHero from "../../assets/images/rumly.svg";
+
+//discover
 import facebookLogo from "../../assets/images/rumly/facebook.svg";
 import boligPortalLogo from "../../assets/images/rumly/boligportal.svg";
 import roomiiLogo from "../../assets/images/rumly/roomii.svg";
@@ -9,6 +11,42 @@ import fourFindingIcon from "../../assets/images/rumly/4finding.svg";
 import participantsIcon from "../../assets/images/shared/participants.svg";
 import timeIcon from "../../assets/images/shared/time.svg";
 import agedIcon from "../../assets/images/shared/aged.svg";
+
+// develop
+//Wireframes
+import preboardingWireframes from "../../assets/images/rumly/preboarding.svg";
+import signUpWireframes from "../../assets/images/rumly/sign-up.svg";
+import personalisationWireframes from "../../assets/images/rumly/personalisation.svg";
+import inAppWireframes from "../../assets/images/rumly/in-app.svg";
+
+//Visual identity
+import rumlyMoodboard from "../../assets/images/rumly/moodboard.svg";
+import rumlyPrimaryColors from "../../assets/images/rumly/primary-colors.svg";
+import rumlySecondaryColors from "../../assets/images/rumly/secondary-colors.svg";
+
+import rumlyPrimaryButton from "../../assets/images/rumly/primary-button.svg";
+import rumlySecondaryButtons from "../../assets/images/rumly/secondary-buttons.svg";
+import rumlyInputField from "../../assets/images/rumly/input-field.svg";
+import rumlyMatchScore from "../../assets/images/rumly/match-score.svg";
+import rumlyTopNavIcons from "../../assets/images/rumly/top-nav.svg";
+import rumlyFilteringIcons from "../../assets/images/rumly/filtering.svg";
+import rumlyBottomNavIcons from "../../assets/images/rumly/bot-nav.svg";
+import rumlyProfileCard from "../../assets/images/rumly/profile-card.svg";
+
+import rumlyPrimaryLogo from "../../assets/images/rumly/primary-logo.svg";
+import rumlySecondaryLogo from "../../assets/images/rumly/secondary-logo.svg";
+import rumlySubmarkLogo from "../../assets/images/rumly/submark-logo.svg";
+import rumlyFavicon from "../../assets/images/rumly/favicon.svg";
+
+//From sketching til finished design
+import rumlySketching from "../../assets/images/rumly/sketching.svg";
+import rumlyPrototypeWireframe from "../../assets/images/rumly/wireframe.svg";
+import rumlyPrototype from "../../assets/images/rumly/prototyping.svg";
+
+//Testing
+// Testing
+import rumlyTestingBefore from "../../assets/images/rumly/testing-before.svg";
+import rumlyTestingAfter from "../../assets/images/rumly/testing-after.svg";
 
 const rumly = {
   slug: "rumly",
@@ -26,7 +64,6 @@ const rumly = {
     {
       label: "Duration",
       value: "4 weeks",
-      highlight: true,
     },
     {
       label: "Team",
@@ -79,8 +116,8 @@ const rumly = {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "Shopping for children’s clothing online can make it difficult to assess quality, materials and sizing.",
-        "At the same time, purchase decisions are influenced by aesthetics, inspiration and trust.",
+        "Most roommate searches happen through Facebook groups or housing portals, where housing is prioritised over compatibility.",
+        "As a result, users spend time sorting through irrelevant posts and making important decisions with limited information.",
       ],
       conclusion:
         "This project rethinks roommate search by putting compatibility first.",
@@ -89,7 +126,7 @@ const rumly = {
     researchApproach: {
       title: "Research approach",
       description:
-        "We combined secondary research with primary research to identify key patterns in shopping behaviour.",
+        "We explored existing solutions and conducted semi-structured interviews to understand users’ needs and decision-making.",
     },
 
     competitors: {
@@ -118,7 +155,7 @@ const rumly = {
     primaryResearch: {
       title: "Primary research",
 
-      description: "Based on a semi-structured interview",
+      description: "Based on a semi-structured interviews",
 
       facts: [
         {
@@ -127,11 +164,11 @@ const rumly = {
         },
         {
           icon: timeIcon,
-          value: "15–20 min.",
+          value: "15-20 min.",
         },
         {
           icon: agedIcon,
-          value: "Aged 18–30",
+          value: "Aged 18-30",
         },
       ],
 
@@ -148,7 +185,7 @@ const rumly = {
           quotes: [
             {
               text: "I'd rather pay a higher rent if it meant living with someone I genuinely get along with.",
-              participant: "Participants  4 & 6)",
+              participant: "Participants 4 and 6",
             },
             {
               text: "Finding the right roommate matters more than finding the cheapest place.",
@@ -266,9 +303,258 @@ const rumly = {
   },
 
   develop: {
-    wireframes: [],
-    visualIdentity: {},
-    testing: {},
+    wireframes: {
+      title: "Wireframes",
+      description:
+        "Low-fidelity wireframes were used to explore layouts, user flows, and screen hierarchy before moving into visual design.",
+
+      groups: [
+        {
+          title: "Onboarding",
+
+          images: [
+            {
+              src: preboardingWireframes,
+              alt: "Rumly pre-boarding wireframes",
+              caption: "Pre-boarding",
+            },
+            {
+              src: signUpWireframes,
+              alt: "Rumly sign-up wireframes",
+              caption: "Sign-up",
+            },
+            {
+              src: personalisationWireframes,
+              alt: "Rumly personalisation wireframes",
+              caption: "Personalisation",
+            },
+          ],
+        },
+
+        {
+          title: "In-app",
+
+          images: [
+            {
+              src: inAppWireframes,
+              alt: "Rumly in-app wireframes",
+              caption: "In-app",
+            },
+          ],
+        },
+      ],
+    },
+
+    visualIdentity: {
+      title: "Visual identity",
+      description:
+        "The visual identity was designed to feel reassuring, friendly and social while creating a simple and welcoming user experience.",
+
+      moodboard: {
+        title: "Moodboard",
+        image: {
+          src: rumlyMoodboard,
+          alt: "Rumly moodboard expressing a reassuring, friendly and social visual direction",
+        },
+      },
+
+      typography: {
+        title: "Typography",
+
+        items: [
+          {
+            label: "Heading",
+            font: "Otomanopee One",
+            description:
+              "Adds a friendly and approachable feel to the visual identity.",
+          },
+          {
+            label: "Body",
+            font: "Poppins",
+            description:
+              "Keeps information clear and easy to scan throughout the user journey.",
+          },
+        ],
+      },
+
+      colors: {
+        primary: {
+          title: "Primary colors",
+          image: {
+            src: rumlyPrimaryColors,
+            alt: "Rumly primary color palette",
+          },
+        },
+
+        secondary: {
+          title: "Secondary colors",
+          image: {
+            src: rumlySecondaryColors,
+            alt: "Rumly secondary color palette",
+          },
+        },
+      },
+
+      uiComponents: {
+        title: "UI components",
+
+        items: [
+          {
+            title: "Primary button",
+            image: {
+              src: rumlyPrimaryButton,
+              alt: "Rumly primary button",
+            },
+          },
+          {
+            title: "Secondary buttons",
+            image: {
+              src: rumlySecondaryButtons,
+              alt: "Rumly secondary buttons",
+            },
+          },
+          {
+            title: "Input field",
+            image: {
+              src: rumlyInputField,
+              alt: "Rumly message input field",
+            },
+          },
+          {
+            title: "Match score",
+            image: {
+              src: rumlyMatchScore,
+              alt: "Rumly compatibility match score component",
+            },
+          },
+          {
+            title: "Icon style",
+            items: [
+              {
+                title: "Top-nav",
+                image: {
+                  src: rumlyTopNavIcons,
+                  alt: "Rumly top navigation icons",
+                },
+              },
+              {
+                title: "Filtering",
+                image: {
+                  src: rumlyFilteringIcons,
+                  alt: "Rumly filtering icon",
+                },
+              },
+              {
+                title: "Bot-nav",
+                image: {
+                  src: rumlyBottomNavIcons,
+                  alt: "Rumly bottom navigation icons",
+                },
+              },
+            ],
+          },
+          {
+            title: "Profile card",
+            image: {
+              src: rumlyProfileCard,
+              alt: "Rumly roommate profile card",
+            },
+          },
+        ],
+      },
+
+      logos: {
+        title: "Logo variations",
+
+        items: [
+          {
+            title: "Primary logo",
+            description:
+              "The complete logo used for brand communication and larger layouts.",
+            image: {
+              src: rumlyPrimaryLogo,
+              alt: "Rumly primary logo",
+            },
+          },
+          {
+            title: "Secondary logo",
+            description:
+              "The logo mark used in onboarding and smaller interface elements.",
+            image: {
+              src: rumlySecondaryLogo,
+              alt: "Rumly secondary logo",
+            },
+          },
+          {
+            title: "Submark logo",
+            description:
+              "The wordmark used when a cleaner and more minimal look is needed.",
+            image: {
+              src: rumlySubmarkLogo,
+              alt: "Rumly submark logo",
+            },
+          },
+          {
+            title: "Favicon",
+            description:
+              "The icon used as the app icon, favicon and in small-scale branding.",
+            image: {
+              src: rumlyFavicon,
+              alt: "Rumly favicon",
+            },
+          },
+        ],
+      },
+    },
+
+    designProcess: {
+      title: "From sketching to finished design",
+
+      items: [
+        {
+          title: "Sketching",
+          image: rumlySketching,
+          alt: "Rumly sketch",
+        },
+        {
+          title: "Wireframes",
+          image: rumlyPrototypeWireframe,
+          alt: "Rumly wireframe",
+        },
+        {
+          title: "Prototyping",
+          image: rumlyPrototype,
+          alt: "Rumly prototype",
+        },
+      ],
+    },
+
+    testing: {
+      title: "Testing",
+      description:
+        "We conducted multiple Think Aloud tests with different participants throughout the design process.",
+
+      feedback: [
+        "Users wanted to connect with potential roommates faster and more easily.",
+        "Users expected the Connect button to be visible directly on each profile card.",
+      ],
+
+      changes: [
+        "Added a Connect button directly to each profile card.",
+        "Reduced the number of steps required to connect.",
+        "Made the primary action more visible and accessible.",
+      ],
+
+      before: {
+        src: rumlyTestingBefore,
+        alt: "Rumly profile cards before usability testing",
+      },
+
+      after: {
+        src: rumlyTestingAfter,
+        alt: "Rumly profile cards after usability testing with visible Connect buttons",
+      },
+    },
   },
 
   deliver: {

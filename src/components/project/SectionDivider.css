@@ -1,0 +1,11 @@
+.section-divider {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.section-divider__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

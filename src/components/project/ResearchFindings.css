@@ -1,0 +1,143 @@
+.research-findings {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100%;
+  padding-block: 3rem;
+}
+
+.research-findings::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+
+  border: 1px solid var(--graa);
+  border-radius: 5.5rem;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.research-findings__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.research-findings__title,
+.research-findings__description {
+  margin: 0;
+}
+
+.research-findings__description {
+  max-width: 43rem;
+  line-height: 1.7;
+}
+
+.research-findings__facts {
+  display: grid;
+  grid-template-columns: repeat(3, 12rem);
+  justify-content: center;
+  column-gap: 5rem;
+  gap: 2rem;
+
+  padding: 1.25rem 2rem;
+
+  background-color: var(--sand);
+  border-radius: 5rem;
+}
+
+.research-findings__fact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  min-height: auto;
+  padding: 0;
+
+  text-align: center;
+}
+
+.research-findings__fact img {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.research-findings__fact p {
+  margin: 0;
+}
+
+.research-findings__scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* Continue from the content margin to the right viewport edge */
+  margin-right: calc(50% - 50vw);
+  padding-right: 5rem;
+  padding-bottom: 1rem;
+
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+}
+
+.research-findings__track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+
+  width: max-content;
+}
+
+.research-findings__track > .finding-card {
+  flex: 0 0 calc((100vw - 12rem) / 2);
+  width: calc((100vw - 12rem) / 2);
+  min-width: 28rem;
+
+  scroll-snap-align: start;
+}
+
+@media (max-width: 48rem) {
+  .research-findings {
+    gap: 2rem;
+    padding-block: 3rem;
+  }
+
+  .research-findings::before {
+    border-radius: 3rem;
+  }
+
+  .research-findings__facts {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    gap: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  .research-findings__scroll {
+    margin-right: -2rem;
+    padding-right: 2rem;
+  }
+
+  .research-findings__track > .finding-card {
+    flex: 0 0 85vw;
+    width: 85vw;
+    min-width: 0;
+  }
+
+  .finding-card {
+    min-height: 29rem;
+    padding-block: 1.5rem;
+  }
+}

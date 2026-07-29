@@ -1,35 +1,24 @@
-.project-process__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.process-card {
+.process-marker {
   position: relative;
-  display: grid;
-  place-items: center;
-  min-height: 19rem;
+  width: 18rem;
 }
 
-.process-card__graphic {
+.process-marker__image {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
 }
 
-.process-card__content {
+.process-marker__text {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem 2rem 2rem;
-  text-align: center;
-}
+  top: 65%;
+  left: 50%;
 
-.process-card__content ul {
-  margin: 1rem 0 0;
-  padding: 0;
-  list-style: none;
+  width: 100%;
+  margin: 0;
+
+  text-align: center;
+  white-space: nowrap;
+
+  transform: translate(-50%, -50%);
 }

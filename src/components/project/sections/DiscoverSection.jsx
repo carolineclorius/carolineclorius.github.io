@@ -5,15 +5,20 @@ import ContentCard from "../ContentCard";
 import ResearchSummary from "../ResearchSummary";
 import ResearchFindings from "../ResearchFindings";
 
+import "./DiscoverSection.css";
+
 function DiscoverSection({ data }) {
   return (
-    <section className="discover-section">
+    <section id="discover" className="discover-section">
       <SectionDivider />
 
       <ProcessMarker title="Discover" number="01" progress={25} />
 
-      {data.problem && (
-        <ProjectSection title={data.problem.title}>
+      {data.problem?.title && (
+        <ProjectSection
+          title={data.problem.title}
+          className="discover-section__problem"
+        >
           {data.problem.paragraphs?.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -25,17 +30,50 @@ function DiscoverSection({ data }) {
       )}
 
       {data.researchApproach?.description && (
-        <ContentCard title={data.researchApproach.title}>
+        <ContentCard title={data.researchApproach.title} variant="sand">
           <p>{data.researchApproach.description}</p>
         </ContentCard>
       )}
 
-      {data.secondaryResearch?.length > 0 && (
-        <ResearchSummary items={data.secondaryResearch} />
+      {data.competitors?.items?.length > 0 && (
+        <ResearchSummary
+          title={data.competitors.title}
+          items={data.competitors.items}
+        />
       )}
 
-      {data.findings?.length > 0 && (
-        <ResearchFindings findings={data.findings} />
+      {data.secondaryResearch?.items?.length > 0 && (
+        <ResearchSummary
+          title={data.secondaryResearch.title}
+          items={data.secondaryResearch.items}
+        />
+      )}
+
+      {data.primaryResearch?.findings?.length > 0 && (
+        <ResearchFindings
+          title={data.primaryResearch.title}
+          description={data.primaryResearch.description}
+          facts={data.primaryResearch.facts}
+          findings={data.primaryResearch.findings}
+        />
+      )}
+
+      {data.onlineSurvey?.findings?.length > 0 && (
+        <ResearchFindings
+          title={data.onlineSurvey.title}
+          description={data.onlineSurvey.description}
+          facts={data.onlineSurvey.facts}
+          findings={data.onlineSurvey.findings}
+        />
+      )}
+
+      {data.interviews?.findings?.length > 0 && (
+        <ResearchFindings
+          title={data.interviews.title}
+          description={data.interviews.description}
+          facts={data.interviews.facts}
+          findings={data.interviews.findings}
+        />
       )}
     </section>
   );

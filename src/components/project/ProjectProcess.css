@@ -5,7 +5,7 @@
   margin-bottom: 5rem;
 
   background: var(--sand);
-  border-radius: 3rem;
+  border-radius: 5.5rem;
 }
 
 /* Keep the section content aligned with the page */
@@ -28,6 +28,40 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: stretch;
   gap: 1.5rem;
+}
+
+.process-card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 19rem;
+
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.process-card__graphic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.process-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 2rem 2rem;
+  text-align: center;
+}
+
+.process-card__content ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 @media (max-width: 720px) {
