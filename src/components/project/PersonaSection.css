@@ -1,5 +1,238 @@
+.persona-section__intro {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Arrange persona cards horizontally */
 .persona-grid {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  padding: 0.5rem 0 1.5rem;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+/* Use the full width when there is only one persona */
+.persona-card:only-child {
+  flex-basis: 100%;
+}
+
+/* Style each persona card */
+.persona-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+  grid-template-columns: 20rem minmax(0, 1fr);
+  flex: 0 0 min(78rem, calc(100vw - 10rem));
+  gap: 3rem;
+
+  min-height: 32rem;
+  padding: 2.5rem;
+
+  background: var(--sand);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+
+  scroll-snap-align: start;
+}
+
+/* Style the profile column */
+.persona-card__profile {
+  display: flex;
+  flex-direction: column;
+  padding-right: 3rem;
+
+  border-right: 1px solid var(--graa);
+}
+
+/* Style the persona portrait */
+.persona-card__image {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 1.5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Add space around the persona name */
+.persona-card__name {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Limit the profile description width */
+.persona-card__description {
+  max-width: 18rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Remove default list styling */
+.persona-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* Align detail icons and text */
+.persona-card__details li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Prevent shared icons from filling the container */
+.persona-card__details img {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+/* Arrange the quote and category content */
+.persona-card__content {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+  min-width: 0;
+}
+
+.persona-card__quote {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 9rem;
+  margin: 0;
+}
+
+.persona-card__quote-frame {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.persona-card__quote-text {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  margin: 0;
+  padding: 2rem 4rem;
+
+  text-align: left;
+}
+
+/* Arrange the four persona categories */
+.persona-card__categories {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* Prevent category content from overflowing */
+.persona-card__category {
+  min-width: 0;
+}
+
+/* Align category icons and titles */
+.persona-card__category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin: 0 0 1rem;
+}
+
+/* Keep category icons small */
+.persona-card__category-title img {
+  flex: 0 0 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+}
+
+/* Style category lists */
+.persona-card__category ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.persona-card__category li {
+  margin-bottom: 0.6rem;
+}
+
+.persona-card__category small {
+  color: var(--sort);
+}
+
+/* Tablet layout */
+@media (max-width: 1100px) {
+  .persona-card {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    flex-basis: calc(100vw - 6rem);
+    gap: 2rem;
+  }
+
+  .persona-card__profile {
+    padding-right: 2rem;
+  }
+
+  .persona-card__image {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .persona-card__categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  .persona-grid {
+    gap: 1.5rem;
+  }
+
+  .persona-card,
+  .persona-card:only-child {
+    grid-template-columns: 1fr;
+    flex-basis: calc(100vw - 4rem);
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .persona-card__profile {
+    padding: 0 0 2rem;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--graa);
+  }
+
+  .persona-card__image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .persona-card__details {
+    margin-top: 1rem;
+  }
+
+  .persona-card__quote-text {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .persona-card__categories {
+    grid-template-columns: 1fr;
+  }
 }

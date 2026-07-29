@@ -5,6 +5,7 @@ import ContentCard from "../ContentCard";
 import ResearchSummary from "../ResearchSummary";
 import ResearchFindings from "../ResearchFindings";
 
+import "./ProcessSections.css";
 import "./DiscoverSection.css";
 
 function DiscoverSection({ data }) {

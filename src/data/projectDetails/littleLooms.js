@@ -11,6 +11,15 @@ import participantsIcon from "../../assets/images/shared/participants.svg";
 import timeIcon from "../../assets/images/shared/time.svg";
 import agedIcon from "../../assets/images/shared/aged.svg";
 
+//define
+// Key insights
+import effortlessIcon from "../../assets/images/lumina/discover/online2finding.svg";
+import qualityIcon from "../../assets/images/littlelooms/define/search.svg";
+import visualAppealIcon from "../../assets/images/rumly/3finding.svg";
+
+//Perona
+import sofiePersona from "../../assets/images/littlelooms/define/persona-sofie.svg";
+
 //Develop
 //Wireframes
 import littleLoomsDesktopLandingpage from "../../assets/images/littlelooms/develop/wireframes/desktop-landingpage.svg";
@@ -286,10 +295,105 @@ const littleLooms = {
   },
 
   define: {
-    insights: [],
-    personas: [],
-    questions: [],
-    requirements: [],
+    insights: [
+      {
+        icon: effortlessIcon,
+        text: "Shopping needs to feel effortless",
+      },
+      {
+        icon: qualityIcon,
+        text: "Quality must be easy to evaluate",
+      },
+      {
+        icon: visualAppealIcon,
+        text: "Visual appeal shapes decisions",
+      },
+      {
+        icon: fourFindingIcon,
+        text: "Clarity builds confidence",
+      },
+    ],
+
+    personas: {
+      title: "Persona",
+      intro:
+        "The persona brings these insights together into a representative user profile.",
+      items: [
+        {
+          image: sofiePersona,
+          name: "Sofie",
+          age: 32,
+          description: "Busy quality-conscious mother",
+          details: [
+            {
+              icon: "age",
+              text: "Mother of two (2 and 5 years old)",
+            },
+            {
+              icon: "work",
+              text: "Busy everyday life with work and kids",
+            },
+          ],
+
+          quote:
+            "I want to find clothes that look beautiful and last — without spending too much time searching.",
+
+          motivations: [
+            "Find well-made clothes that last",
+            "Choose quality materials",
+            "Make more conscious choices",
+          ],
+
+          behaviours: [
+            "Primarily shops for children’s clothing online",
+            "Finds inspiration on Instagram",
+            "Checks materials and sizing before buying",
+          ],
+
+          frustrations: [
+            "Unclear product information",
+            "Overwhelming webshops",
+            "Uncertainty about quality and sizing",
+          ],
+
+          needs: [
+            "Clear material and sizing information",
+            "Visual inspiration and styling",
+            "A simple, easy-to-navigate shopping experience",
+          ],
+        },
+      ],
+    },
+
+    questions: [
+      "How might we help busy parents quickly find relevant children’s clothing?",
+      "How might we make quality, materials and sizing easy to evaluate online?",
+      "How might we create an inspiring shopping experience without making it overwhelming?",
+    ],
+    requirements: [
+      {
+        title: "Easy navigation",
+        description: "Help busy parents find relevant products quickly.",
+      },
+      {
+        title: "Clear product information",
+        description: "Make materials, quality and sizing easy to understand.",
+      },
+      {
+        title: "Visual inspiration",
+        description: "Use styling and imagery to inspire purchase decisions.",
+      },
+      {
+        title: "Trust-building content",
+        description:
+          "Support confident decisions through clear and credible information.",
+      },
+      {
+        title: "Balanced experience",
+        description:
+          "Combine visual appeal with a simple and functional shopping experience.",
+      },
+    ],
   },
 
   develop: {

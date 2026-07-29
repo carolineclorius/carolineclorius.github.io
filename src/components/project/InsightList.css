@@ -1,0 +1,67 @@
+/* Style the insights section */
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: calc(100% + 10rem);
+
+  margin-left: -5rem;
+  margin-right: -5rem;
+
+  padding: 3rem 5rem;
+
+  border: 1px solid var(--graa);
+  border-radius: 4rem;
+}
+
+/* Limit the introductory text */
+.insight-list__description {
+  max-width: 42rem;
+}
+
+/* Arrange insights in two columns */
+.insight-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 4rem;
+
+  margin: 1rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* Align icon and text */
+.insight-list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Style the insight icon */
+.insight-list__icon {
+  flex: 0 0 auto;
+
+  width: 2rem;
+  height: 2rem;
+
+  object-fit: contain;
+}
+
+/* Prevent text overflow */
+.insight-list__item p {
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .insight-list {
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+
+  .insight-list__grid {
+    gap: 1.5rem;
+  }
+}

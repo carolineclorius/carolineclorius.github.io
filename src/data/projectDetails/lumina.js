@@ -11,6 +11,13 @@ import participantsIcon from "../../assets/images/shared/participants.svg";
 import timeIcon from "../../assets/images/shared/time.svg";
 import agedIcon from "../../assets/images/shared/aged.svg";
 
+//define
+// Key insights
+import sharedMomentsIcon from "../../assets/images/rumly/1finding.svg";
+
+//Persona
+import mariaPersona from "../../assets/images/lumina/define/persona-maria.svg";
+
 // Develop
 // Wireframes
 import luminaWireframe from "../../assets/images/lumina/develop/wireframes/wireframe.svg";
@@ -279,10 +286,96 @@ const lumina = {
   },
 
   define: {
-    insights: [],
-    personas: [],
-    questions: [],
-    requirements: [],
+    insights: [
+      {
+        icon: sharedMomentsIcon,
+        text: "Music creates shared moments",
+      },
+      {
+        icon: twoOnlineFindingIcon,
+        text: "Performance and aesthetics matter equally",
+      },
+      {
+        icon: threeFindingIcon,
+        text: "Portability extends product relevance",
+      },
+    ],
+
+    personas: {
+      title: "Persona",
+      intro:
+        "The persona bring the key user needs and behaviours together into representative user profiles.",
+      items: [
+        {
+          image: mariaPersona,
+          name: "Maria",
+          age: 25,
+          description:
+            "Looking for a portable speaker that fits her social lifestyle",
+          details: [
+            {
+              icon: "home",
+              text: "Student living with friends",
+            },
+          ],
+
+          quote:
+            "I want a speaker that looks good in my home and makes it easy to bring music into the moments I share with others.",
+
+          motivations: [
+            "Bring music into social moments",
+            "Find a speaker that fits her personal style",
+            "Choose quality that lasts",
+          ],
+
+          behaviours: [
+            "Researches products before buying",
+            "Looks for recommendations and reviews",
+            "Uses music throughout her everyday life",
+          ],
+
+          frustrations: [
+            "Technical information can feel overwhelming",
+            "Difficult to judge quality online",
+            "Hard to imagine how a speaker fits into everyday life",
+          ],
+
+          needs: [
+            "Clear product and quality information",
+            "A portable and visually appealing design",
+            "An inspiring and easy-to-explore experience",
+          ],
+        },
+      ],
+    },
+
+    questions: [
+      "How might we present a portable speaker as part of the user’s lifestyle rather than just a product?",
+      "How might we create a digital experience that feels relevant across different moods and moments?",
+      "How might we make the speaker’s features and qualities easy to explore without overwhelming the user?",
+    ],
+    requirements: [
+      {
+        title: "Relevant across everyday moments",
+        description:
+          "Present the speaker as part of an active and social lifestyle.",
+      },
+      {
+        title: "Social and experience-driven",
+        description:
+          "Connect the product to shared moments, music and social experiences.",
+      },
+      {
+        title: "Clear product presentation",
+        description:
+          "Make features, quality and product options easy to understand.",
+      },
+      {
+        title: "Flexible day and night experience",
+        description:
+          "Allow users to switch between visual expressions that reflect different moods and moments.",
+      },
+    ],
   },
 
   develop: {

@@ -5,6 +5,8 @@ import PersonaSection from "../PersonaSection";
 import QuestionList from "../QuestionList";
 import RequirementGrid from "../RequirementGrid";
 
+import "./ProcessSections.css";
+
 function DefineSection({ data }) {
   const hasContent =
     data.insights?.length > 0 ||
@@ -24,7 +26,13 @@ function DefineSection({ data }) {
         <InsightList title="Key insights" items={data.insights} />
       )}
 
-      {data.personas?.length > 0 && <PersonaSection personas={data.personas} />}
+      {data.personas && (
+        <PersonaSection
+          title={data.personas.title}
+          intro={data.personas.intro}
+          personas={data.personas.items}
+        />
+      )}
 
       {data.questions?.length > 0 && (
         <QuestionList questions={data.questions} />

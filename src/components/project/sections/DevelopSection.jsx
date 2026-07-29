@@ -6,7 +6,7 @@ import WireframesSection from "../WireframesSection";
 import VisualIdentitySection from "../VisualIdentitySection";
 import DesignProcessSection from "../DesignProcessSection";
 
-import "./DevelopSection.css";
+import "./ProcessSections.css";
 
 function DevelopSection({ data = {} }) {
   return (

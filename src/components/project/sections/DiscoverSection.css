@@ -1,11 +1,3 @@
-.discover-section {
-  display: flex;
-  flex-direction: column;
-  gap: 7.5rem;
-  width: 100%;
-  padding-bottom: 7.5rem;
-}
-
 .discover-section
   > *:not(
     .section-divider,
@@ -32,11 +24,4 @@
 
 .discover-section__problem .fed-h3 {
   margin-top: 1rem;
-}
-
-@media (max-width: 48rem) {
-  .discover-section {
-    gap: 5rem;
-    padding-bottom: 5rem;
-  }
 }

@@ -12,6 +12,14 @@ import participantsIcon from "../../assets/images/shared/participants.svg";
 import timeIcon from "../../assets/images/shared/time.svg";
 import agedIcon from "../../assets/images/shared/aged.svg";
 
+//define
+//Key insigts
+import cognitiveOverloadIcon from "../../assets/images/rumly/define/brain.svg";
+
+//persona
+import emmaPersona from "../../assets/images/rumly/define/persona-emma.svg";
+import jonasPersona from "../../assets/images/rumly/define/persona-jonas.svg";
+
 // develop
 //Wireframes
 import preboardingWireframes from "../../assets/images/rumly/preboarding.svg";
@@ -274,11 +282,109 @@ const rumly = {
 
   define: {
     insights: [
-      "Compatibility determines the final decision",
-      "First impressions happen instantly",
-      "Current platforms create cognitive overload",
-      "People want long-term compatibility",
+      {
+        icon: oneFindingIcon,
+        text: "Compatibility determines the final decision",
+      },
+      {
+        icon: threeFindingIcon,
+        text: "First impressions happen instantly",
+      },
+      {
+        icon: cognitiveOverloadIcon,
+        text: "Current platforms create cognitive overload",
+      },
+      {
+        icon: fourFindingIcon,
+        text: "People want long-term compatibility",
+      },
     ],
+
+    personas: {
+      title: "Personas",
+      intro:
+        "The personas bring these insights together into two distinct user journeys.",
+      items: [
+        {
+          image: emmaPersona,
+          name: "Emma",
+          age: 20,
+          description: "Looking for roomies and a home",
+          details: [
+            {
+              icon: "home",
+              text: "First time living away from home",
+            },
+          ],
+
+          quote:
+            "I want to find people I genuinely fit with — and a home where I can feel comfortable from day one.",
+
+          motivations: [
+            "Find a welcoming shared home",
+            "Feel safe and comfortable with future roomies",
+            "Build a social life in a new city",
+          ],
+
+          behaviours: [
+            "Looks for shared housing online",
+            "Judges the atmosphere from photos and descriptions",
+            "Tries to understand who she would be living with",
+          ],
+
+          frustrations: [
+            "Hard to judge compatibility",
+            "Unclear expectations in listings",
+            "Overwhelming Facebook groups",
+          ],
+
+          needs: [
+            "Insight into everyday life and atmosphere",
+            "Matching based on habits and preferences",
+            "An easy way to introduce herself",
+          ],
+        },
+        {
+          image: jonasPersona,
+          name: "Jonas",
+          age: 26,
+          description: "Looking for roomies for an existing home",
+          details: [
+            {
+              icon: "home",
+              text: "Lives in an established shared home",
+            },
+          ],
+
+          quote:
+            "I don’t just need someone to fill a room — I want to find people who fit into the way we live.",
+
+          motivations: [
+            "Find a compatible new roommate",
+            "Maintain a good atmosphere in the home",
+            "Make a confident and informed choice",
+          ],
+
+          behaviours: [
+            "Creates and shares housing listings online",
+            "Evaluates applicants through profiles and messages",
+            "Discusses potential roommates with the household",
+          ],
+
+          frustrations: [
+            "Applications provide too little relevant information",
+            "Difficult to compare potential roommates",
+            "Time-consuming communication with unsuitable applicants",
+          ],
+
+          needs: [
+            "Clear information about habits and preferences",
+            "A simple way to compare potential roommates",
+            "Confidence that a person will fit into the household",
+          ],
+        },
+      ],
+    },
 
     questions: [
       "How might we help users evaluate compatibility before they contact each other?",
@@ -298,6 +404,15 @@ const rumly = {
       {
         title: "Structured profiles",
         description: "Present relevant information in a clear format.",
+      },
+      {
+        title: "Easy communication",
+        description: "Enable quick contact after matching.",
+      },
+      {
+        title: "Support two user journeys",
+        description:
+          "Support both roommate-only and housing + roommate journeys.",
       },
     ],
   },

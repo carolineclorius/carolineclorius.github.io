@@ -3,6 +3,8 @@ import ProcessMarker from "../ProcessMarker";
 import ProjectLinks from "../ProjectLinks";
 import ReflectionSection from "../ReflectionSection";
 
+import "./ProcessSections.css";
+
 function DeliverSection({ data }) {
   const hasContent =
     Object.keys(data.prototype ?? {}).length > 0 ||
