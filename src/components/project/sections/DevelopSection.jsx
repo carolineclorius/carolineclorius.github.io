@@ -8,7 +8,7 @@ import DesignProcessSection from "../DesignProcessSection";
 
 import "./ProcessSections.css";
 
-function DevelopSection({ data = {} }) {
+function DevelopSection({ data = {}, project }) {
   return (
     <section id="develop" className="develop-section">
       <SectionDivider />
@@ -20,7 +20,7 @@ function DevelopSection({ data = {} }) {
       )}
 
       {data.visualIdentity && (
-        <VisualIdentitySection data={data.visualIdentity} />
+        <VisualIdentitySection data={data.visualIdentity} project={project} />
       )}
 
       {data.designProcess?.items?.length > 0 && (
@@ -35,6 +35,8 @@ function DevelopSection({ data = {} }) {
           after={data.testing.after}
           feedback={data.testing.feedback}
           changes={data.testing.changes}
+          quote={data.testing.quote}
+          imageSize={data.testing.imageSize}
         />
       )}
     </section>

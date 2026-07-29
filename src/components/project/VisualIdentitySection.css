@@ -100,8 +100,9 @@
 /* Moodboard */
 .visual-identity__image {
   display: block;
-  width: 100%;
+  width: min(100%, 40rem);
   height: auto;
+  margin-inline: auto;
 }
 
 /* Typography */
@@ -165,6 +166,26 @@
   grid-area: icons;
 }
 
+/* Shared icon group sizes */
+
+.visual-identity__subcomponent--top-nav .visual-identity__subcomponent-image {
+  width: 8rem;
+}
+
+.visual-identity__subcomponent--filtering .visual-identity__subcomponent-image {
+  width: 4rem;
+}
+
+.visual-identity__subcomponent--bottom-nav
+  .visual-identity__subcomponent-image {
+  width: 11rem;
+}
+
+.visual-identity__subcomponent--other-icons
+  .visual-identity__subcomponent-image {
+  width: 9rem;
+}
+
 /* Profile card */
 .visual-identity__component:nth-child(6) {
   grid-area: profile;
@@ -182,29 +203,12 @@
   height: auto;
 }
 
-.visual-identity__component:nth-child(1) .visual-identity__component-image,
-.visual-identity__component:nth-child(2) .visual-identity__component-image {
-  width: min(100%, 24rem);
-}
-
-.visual-identity__component:nth-child(3) .visual-identity__component-image {
-  width: min(100%, 28rem);
-}
-
-.visual-identity__component:nth-child(4) .visual-identity__component-image {
-  width: min(100%, 26rem);
-}
-
 .visual-identity__component:nth-child(5) {
   justify-self: start;
 }
 
 .visual-identity__component:nth-child(6) {
   justify-self: start;
-}
-
-.visual-identity__component:nth-child(6) .visual-identity__component-image {
-  width: min(100%, 10rem);
 }
 
 .visual-identity__subcomponents {
@@ -221,7 +225,8 @@
 .visual-identity__colors {
   display: flex;
   flex-direction: column;
-  gap: 20rem;
+  justify-content: center;
+  gap: 6rem;
 
   padding: 3rem 2rem;
 }
@@ -324,7 +329,7 @@
 
 .visual-identity--little-looms .visual-identity__component:nth-child(4),
 .visual-identity--little-looms .visual-identity__component:nth-child(6) {
-  width: 16rem;
+  width: 14rem;
 }
 
 .visual-identity--little-looms
@@ -337,6 +342,168 @@
   width: 100%;
   max-width: none;
   height: auto;
+}
+
+/* Shared visual sizes */
+.visual-identity__component:nth-child(1) .visual-identity__component-image {
+  width: min(100%, 11rem);
+}
+
+.visual-identity__component:nth-child(2) .visual-identity__component-image {
+  width: min(100%, 10rem);
+}
+
+.visual-identity__component:nth-child(3) .visual-identity__component-image {
+  width: min(100%, 16rem);
+}
+
+.visual-identity__component:nth-child(4) .visual-identity__component-image {
+  width: min(100%, 12rem);
+}
+
+.visual-identity__component:nth-child(6) .visual-identity__component-image {
+  width: min(100%, 10rem);
+}
+
+/* Rumly only */
+.visual-identity--rumly
+  .visual-identity__component:nth-child(1)
+  .visual-identity__component-image {
+  width: min(100%, 14rem);
+}
+
+.visual-identity--rumly
+  .visual-identity__component:nth-child(2)
+  .visual-identity__component-image {
+  width: min(100%, 14rem);
+}
+
+.visual-identity--rumly
+  .visual-identity__component:nth-child(3)
+  .visual-identity__component-image {
+  width: min(100%, 16rem);
+}
+
+.visual-identity--rumly
+  .visual-identity__component:nth-child(4)
+  .visual-identity__component-image {
+  width: min(100%, 18rem);
+}
+
+.visual-identity--rumly
+  .visual-identity__component:nth-child(6)
+  .visual-identity__component-image {
+  width: min(100%, 10rem);
+}
+
+/* Default layout for Rumly and Little Looms */
+.visual-identity__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Lumina only */
+.visual-identity--lumina .visual-identity__components {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+  grid-template-areas:
+    "primary icons"
+    "secondary icons"
+    "input rating"
+    "mode rating"
+    "product product";
+
+  column-gap: 4rem;
+  row-gap: 3rem;
+  align-items: start;
+}
+
+.visual-identity--lumina .visual-identity__component--primary {
+  grid-area: primary;
+}
+
+.visual-identity--lumina .visual-identity__component--secondary {
+  grid-area: secondary;
+}
+
+.visual-identity--lumina .visual-identity__component--input {
+  grid-area: input;
+}
+
+.visual-identity--lumina .visual-identity__component--mode {
+  grid-area: mode;
+}
+
+.visual-identity--lumina .visual-identity__component--icons {
+  grid-area: icons;
+}
+
+.visual-identity--lumina .visual-identity__component--rating {
+  grid-area: rating;
+}
+
+.visual-identity--lumina .visual-identity__component--product {
+  grid-area: product;
+}
+
+/* Lumina image sizes */
+/* Lumina image sizes */
+.visual-identity--lumina
+  .visual-identity__component--primary
+  .visual-identity__component-image {
+  width: min(100%, 7rem);
+}
+
+.visual-identity--lumina
+  .visual-identity__component--secondary
+  .visual-identity__component-image {
+  width: min(100%, 5rem);
+}
+
+.visual-identity--lumina
+  .visual-identity__component--input
+  .visual-identity__component-image {
+  width: min(100%, 16rem);
+}
+
+.visual-identity--lumina
+  .visual-identity__component--mode
+  .visual-identity__component-image {
+  width: min(100%, 8rem);
+}
+
+.visual-identity--lumina
+  .visual-identity__component--icons
+  .visual-identity__subcomponent-image {
+  width: min(100%, 10rem);
+}
+
+.visual-identity--lumina
+  .visual-identity__component--rating
+  .visual-identity__component-image {
+  width: min(100%, 10rem);
+}
+
+.visual-identity--lumina
+  .visual-identity__component--product
+  .visual-identity__component-image {
+  width: min(100%, 34rem);
+}
+
+/* Bottom layout */
+.visual-identity__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Lumina bottom layout */
+.visual-identity--lumina .visual-identity__bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 @media (max-width: 720px) {
@@ -363,5 +530,21 @@
   .visual-identity__colors,
   .visual-identity__logos {
     border-radius: 2rem;
+  }
+
+  .visual-identity--lumina .visual-identity__components {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "primary"
+      "secondary"
+      "icons"
+      "input"
+      "mode"
+      "rating"
+      "product";
+  }
+
+  .visual-identity--lumina .visual-identity__bottom {
+    grid-template-columns: 1fr;
   }
 }

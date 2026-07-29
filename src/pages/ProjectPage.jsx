@@ -49,7 +49,9 @@ function ProjectPage() {
 
       {project.define && <DefineSection data={project.define} />}
 
-      {project.develop && <DevelopSection data={project.develop} />}
+      {project.develop && (
+        <DevelopSection data={project.develop} project={project.project} />
+      )}
 
       {project.deliver && <DeliverSection data={project.deliver} />}
 

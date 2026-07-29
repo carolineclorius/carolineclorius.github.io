@@ -1,13 +1,13 @@
 // Import component styles
 import "./VisualIdentitySection.css";
 
-function VisualIdentitySection({ data }) {
+function VisualIdentitySection({ data, project }) {
   if (!data) return null;
 
   return (
     <section
       className={`visual-identity ${
-        data.project ? `visual-identity--${data.project}` : ""
+        project ? `visual-identity--${project}` : ""
       }`}
     >
       <div className="visual-identity__inner">
@@ -62,7 +62,11 @@ function VisualIdentitySection({ data }) {
                 <div className="visual-identity__components">
                   {data.uiComponents.items.map((item) => (
                     <section
-                      className="visual-identity__component"
+                      className={`visual-identity__component ${
+                        item.layout
+                          ? `visual-identity__component--${item.layout}`
+                          : ""
+                      }`}
                       key={item.title}
                     >
                       <h4>{item.title}</h4>
@@ -79,7 +83,11 @@ function VisualIdentitySection({ data }) {
                         <div className="visual-identity__subcomponents">
                           {item.items.map((subitem) => (
                             <div
-                              className="visual-identity__subcomponent"
+                              className={`visual-identity__subcomponent ${
+                                subitem.layout
+                                  ? `visual-identity__subcomponent--${subitem.layout}`
+                                  : ""
+                              }`}
                               key={subitem.title}
                             >
                               <h5>{subitem.title}</h5>
@@ -129,43 +137,45 @@ function VisualIdentitySection({ data }) {
           )}
         </div>
 
-        {data.graphicElements && (
-          <article className="visual-identity__graphic-elements">
-            <h3>{data.graphicElements.title}</h3>
+        <div className="visual-identity__bottom">
+          {data.graphicElements && (
+            <article className="visual-identity__graphic-elements">
+              <h3>{data.graphicElements.title}</h3>
 
-            {data.graphicElements.description && (
-              <p>{data.graphicElements.description}</p>
-            )}
+              {data.graphicElements.description && (
+                <p>{data.graphicElements.description}</p>
+              )}
 
-            <img
-              className="visual-identity__graphic-elements-image"
-              src={data.graphicElements.image.src}
-              alt={data.graphicElements.image.alt}
-            />
-          </article>
-        )}
+              <img
+                className="visual-identity__graphic-elements-image"
+                src={data.graphicElements.image.src}
+                alt={data.graphicElements.image.alt}
+              />
+            </article>
+          )}
 
-        {data.logos?.items?.length > 0 && (
-          <article className="visual-identity__logos">
-            <h3>{data.logos.title}</h3>
+          {data.logos?.items?.length > 0 && (
+            <article className="visual-identity__logos">
+              <h3>{data.logos.title}</h3>
 
-            <div className="visual-identity__logo-grid">
-              {data.logos.items.map((item) => (
-                <div className="visual-identity__logo" key={item.title}>
-                  <img
-                    className="visual-identity__logo-image"
-                    src={item.image.src}
-                    alt={item.image.alt}
-                  />
+              <div className="visual-identity__logo-grid">
+                {data.logos.items.map((item) => (
+                  <div className="visual-identity__logo" key={item.title}>
+                    <img
+                      className="visual-identity__logo-image"
+                      src={item.image.src}
+                      alt={item.image.alt}
+                    />
 
-                  <h4>{item.title}</h4>
+                    <h4>{item.title}</h4>
 
-                  {item.description && <p>{item.description}</p>}
-                </div>
-              ))}
-            </div>
-          </article>
-        )}
+                    {item.description && <p>{item.description}</p>}
+                  </div>
+                ))}
+              </div>
+            </article>
+          )}
+        </div>
       </div>
     </section>
   );

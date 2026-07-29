@@ -57,6 +57,7 @@ import rumlyTestingBefore from "../../assets/images/rumly/testing-before.svg";
 import rumlyTestingAfter from "../../assets/images/rumly/testing-after.svg";
 
 const rumly = {
+  project: "rumly",
   slug: "rumly",
   number: "01",
   title: "Rumly",
@@ -547,6 +548,7 @@ const rumly = {
             items: [
               {
                 title: "Top-nav",
+                layout: "top-nav",
                 image: {
                   src: rumlyTopNavIcons,
                   alt: "Rumly top navigation icons",
@@ -554,6 +556,7 @@ const rumly = {
               },
               {
                 title: "Filtering",
+                layout: "filtering",
                 image: {
                   src: rumlyFilteringIcons,
                   alt: "Rumly filtering icon",
@@ -561,6 +564,7 @@ const rumly = {
               },
               {
                 title: "Bot-nav",
+                layout: "bottom-nav",
                 image: {
                   src: rumlyBottomNavIcons,
                   alt: "Rumly bottom navigation icons",
@@ -659,6 +663,8 @@ const rumly = {
         "Reduced the number of steps required to connect.",
         "Made the primary action more visible and accessible.",
       ],
+
+      imageSize: "small",
 
       before: {
         src: rumlyTestingBefore,

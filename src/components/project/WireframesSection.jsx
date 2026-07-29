@@ -50,7 +50,7 @@ function WireframesSection({ data }) {
                 <div className="wireframes-section__onboarding">
                   {preboarding && (
                     <figure className="wireframes-section__item wireframes-section__item--preboarding">
-                      <figcaption>{preboarding.caption}</figcaption>
+                      <p>{preboarding.caption}</p>
 
                       <img
                         className="wireframes-section__image"
@@ -62,7 +62,7 @@ function WireframesSection({ data }) {
 
                   {signUp && (
                     <figure className="wireframes-section__item wireframes-section__item--signup">
-                      <figcaption>{signUp.caption}</figcaption>
+                      <p>{signUp.caption}</p>
 
                       <img
                         className="wireframes-section__image"
@@ -74,7 +74,7 @@ function WireframesSection({ data }) {
 
                   {personalisation && (
                     <figure className="wireframes-section__item wireframes-section__item--personalisation">
-                      <figcaption>{personalisation.caption}</figcaption>
+                      <p>{personalisation.caption}</p>
 
                       <img
                         className="wireframes-section__image"
@@ -128,7 +128,7 @@ function WireframesSection({ data }) {
                     }`}
                     key={`${group.title}-${image.caption ?? image.src}`}
                   >
-                    {image.caption && <figcaption>{image.caption}</figcaption>}
+                    {image.caption && <p>{image.caption}</p>}
 
                     <img
                       className="wireframes-section__image"

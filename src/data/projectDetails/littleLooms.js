@@ -66,6 +66,7 @@ import littleLoomsTestingBefore from "../../assets/images/littlelooms/develop/te
 import littleLoomsTestingAfter from "../../assets/images/littlelooms/develop/testing/after.svg";
 
 const littleLooms = {
+  project: "little-looms",
   slug: "little-looms",
   number: "02",
   title: "Little Looms",
@@ -460,7 +461,6 @@ const littleLooms = {
     },
 
     visualIdentity: {
-      project: "little-looms",
       title: "Visual identity",
       description:
         "The visual identity combines a playful, harmonious and naïve expression with a clear and easy-to-navigate shopping experience.",
@@ -547,6 +547,7 @@ const littleLooms = {
             items: [
               {
                 title: "Top-nav",
+                layout: "top-nav",
                 image: {
                   src: littleLoomsTopNavIcons,
                   alt: "Little Looms top navigation icons",
@@ -554,6 +555,7 @@ const littleLooms = {
               },
               {
                 title: "Filtering",
+                layout: "filtering",
                 image: {
                   src: littleLoomsFilteringIcon,
                   alt: "Little Looms filtering icon",
@@ -561,6 +563,7 @@ const littleLooms = {
               },
               {
                 title: "Other examples",
+                layout: "bottom-nav",
                 image: {
                   src: littleLoomsOtherIcons,
                   alt: "Additional Little Looms interface icons",
@@ -666,6 +669,8 @@ const littleLooms = {
         "Added clear sections and a more structured table layout.",
         "Improved readability while keeping the visual identity consistent.",
       ],
+
+      imageSize: "normal",
 
       before: {
         src: littleLoomsTestingBefore,

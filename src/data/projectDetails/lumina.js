@@ -53,6 +53,7 @@ import luminaTestingBefore from "../../assets/images/lumina/develop/testing/befo
 import luminaTestingAfter from "../../assets/images/lumina/develop/testing/after.png";
 
 const lumina = {
+  project: "lumina",
   slug: "lumina-audio",
   number: "03",
   title: "Lumina Audio",
@@ -458,6 +459,7 @@ const lumina = {
         items: [
           {
             title: "Primary button",
+            layout: "primary",
 
             image: {
               src: luminaPrimaryButtons,
@@ -466,6 +468,7 @@ const lumina = {
           },
           {
             title: "Secondary buttons",
+            layout: "secondary",
 
             image: {
               src: luminaSecondaryButtons,
@@ -474,6 +477,7 @@ const lumina = {
           },
           {
             title: "Input field",
+            layout: "input",
 
             image: {
               src: luminaInputField,
@@ -482,6 +486,7 @@ const lumina = {
           },
           {
             title: "Day/night mode swipe",
+            layout: "mode",
 
             image: {
               src: luminaDayNightMode,
@@ -490,6 +495,7 @@ const lumina = {
           },
           {
             title: "Icon style",
+            layout: "icons",
 
             items: [
               {
@@ -520,6 +526,7 @@ const lumina = {
           },
           {
             title: "Color and rating indications",
+            layout: "rating",
 
             image: {
               src: luminaColorRating,
@@ -528,6 +535,7 @@ const lumina = {
           },
           {
             title: "Product card",
+            layout: "product",
 
             image: {
               src: luminaProductCard,
@@ -606,6 +614,8 @@ const lumina = {
 
       quote:
         "I don’t think it makes sense, and it feels like an advertisement.",
+
+      imageSize: "normal",
 
       before: {
         src: luminaTestingBefore,

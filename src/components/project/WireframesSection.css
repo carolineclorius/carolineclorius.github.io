@@ -73,7 +73,7 @@
   margin: 0;
 }
 
-.wireframes-section__item figcaption {
+.wireframes-section__item p {
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -140,6 +140,24 @@
   .wireframes-section__item--phone-product
   .wireframes-section__image {
   width: 20rem;
+}
+
+/* Centre a single wireframe, used by Lumina */
+.wireframes-section__grid:has(.wireframes-section__item:only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/* Make the single Lumina wireframe larger */
+.wireframes-section__item:only-child {
+  width: min(100%, 32rem);
+}
+
+/* Hide the extra labels for the single wireframe layout */
+.wireframes-section__group:has(.wireframes-section__item:only-child)
+  .wireframes-section__group-title,
+.wireframes-section__item:only-child p {
+  display: none;
 }
 
 @media (max-width: 720px) {
