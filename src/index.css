@@ -157,16 +157,6 @@ small,
 
 /* Global mobile layout */
 @media (max-width: 720px) {
-  .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 1.25rem 2rem;
-  }
-
-  .site-nav {
-    justify-content: flex-start;
-  }
-
   .page {
     padding: 2rem 2rem 5rem;
   }
