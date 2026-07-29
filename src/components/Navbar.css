@@ -74,17 +74,34 @@
 
 @media (max-width: 720px) {
   body {
-    padding-top: 8.5rem;
+    padding-top: 5rem;
   }
 
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 1.25rem 2rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    height: 2rem;
   }
 
   .site-nav {
-    justify-content: flex-start;
+    margin-right: 0;
+    gap: 0.5rem;
+  }
+
+  .site-nav a {
+    font-size: 0.8rem;
+  }
+
+  .site-nav .contact-link {
+    padding: 0.3rem 0.5rem;
+    border-width: 1.5px;
+    border-radius: 0.5rem;
   }
 
   .page {
