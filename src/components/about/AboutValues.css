@@ -52,14 +52,34 @@
 
 /* Mobile layout */
 @media (max-width: 720px) {
+  .about-values {
+    margin-top: 3rem;
+    padding-block: 2rem;
+  }
+
+  .about-values h2 {
+    margin-bottom: 1.5rem;
+  }
+
   /* Stack the card content vertically */
   .about-value-card {
     min-width: 85vw;
+    gap: 1rem;
     flex-direction: column;
   }
 
   /* Add spacing at the end of the horizontal scroll */
   .about-values__scroller {
-    padding-right: 4rem;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .about-value-card__icon {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .about-value-card__content {
+    max-width: 100%;
   }
 }

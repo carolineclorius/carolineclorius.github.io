@@ -9,11 +9,9 @@
   content: "";
   position: absolute;
   z-index: -1;
+  inset-block: 0;
 
-  top: 0;
-  bottom: 0;
-
-  left: -5rem;
+  left: calc(50% - 50vw);
   width: calc(100% + 10rem);
 
   background-color: var(--sand);
@@ -42,8 +40,11 @@
     padding-block: 3rem;
   }
 
+  .content-card::before {
+    border-radius: 3rem;
+  }
+
   .content-card__inner {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }

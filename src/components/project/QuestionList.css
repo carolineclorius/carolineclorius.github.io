@@ -18,3 +18,13 @@
 .question-list__item p {
   margin: 0;
 }
+
+@media (max-width: 720px) {
+  .question-list__list {
+    margin-top: 1.5rem;
+  }
+
+  .question-list__item {
+    padding-block: 1.5rem;
+  }
+}

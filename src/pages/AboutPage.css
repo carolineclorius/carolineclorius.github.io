@@ -5,3 +5,9 @@
   margin-bottom: 4rem;
   color: var(--lys-orange);
 }
+
+@media (max-width: 720px) {
+  .about-page h1 {
+    margin-bottom: 2rem;
+  }
+}

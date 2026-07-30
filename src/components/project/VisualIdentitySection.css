@@ -1,5 +1,8 @@
 .visual-identity {
   position: relative;
+  isolation: isolate;
+
+  width: 100%;
   padding-block: 4rem;
 }
 
@@ -7,14 +10,14 @@
   content: "";
   position: absolute;
   inset-block: 0;
-  left: calc(50% - 50vw);
 
-  width: 100vw;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
 
   background-color: var(--sand);
   border-radius: 5.5rem;
 
-  z-index: 0;
+  z-index: -1;
 }
 
 .visual-identity__inner {
@@ -173,7 +176,7 @@
 }
 
 .visual-identity__subcomponent--filtering .visual-identity__subcomponent-image {
-  width: 4rem;
+  width: 2rem;
 }
 
 .visual-identity__subcomponent--bottom-nav
@@ -508,30 +511,111 @@
 
 @media (max-width: 720px) {
   .visual-identity {
-    padding-block: 3rem;
+    padding-block: 2rem;
   }
 
   .visual-identity::before {
     border-radius: 3rem;
   }
 
+  .visual-identity__inner {
+    gap: 1.5rem;
+  }
+
+  .visual-identity__header {
+    gap: 1rem;
+  }
+
   .visual-identity__layout,
   .visual-identity__typography,
-  .visual-identity__components,
   .visual-identity__logo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .visual-identity__layout {
+    gap: 1.5rem;
+  }
+
+  .visual-identity__typography {
+    gap: 2rem;
+  }
+
+  .visual-identity__graphic-elements,
+  .visual-identity__card,
+  .visual-identity__colors,
+  .visual-identity__logos {
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  /* Default mobile component layout */
+  .visual-identity__components {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "primary"
+      "secondary"
+      "input"
+      "match"
+      "icons"
+      "profile";
+
+    gap: 2rem;
+  }
+
+  .visual-identity__graphic-elements,
+  .visual-identity__card,
+  .visual-identity__colors,
+  .visual-identity__logos {
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  .visual-identity__graphic-elements-image {
+    max-height: none;
   }
 
   .visual-identity__colors {
     gap: 3rem;
   }
 
-  .visual-identity__card,
-  .visual-identity__colors,
-  .visual-identity__logos {
-    border-radius: 2rem;
+  .visual-identity__color-group h3 {
+    align-self: center;
   }
 
+  .visual-identity__logo-grid {
+    gap: 2rem;
+  }
+
+  .visual-identity__logo {
+    align-items: center;
+    text-align: center;
+  }
+
+  .visual-identity__logo-image {
+    width: min(100%, 12rem);
+    object-position: center;
+  }
+
+  /* Little Looms mobile layout */
+  .visual-identity--little-looms .visual-identity__components {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "primary"
+      "secondary"
+      "input"
+      "profile"
+      "icons"
+      "hover";
+
+    gap: 2rem;
+  }
+
+  .visual-identity--little-looms .visual-identity__component:nth-child(4),
+  .visual-identity--little-looms .visual-identity__component:nth-child(6) {
+    width: min(100%, 14rem);
+  }
+
+  /* Lumina mobile layout */
   .visual-identity--lumina .visual-identity__components {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -542,8 +626,9 @@
       "mode"
       "rating"
       "product";
-  }
 
+    gap: 2rem;
+  }
   .visual-identity--lumina .visual-identity__bottom {
     grid-template-columns: 1fr;
   }

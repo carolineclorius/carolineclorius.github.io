@@ -65,6 +65,12 @@ import littleLoomsPrototype from "../../assets/images/littlelooms/develop/design
 import littleLoomsTestingBefore from "../../assets/images/littlelooms/develop/testing/before.svg";
 import littleLoomsTestingAfter from "../../assets/images/littlelooms/develop/testing/after.svg";
 
+// Deliver
+import littleLoomsDesktopVideo from "../../assets/images/littlelooms/deliver/little-looms-desktop.mov";
+import littleLoomsMobileVideo from "../../assets/images/littlelooms/deliver/little-looms-mobile.mov";
+import littleLoomsCodedVideo from "../../assets/images/littlelooms/deliver/coded-desktop.mov";
+import littleLoomsMockup from "../../assets/images/littlelooms/deliver/mockup.svg";
+
 const littleLooms = {
   project: "little-looms",
   slug: "little-looms",
@@ -685,11 +691,81 @@ const littleLooms = {
   },
 
   deliver: {
-    prototype: {},
-    codedSolution: {},
+    prototype: {
+      title: "High fidelity - Figma",
+      description:
+        "The final interactive prototype reflects the solution after user testing and iterative design improvements.",
+
+      items: [
+        {
+          id: "desktop",
+          title: "Desktop prototype",
+          device: "desktop",
+
+          media: {
+            type: "video",
+            src: littleLoomsDesktopVideo,
+            alt: "Little Looms desktop prototype",
+          },
+
+          link: {
+            label: "Open desktop prototype",
+            href: "https://www.figma.com/proto/4sFs3W206XiXGdIT0VcNqu/Eksamensprojekt---Customer-Experience?node-id=2580-987&t=W8Zzr77jLRxQQUEV-0&scaling=min-zoom&content-scaling=fixed&page-id=954%3A6&starting-point-node-id=2580%3A987 ",
+          },
+        },
+
+        {
+          id: "phone",
+          title: "Mobile prototype",
+          device: "phone",
+
+          media: {
+            type: "video",
+            src: littleLoomsMobileVideo,
+            alt: "Little Looms mobile prototype",
+          },
+
+          link: {
+            label: "Open mobile prototype",
+            href: "https://www.figma.com/proto/4sFs3W206XiXGdIT0VcNqu/Eksamensprojekt---Customer-Experience?node-id=2969-17257&t=W8Zzr77jLRxQQUEV-0&scaling=min-zoom&content-scaling=fixed&page-id=954%3A6&starting-point-node-id=3752%3A12414 ",
+          },
+        },
+      ],
+    },
+    codedSolution: {
+      title: "Coded implementation",
+      description:
+        "A functional proof of concept built with React. Due to the project scope, only selected features were implemented.",
+
+      device: "desktop",
+
+      media: {
+        type: "video",
+        src: littleLoomsCodedVideo,
+        alt: "Little Looms coded implementation",
+      },
+
+      link: {
+        label: "Open the programmed solution",
+        href: "https://eaa25cmc.github.io/customer-experience-exam/",
+      },
+    },
     socialMedia: [],
-    mockup: {},
-    reflection: [],
+
+    mockup: {
+      className: "image-gallery--small",
+      title: "Real-life mockup",
+      description:
+        "A bus stop poster created to bring Little Looms' playful visual identity into an everyday setting and connect with parents.",
+      image: littleLoomsMockup,
+      alt: "Little Looms campaign poster displayed at a bus stop",
+    },
+
+    reflection: [
+      "Research helped us balance a playful visual identity with the clarity needed in a retail experience.",
+      "Designing for both children and parents showed me how visual expression can build emotion while usability builds trust.",
+      "Developing the visual identity across the webshop and campaign material taught me the importance of a consistent brand experience.",
+    ],
   },
 };
 

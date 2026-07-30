@@ -8,9 +8,9 @@
   content: "";
   position: absolute;
   inset-block: 0;
-  left: calc(50% - 50vw);
 
-  width: 100vw;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
 
   border: 1px solid var(--graa);
   border-radius: 5.5rem;
@@ -46,10 +46,23 @@
 
 @media (max-width: 720px) {
   .design-process {
-    padding: 2rem;
+    padding-block: 2rem;
+  }
+
+  .design-process::before {
+    border-radius: 3rem;
+  }
+
+  .design-process h2 {
+    margin-bottom: 1.5rem;
   }
 
   .design-process__grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .design-process__image {
+    width: min(100%, 12rem);
   }
 }

@@ -52,6 +52,11 @@ import luminaPrototype from "../../assets/images/lumina/develop/design-process/p
 import luminaTestingBefore from "../../assets/images/lumina/develop/testing/before.png";
 import luminaTestingAfter from "../../assets/images/lumina/develop/testing/after.png";
 
+//Deliver
+import luminaFigmaVideo from "../../assets/images/lumina/deliver/lumina-figma-desktop.mov";
+import luminaCodedVideo from "../../assets/images/lumina/deliver/lumina-coded-desktop.mov";
+import luminaMockup from "../../assets/images/lumina/deliver/mockup.svg";
+
 const lumina = {
   project: "lumina",
   slug: "lumina-audio",
@@ -630,11 +635,63 @@ const lumina = {
   },
 
   deliver: {
-    prototype: {},
-    codedSolution: {},
-    socialMedia: [],
-    mockup: {},
-    reflection: [],
+    prototype: {
+      layout: "lumina",
+      title: "High fidelity and coded implementation",
+      description:
+        "Compare the final Figma prototype with the coded implementation.",
+
+      items: [
+        {
+          id: "figma",
+          title: "High fidelity - Figma",
+          device: "desktop",
+
+          media: {
+            type: "video",
+            src: luminaFigmaVideo,
+            alt: "Lumina high fidelity Figma prototype",
+          },
+
+          link: {
+            label: "Open in Figma",
+            href: "https://www.figma.com/proto/x3RPnOxiXVLRHfavkKVWSv/Lumina-eksamen?node-id=1221-9977&t=9yq3mqNHRRppBTOr-1&scaling=min-zoom&content-scaling=fixed&page-id=794%3A6666&starting-point-node-id=179%3A2610",
+          },
+        },
+
+        {
+          id: "coded",
+          title: "Coded implementation",
+          device: "desktop",
+
+          media: {
+            type: "video",
+            src: luminaCodedVideo,
+            alt: "Lumina coded implementation",
+          },
+
+          link: {
+            label: "Open programmed solution",
+            href: "https://eaa25cmc.github.io/LuminaEksamen/",
+          },
+        },
+      ],
+    },
+
+    mockup: {
+      className: "image-gallery--small",
+      title: "Real-life mockup",
+      description:
+        "A billboard mockup visualising how the Lumina Audio campaign could appear in a real urban setting.",
+      image: luminaMockup,
+      alt: "Lumina Audio campaign displayed on a city billboard",
+    },
+
+    reflection: [
+      "Research challenged my initial focus on the product and showed that the moments around music were just as important.",
+      "Combining survey data with interviews helped turn broad patterns into a clear design direction.",
+      "User testing showed how small changes in hierarchy and presentation could make the experience clearer and more engaging.",
+    ],
   },
 };
 

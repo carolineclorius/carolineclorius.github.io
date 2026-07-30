@@ -1,25 +1,36 @@
 /* Create a full-width background */
+/* Create a full-width background */
 .project-process {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
   margin-bottom: 5rem;
+  padding-block: 2.5rem 3rem;
+}
+
+.project-process::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
 
   background: var(--sand);
   border-radius: 5.5rem;
+
+  z-index: -1;
 }
 
 /* Keep the section content aligned with the page */
 .project-process__inner {
   width: 100%;
-  padding: 2.5rem 5rem 3rem;
 }
 
 /* Add space below the section title */
 .project-process h2 {
   margin-bottom: 1.5rem;
-
-  font-family: var(--font-body);
-  font-size: 1.4rem;
 }
 
 /* Arrange the process cards */
@@ -66,19 +77,26 @@
 
 @media (max-width: 720px) {
   .project-process {
-    border-radius: 2rem;
+    margin-bottom: 3rem;
+    padding-block: 2rem 3rem;
   }
 
-  .project-process__inner {
-    padding: 2rem 2rem 3rem;
+  .project-process::before {
+    border-radius: 2rem;
   }
 
   .project-process__grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .process-card {
     width: min(100%, 22rem);
+    min-height: 17rem;
     margin-inline: auto;
+  }
+
+  .process-card__content {
+    padding: 4rem 1.5rem 1.5rem;
   }
 }

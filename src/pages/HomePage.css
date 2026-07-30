@@ -3,7 +3,7 @@
   display: grid;
   gap: 0.5rem;
   align-content: center;
-  padding: 1rem 0;
+  padding-block: 1rem;
 }
 
 /* Display the designer introduction in two columns */
@@ -17,13 +17,15 @@
 
 /* Scale the designer image */
 .designer-image {
+  display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
+  height: auto;
 }
 
 /* Limit the width of the designer description */
 .designer-content {
-  max-width: 650px;
+  max-width: 40rem;
 }
 
 /* Limit the width of the featured projects introduction */
@@ -38,10 +40,15 @@
 
 /* Mobile layout */
 @media (max-width: 720px) {
+  .hero-section {
+    padding-block: 2rem;
+  }
+
   .designer-section {
     grid-template-columns: 1fr;
     gap: 2rem;
     min-height: auto;
+    padding-block: 2rem;
   }
 
   .designer-image {

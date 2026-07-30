@@ -1,11 +1,21 @@
+import { useCallback, useState } from "react";
+
 import SectionDivider from "../SectionDivider";
 import ProcessMarker from "../ProcessMarker";
-import ProjectLinks from "../ProjectLinks";
+import PrototypeSection from "../PrototypeSection";
+import CodedSolutionSection from "../CodedSolutionSection";
+import ImageGallery from "../ImageGallery";
 import ReflectionSection from "../ReflectionSection";
 
 import "./ProcessSections.css";
 
 function DeliverSection({ data }) {
+  const [isCodedSolutionVisible, setIsCodedSolutionVisible] = useState(false);
+
+  const handleCodedSolutionVisibility = useCallback((isVisible) => {
+    setIsCodedSolutionVisible(isVisible);
+  }, []);
+
   const hasContent =
     Object.keys(data.prototype ?? {}).length > 0 ||
     Object.keys(data.codedSolution ?? {}).length > 0 ||
@@ -22,21 +32,17 @@ function DeliverSection({ data }) {
 
       <ProcessMarker title="Deliver" number="04" progress={100} />
 
-      {data.prototype?.image && (
-        <ProjectLinks
-          title={data.prototype.title}
-          description={data.prototype.description}
-          image={data.prototype.image}
-          links={data.prototype.links}
+      {data.prototype?.items?.length > 0 && (
+        <PrototypeSection
+          data={data.prototype}
+          isPaused={isCodedSolutionVisible}
         />
       )}
 
-      {data.codedSolution?.image && (
-        <ProjectLinks
-          title={data.codedSolution.title}
-          description={data.codedSolution.description}
-          image={data.codedSolution.image}
-          links={data.codedSolution.links}
+      {data.codedSolution?.media?.src && (
+        <CodedSolutionSection
+          data={data.codedSolution}
+          onVisibilityChange={handleCodedSolutionVisibility}
         />
       )}
 
@@ -51,6 +57,7 @@ function DeliverSection({ data }) {
       {data.mockup?.image && (
         <ImageGallery
           title={data.mockup.title}
+          description={data.mockup.description}
           images={[
             {
               src: data.mockup.image,
@@ -58,6 +65,7 @@ function DeliverSection({ data }) {
             },
           ]}
           layout="single"
+          className={data.mockup.className}
         />
       )}
 

@@ -26,3 +26,18 @@
   text-align: right;
   line-height: 1.5;
 }
+
+/* Mobile layout */
+@media (max-width: 720px) {
+  .project-overview__row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+
+    min-height: auto;
+    padding-block: 1rem;
+  }
+
+  .project-overview__value {
+    text-align: left;
+  }
+}

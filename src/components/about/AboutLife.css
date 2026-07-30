@@ -1,6 +1,6 @@
 /* Add vertical spacing around the section */
 .about-life {
-  padding: 5rem 0;
+  padding: 5rem;
 }
 
 /* Add spacing below the section headings */
@@ -74,9 +74,18 @@
 
 /* Mobile layout */
 @media (max-width: 720px) {
+  .about-life {
+    padding-block: 2rem;
+  }
+
   /* Stack the text sections vertically */
   .about-life__text {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-gallery {
+    margin-top: 3rem;
   }
 }

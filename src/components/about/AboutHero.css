@@ -52,4 +52,8 @@
   .about-hero__visual {
     min-height: 34rem;
   }
+
+  .about-hero__content {
+    max-width: 100%;
+  }
 }

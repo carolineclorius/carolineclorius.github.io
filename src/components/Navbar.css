@@ -48,7 +48,7 @@
 /* Highlight the active and hovered links */
 .site-nav a.active,
 .site-nav a:hover {
-  color: var(--sort);
+  color: var(--lys-orange);
   text-decoration: underline;
   text-decoration-color: var(--lys-orange);
   text-decoration-thickness: 1px;
@@ -57,7 +57,7 @@
 
 /* Style the contact button */
 .site-nav .contact-link {
-  padding: 0.55rem 1rem;
+  padding: 0.5rem 1rem;
   border: 2px solid var(--lys-orange);
   border-radius: 1rem;
   color: var(--sort);
@@ -68,7 +68,7 @@
 /* Keep the contact button text color consistent */
 .site-nav .contact-link:hover,
 .site-nav .contact-link.active {
-  color: var(--sort);
+  color: var(--lys-orange);
 }
 
 @media (max-width: 720px) {
@@ -77,13 +77,8 @@
   }
 
   .site-header {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
     gap: 0.5rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   .logo {
@@ -92,17 +87,13 @@
   }
 
   .site-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
     margin: 0;
     gap: 0.5rem;
   }
 
   .site-nav a {
     flex-shrink: 0;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     white-space: nowrap;
   }
 

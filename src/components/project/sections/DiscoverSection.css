@@ -1,14 +1,3 @@
-.discover-section
-  > *:not(
-    .section-divider,
-    .process-marker,
-    .content-card,
-    .research-finding,
-    .research-summary
-  ) {
-  width: min(100%, 75rem);
-}
-
 .discover-section > .research-findings {
   width: 100%;
   max-width: none;
@@ -19,9 +8,20 @@
 }
 
 .discover-section__problem p {
+  max-width: 68rem;
   margin: 0;
 }
 
 .discover-section__problem .fed-h3 {
   margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  .discover-section__problem h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .discover-section__problem .fed-h3 {
+    margin-top: 0.75rem;
+  }
 }

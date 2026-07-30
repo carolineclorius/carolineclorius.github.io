@@ -10,7 +10,7 @@ function ResearchSummary({ title, items }) {
           <article className="research-summary__card" key={item.title}>
             <div className="research-summary__logo-wrapper">
               <img
-                className="research-summary__image"
+                className="research-summary__logo"
                 src={item.logo}
                 alt=""
                 aria-hidden="true"

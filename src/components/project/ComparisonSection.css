@@ -129,8 +129,15 @@
 @media (max-width: 720px) {
   .comparison-section {
     gap: 2.5rem;
-    padding: 2rem;
     border-radius: 2.5rem;
+  }
+
+  .comparison-section::before {
+    border-radius: 3rem;
+  }
+
+  .comparison-section__header {
+    gap: 1rem;
   }
 
   .comparison-section__text-grid,

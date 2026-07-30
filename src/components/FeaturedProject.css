@@ -1,7 +1,6 @@
 /* Display the project content and image side by side */
 .featured-project {
   position: relative;
-  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -80,8 +79,8 @@
   .featured-project--reverse {
     flex-direction: column;
     align-items: stretch;
-    gap: 2.5rem;
-    padding: 4rem 0;
+    gap: 2rem;
+    padding-block: 2rem;
   }
 
   /* Allow both sections to use the full width */
@@ -93,5 +92,13 @@
   /* Allow the description to use the available width */
   .featured-project__description {
     max-width: 100%;
+  }
+
+  .featured-project__image-link {
+    width: min(100%, 26rem);
+  }
+
+  .featured-project__button {
+    align-self: center;
   }
 }

@@ -1,0 +1,174 @@
+import { useEffect, useRef, useState } from "react";
+
+import PrototypeDevice from "./PrototypeDevice";
+
+import "./PrototypeSection.css";
+
+function PrototypeSection({ data, isPaused = false }) {
+  const sectionRef = useRef(null);
+  const videoRefs = useRef({});
+
+  const firstItemId = data?.items?.[0]?.id;
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeItem, setActiveItem] = useState(firstItemId);
+
+  const isFramedComparison = data?.items?.every(
+    (item) => item.presentation === "framed-video",
+  );
+
+  const isDesktopComparison =
+    data?.items?.length > 1 &&
+    data.items.every((item) => item.device === "desktop");
+
+  let layoutClass = "";
+
+  if (isFramedComparison) {
+    layoutClass = "prototype--phone-comparison";
+  } else if (isDesktopComparison) {
+    layoutClass = "prototype--desktop-comparison";
+  }
+
+  // Reset the active item when a new project is loaded.
+  useEffect(() => {
+    setActiveItem(firstItemId);
+  }, [firstItemId]);
+
+  // Check whether the prototype section is visible.
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    if (!sectionElement) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.35,
+      },
+    );
+
+    observer.observe(sectionElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Play only the active prototype video.
+  useEffect(() => {
+    Object.entries(videoRefs.current).forEach(([itemId, videoElement]) => {
+      if (!videoElement) return;
+
+      const shouldPlay = isVisible && !isPaused && itemId === activeItem;
+
+      if (shouldPlay) {
+        videoElement.play().catch(() => {});
+      } else {
+        videoElement.pause();
+      }
+    });
+  }, [activeItem, isVisible, isPaused]);
+
+  // Pause all videos when the section is removed.
+  useEffect(() => {
+    return () => {
+      Object.values(videoRefs.current).forEach((videoElement) => {
+        videoElement?.pause();
+      });
+    };
+  }, []);
+
+  if (!data?.items?.length) return null;
+
+  const activateItem = (itemId) => {
+    setActiveItem(itemId);
+  };
+
+  const resetActiveItem = () => {
+    setActiveItem(firstItemId);
+  };
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`prototype ${layoutClass} ${
+        data.layout ? `prototype--${data.layout}` : ""
+      }`.trim()}
+    >
+      <div className="prototype__header">
+        <h2 className="prototype__title">{data.title}</h2>
+
+        {data.description && (
+          <p className="prototype__description">{data.description}</p>
+        )}
+      </div>
+
+      <div className="prototype__devices" onMouseLeave={resetActiveItem}>
+        {data.items.map((item) => {
+          const isActive = activeItem === item.id;
+
+          const setVideoRef = (element) => {
+            if (element) {
+              videoRefs.current[item.id] = element;
+            } else {
+              delete videoRefs.current[item.id];
+            }
+          };
+
+          return (
+            <article
+              key={item.id}
+              className={`prototype__item prototype__item--${item.device} ${
+                isActive ? "prototype__item--active" : ""
+              }`}
+              onMouseEnter={() => activateItem(item.id)}
+              onFocus={() => activateItem(item.id)}
+            >
+              <button
+                className="prototype__device-button"
+                type="button"
+                onClick={() => activateItem(item.id)}
+                aria-label={`Play ${item.title}`}
+              >
+                {item.presentation === "framed-video" ? (
+                  <video
+                    ref={setVideoRef}
+                    className="prototype__framed-video"
+                    src={item.media.src}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-label={item.media.alt}
+                  />
+                ) : (
+                  <PrototypeDevice
+                    ref={setVideoRef}
+                    device={item.device}
+                    video={item.media.src}
+                    alt={item.media.alt}
+                  />
+                )}
+              </button>
+
+              {item.link?.href && (
+                <a
+                  className="prototype__link"
+                  href={item.link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.link.label}
+                </a>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+export default PrototypeSection;

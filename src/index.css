@@ -160,4 +160,17 @@ small,
   .page {
     padding: 2rem 2rem 5rem;
   }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
 }

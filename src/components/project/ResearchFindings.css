@@ -38,7 +38,7 @@
 
 .research-findings__description {
   max-width: 43rem;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .research-findings__facts {
@@ -61,7 +61,6 @@
   justify-content: center;
   gap: 0.5rem;
 
-  min-height: auto;
   padding: 0;
 
   text-align: center;
@@ -82,7 +81,6 @@
   overflow-x: auto;
   overflow-y: hidden;
 
-  /* Continue from the content margin to the right viewport edge */
   margin-right: calc(50% - 50vw);
   padding-right: 5rem;
   padding-bottom: 1rem;
@@ -122,6 +120,7 @@
     grid-template-columns: 1fr;
     justify-content: stretch;
     gap: 1.5rem;
+    padding-block: 1.5rem;
     border-radius: 2rem;
   }
 
@@ -130,14 +129,13 @@
     padding-right: 2rem;
   }
 
-  .research-findings__track > .finding-card {
-    flex: 0 0 85vw;
-    width: 85vw;
-    min-width: 0;
+  .research-findings__track {
+    gap: 1.5rem;
   }
 
-  .finding-card {
-    min-height: 29rem;
-    padding-block: 1.5rem;
+  .research-findings__track > .finding-card {
+    flex-basis: calc(100vw - 4rem);
+    width: calc(100vw - 4rem);
+    min-width: 0;
   }
 }

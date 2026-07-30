@@ -56,6 +56,11 @@ import rumlyPrototype from "../../assets/images/rumly/prototyping.svg";
 import rumlyTestingBefore from "../../assets/images/rumly/testing-before.svg";
 import rumlyTestingAfter from "../../assets/images/rumly/testing-after.svg";
 
+//Deliver
+import rumlyFigmaVideo from "../../assets/images/rumly/deliver/rumly-figma.mov";
+import rumlyCodedVideo from "../../assets/images/rumly/deliver/rumly-figma.mov";
+import rumlyMockup from "../../assets/images/rumly/deliver/mockup.svg";
+
 const rumly = {
   project: "rumly",
   slug: "rumly",
@@ -679,9 +684,60 @@ const rumly = {
   },
 
   deliver: {
-    prototype: {},
-    codedSolution: {},
+    prototype: {
+      title: "High fidelity and coded implementation",
+      description:
+        "Compare the final Figma prototype with the coded implementation.",
+
+      items: [
+        {
+          id: "figma",
+          title: "High fidelity - Figma",
+          device: "phone",
+          presentation: "framed-video",
+
+          media: {
+            type: "video",
+            src: rumlyFigmaVideo,
+            alt: "Rumly high fidelity prototype",
+          },
+
+          link: {
+            label: "Open in Figma",
+            href: "https://www.figma.com/proto/yiLh5FD1vqunvvlJpx0qGb/Webapp-Eksamensprojekt?node-id=1109-3265&t=IwatLmBI1ZEXqVR3-1&scaling=scale-down&content-scaling=fixed&page-id=51%3A30&starting-point-node-id=1109%3A3265",
+          },
+        },
+
+        {
+          id: "coded",
+          title: "Coded implementation",
+          device: "phone",
+          presentation: "framed-video",
+
+          media: {
+            type: "video",
+            src: rumlyCodedVideo,
+            alt: "Rumly coded implementation",
+          },
+
+          link: {
+            label: "Open programmed solution",
+            href: "https://cecilieva.github.io/webapp-eksamensprojekt/?fbclid=IwY2xjawSLnOpleHRuA2FlbQIxMABicmlkETFqUmRsYXFlT0VERHZvNk12c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuT8ItRezfG7sRZd69HAPqAKU9KtvDzLQ1C7KVUlzSWXr1GEAGMMidK9Y-B-_aem_9ed94Kho79SAPk9EWKdtCQ",
+          },
+        },
+      ],
+    },
+
     animations: [],
+
+    mockup: {
+      title: "Real-life mockup",
+      description:
+        "A campaign poster designed to introduce Rumly in a public space and help potential users understand how the app connects compatible roommates.",
+      image: rumlyMockup,
+      alt: "Rumly campaign poster displayed at a bus stop",
+    },
+
     reflection: [
       "Research showed me that roommate matching is not only about practical compatibility, but also about trust, personality and everyday habits.",
       "Translating user needs into the visual identity helped me understand how tone, colour and interaction design can make a sensitive process feel more reassuring.",

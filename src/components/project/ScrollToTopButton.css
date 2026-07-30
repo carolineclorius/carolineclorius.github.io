@@ -32,3 +32,24 @@
   height: 1rem;
   flex-shrink: 0;
 }
+
+@media (max-width: 720px) {
+  .scroll-to-top-button {
+    right: 2rem;
+    bottom: 1.5rem;
+
+    gap: 0.35rem;
+    padding: 0.75rem;
+
+    border-radius: 0.75rem;
+  }
+
+  .scroll-to-top-button--footer {
+    bottom: 11rem;
+  }
+
+  .scroll-to-top-button img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}

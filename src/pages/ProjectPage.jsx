@@ -1,5 +1,5 @@
 // Import routing tools
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
 
 // Import project data
 import projectDetails from "../data/projectDetails";
@@ -12,10 +12,9 @@ import DefineSection from "../components/project/sections/DefineSection";
 import DevelopSection from "../components/project/sections/DevelopSection";
 import DeliverSection from "../components/project/sections/DeliverSection";
 import ScrollToTopButton from "../components/project/ScrollToTopButton";
+import NotFoundPage from "./NotFoundPage";
 
 // Import page styles
-import "./ProjectPage.css";
-
 function ProjectPage() {
   // Get the project slug from the URL
   const { slug } = useParams();
@@ -25,16 +24,7 @@ function ProjectPage() {
 
   // Display an error message if the project does not exist
   if (!project) {
-    return (
-      <main className="page narrow">
-        <p className="eyebrow">404</p>
-        <h1>Project not found</h1>
-        <p>The project does not exist in the list yet.</p>
-        <Link className="button" to="/projects">
-          Back to projects
-        </Link>
-      </main>
-    );
+    return <NotFoundPage />;
   }
 
   return (

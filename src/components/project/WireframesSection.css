@@ -12,9 +12,9 @@
   content: "";
   position: absolute;
   inset-block: 0;
-  left: calc(50% - 50vw);
 
-  width: 100vw;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
 
   background: var(--sand);
   border-radius: 5.5rem;
@@ -162,11 +162,19 @@
 
 @media (max-width: 720px) {
   .wireframes-section {
-    padding-block: 3rem;
+    padding-block: 2rem;
   }
 
   .wireframes-section::before {
     border-radius: 3rem;
+  }
+
+  .wireframes-section__inner {
+    gap: 2rem;
+  }
+
+  .wireframes-section__header {
+    gap: 1rem;
   }
 
   .wireframes-section__onboarding {
@@ -176,7 +184,12 @@
       "signup"
       "personalisation";
 
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+
+  .wireframes-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .wireframes-section__item--signup,
@@ -185,7 +198,13 @@
     width: 100%;
   }
 
-  .wireframes-section__grid {
-    grid-template-columns: 1fr;
+  .wireframes-section__group--phone .wireframes-section__image {
+    width: min(10rem, 100%);
+  }
+
+  .wireframes-section__group--phone
+    .wireframes-section__item--phone-product
+    .wireframes-section__image {
+    width: min(20rem, 100%);
   }
 }

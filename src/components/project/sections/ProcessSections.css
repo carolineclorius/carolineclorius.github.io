@@ -9,12 +9,12 @@
   padding-bottom: 5rem;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 720px) {
   .discover-section,
   .define-section,
   .develop-section,
   .deliver-section {
-    gap: 3rem;
-    padding-bottom: 3rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
   }
 }

@@ -81,7 +81,7 @@
   /* Stack the footer content */
   .footer__content {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   /* Reduce the spacing above the heading */

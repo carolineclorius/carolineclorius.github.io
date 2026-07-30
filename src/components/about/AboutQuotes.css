@@ -1,6 +1,6 @@
 /* Add vertical spacing around the section */
 .quotes-section {
-  padding: 4rem 0;
+  padding-block: 4rem;
 }
 
 /* Position and structure the quote card */
@@ -46,18 +46,15 @@
 
 /* Position the recommendation navigation */
 .quotes-dots {
-  position: absolute;
-  left: 52rem;
-  bottom: 6rem;
-
   display: flex;
   gap: 0.5rem;
+  margin-top: 2rem;
 }
 
 /* Style the navigation buttons */
 .quotes-dots button {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.5rem;
+  height: 0.5rem;
   padding: 0;
 
   border: 0;
@@ -73,9 +70,18 @@
 
 /* Mobile layout */
 @media (max-width: 720px) {
+  .quotes-section {
+    padding-block: 2rem;
+  }
+
   /* Add spacing inside the quote card */
   .quotes-card {
-    padding: 2rem;
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .quotes-card blockquote {
+    max-width: 100%;
   }
 
   /* Reduce the recommendation text size */
@@ -85,7 +91,6 @@
 
   /* Move the navigation below the recommendation */
   .quotes-dots {
-    position: static;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
