@@ -83,7 +83,7 @@
 /* Mobile layout */
 @media (max-width: 720px) {
   .about-life {
-    padding-block: 2rem;
+    padding: 2rem 0;
   }
 
   /* Stack the text sections vertically */
@@ -95,5 +95,23 @@
 
   .about-gallery {
     margin-top: 3rem;
+  }
+
+  .interest-item {
+    width: 8rem;
+    height: 3.8rem;
+    flex: 0 0 auto;
+  }
+
+  .interest-item:nth-child(5) {
+    width: 10rem;
+  }
+
+  .interest-item:nth-child(6) {
+    width: 12rem;
+  }
+
+  .interest-item:nth-child(7) {
+    width: 10rem;
   }
 }

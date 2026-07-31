@@ -50,7 +50,7 @@
 
   /* Reduce the image container height */
   .about-hero__visual {
-    min-height: 34rem;
+    min-height: 30rem;
   }
 
   .about-hero__content {

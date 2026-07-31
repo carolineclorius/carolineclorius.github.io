@@ -1,11 +1,12 @@
 // Import React state for changing between recommendations
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Import component styles
 import "./AboutQuotes.css";
 
 // Import the decorative quote frame
 import quoteFrame from "../../assets/images/quoteframe.svg";
+import mobileQuoteFrame from "../../assets/images/mobile-quoteframe.svg";
 
 // Store the recommendations displayed in the quote carousel
 const Quotes = [
@@ -49,12 +50,15 @@ function AboutQuotes() {
     <section className="quotes-section">
       <div className="quotes-card">
         {/* Decorative background shape */}
-        <img
-          src={quoteFrame}
-          alt=""
-          aria-hidden="true"
-          className="about-quotes__shape"
-        />
+        <picture className="about-quotes__shape">
+          <source media="(max-width: 720px)" srcSet={mobileQuoteFrame} />
+          <img
+            src={quoteFrame}
+            alt=""
+            aria-hidden="true"
+            className="about-quotes__shape"
+          />
+        </picture>
         <h2>What people say</h2>
 
         {/* Display the active recommendation */}
