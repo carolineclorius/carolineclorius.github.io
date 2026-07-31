@@ -1,12 +1,11 @@
 // Import React state for changing between recommendations
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 
 // Import component styles
 import "./AboutQuotes.css";
 
 // Import the decorative quote frame
 import quoteFrame from "../../assets/images/quoteframe.svg";
-import mobileQuoteFrame from "../../assets/images/mobile-quoteframe.svg";
 
 // Store the recommendations displayed in the quote carousel
 const Quotes = [
@@ -43,22 +42,53 @@ function AboutQuotes() {
   // Track which recommendation is currently displayed
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const touchStartX = useRef(0);
+
   // Get the active recommendation from the array
   const currentQuote = Quotes[activeIndex];
 
+  const showPreviousQuote = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === 0 ? Quotes.length - 1 : currentIndex - 1,
+    );
+  };
+
+  const showNextQuote = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === Quotes.length - 1 ? 0 : currentIndex + 1,
+    );
+  };
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    const touchEndX = event.changedTouches[0].clientX;
+    const swipeDistance = touchEndX - touchStartX.current;
+    const minimumSwipeDistance = 50;
+
+    if (swipeDistance > minimumSwipeDistance) {
+      showPreviousQuote();
+    } else if (swipeDistance < -minimumSwipeDistance) {
+      showNextQuote();
+    }
+  };
+
   return (
     <section className="quotes-section">
-      <div className="quotes-card">
+      <div
+        className="quotes-card"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Decorative background shape */}
-        <picture className="about-quotes__shape">
-          <source media="(max-width: 720px)" srcSet={mobileQuoteFrame} />
-          <img
-            src={quoteFrame}
-            alt=""
-            aria-hidden="true"
-            className="about-quotes__shape"
-          />
-        </picture>
+        <img
+          src={quoteFrame}
+          alt=""
+          aria-hidden="true"
+          className="about-quotes__shape"
+        />
+
         <h2>What people say</h2>
 
         {/* Display the active recommendation */}

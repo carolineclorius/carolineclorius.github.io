@@ -93,16 +93,16 @@
   .quotes-card {
     min-height: auto;
     padding: 2rem 0 4rem;
+    touch-action: pan-y;
+    cursor: grab;
+  }
+
+  .quotes-card:active {
+    cursor: grabbing;
   }
 
   .about-quotes__shape {
-    top: 0rem;
-    left: -2rem;
-
-    width: calc(100% + 4rem);
-    height: calc(100% - 1rem);
-
-    object-fit: fill;
+    display: none;
   }
 
   .quotes-card blockquote {

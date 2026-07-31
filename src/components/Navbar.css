@@ -78,28 +78,28 @@
 
   .site-header {
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
   }
 
   .logo {
-    height: 2rem;
+    height: 3rem;
     width: auto;
   }
 
   .site-nav {
     margin: 0;
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
 
   .site-nav a {
     flex-shrink: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     white-space: nowrap;
   }
 
   .site-nav .contact-link {
-    padding: 0.3rem 0.5rem;
+    padding: 0.5rem 1rem;
     border-width: 1.5px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
   }
 }
