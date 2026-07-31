@@ -1,6 +1,7 @@
 import "./PersonaSection.css";
 
 import quoteFrame from "../../assets/images/shared/long-quote-frame.svg";
+import smallQuoteFrame from "../../assets/images/shared/small-long-quote-frame.svg";
 
 import motivationIcon from "../../assets/images/shared/heart.svg";
 import behaviourIcon from "../../assets/images/shared/bag.svg";
@@ -59,12 +60,14 @@ function PersonaSection({ title, intro, personas }) {
             <div className="persona-card__content">
               {persona.quote && (
                 <blockquote className="persona-card__quote">
-                  <img
-                    className="persona-card__quote-frame"
-                    src={quoteFrame}
-                    alt=""
-                    aria-hidden="true"
-                  />
+                  <picture className="persona-card__quote-frame">
+                    <source
+                      media="(max-width: 720px)"
+                      srcSet={smallQuoteFrame}
+                    />
+
+                    <img src={quoteFrame} alt="" aria-hidden="true" />
+                  </picture>
 
                   <p className="persona-card__quote-text">{persona.quote}</p>
                 </blockquote>
