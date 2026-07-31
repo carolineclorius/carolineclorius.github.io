@@ -128,15 +128,17 @@
   }
 
   .finding-card__quote {
-    min-height: 6rem;
+    min-height: 8rem;
   }
 
   .finding-card__quote-frame {
-    min-height: 6rem;
+    width: 100%;
+    height: 8rem;
+    min-height: 8rem;
   }
 
   .finding-card__quote-content {
-    inset: 1.25rem 1.5rem;
+    inset: 1.5rem;
   }
 
   .finding-card__toggle {
