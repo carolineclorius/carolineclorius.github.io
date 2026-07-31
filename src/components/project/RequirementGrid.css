@@ -4,7 +4,7 @@
 
 .requirement-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 20rem));
+  grid-template-columns: repeat(6, minmax(0, 20rem));
   justify-content: center;
   gap: 2rem;
   margin: 1.5rem auto 0;
@@ -61,13 +61,17 @@
     margin-top: 1rem;
   }
 
-  .requirement-grid {
-    grid-template-columns: 1fr;
+  .requirement-grid,
+  .requirement-grid:has(.requirement-card:nth-child(4):last-child) {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
     gap: 1.5rem;
     margin-top: 1.5rem;
   }
 
-  .requirement-card {
+  .requirement-grid > .requirement-card {
+    grid-column: 1 / -1;
+    min-width: 0;
     min-height: auto;
     padding: 1.5rem;
   }
