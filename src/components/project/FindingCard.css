@@ -44,6 +44,14 @@
   min-height: 7rem;
   margin: 0;
   margin-bottom: 1rem;
+
+  transition: transform 250ms ease;
+  transform-origin: center;
+}
+
+/* Scale the full quote on hover */
+.finding-card__quote:hover {
+  transform: scale(1.03);
 }
 
 .finding-card__quote-frame {

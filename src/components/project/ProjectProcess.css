@@ -50,6 +50,14 @@
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+
+  transition: transform 250ms ease;
+}
+
+/* Scale each process card on hover and keyboard focus */
+.process-card:hover,
+.process-card:focus-visible {
+  transform: scale(1.03);
 }
 
 .process-card__graphic {

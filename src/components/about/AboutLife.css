@@ -38,6 +38,14 @@
 
   width: 9.5rem;
   height: 4.5rem;
+
+  transition: transform 250ms ease;
+}
+
+/* Scale the interest label on hover */
+.interest-item:hover,
+.interest-item:focus-visible {
+  transform: scale(1.03);
 }
 
 /* Place the decorative frame behind the label */

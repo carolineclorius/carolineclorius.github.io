@@ -18,7 +18,7 @@ const interests = [
   { label: "Travel", frame: interestFrame2 },
   { label: "Music", frame: interestFrame3 },
   { label: "Books", frame: interestFrame1 },
-  { label: "Museums", frame: interestFrame4 },
+  { label: "Museums", frame: interestFrame5 },
   { label: "Exploring new places", frame: interestFrame5 },
   { label: "Quality time", frame: interestFrame6 },
 ];
