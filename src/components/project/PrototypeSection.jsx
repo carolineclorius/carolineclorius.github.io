@@ -7,6 +7,7 @@ import "./PrototypeSection.css";
 function PrototypeSection({ data, isPaused = false }) {
   const sectionRef = useRef(null);
   const videoRefs = useRef({});
+  const itemRefs = useRef({});
 
   const firstItemId = data?.items?.[0]?.id;
 
@@ -45,7 +46,7 @@ function PrototypeSection({ data, isPaused = false }) {
         setIsVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.35,
+        threshold: 0,
       },
     );
 
@@ -55,6 +56,47 @@ function PrototypeSection({ data, isPaused = false }) {
       observer.disconnect();
     };
   }, []);
+
+  // Activate the prototype that reaches the middle of the screen on mobile.
+  useEffect(() => {
+    const mobileMediaQuery = window.matchMedia("(max-width: 720px)");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!mobileMediaQuery.matches) return;
+
+        const visibleEntry = entries.find((entry) => entry.isIntersecting);
+
+        if (!visibleEntry) return;
+
+        const itemId = visibleEntry.target.dataset.prototypeId;
+
+        const visibleItem = data.items.find(
+          (item) => String(item.id) === itemId,
+        );
+
+        if (visibleItem) {
+          setActiveItem(visibleItem.id);
+        }
+      },
+      {
+        /*
+         * Only observe the middle part of the viewport.
+         * The next video becomes active when it reaches this area.
+         */
+        rootMargin: "-35% 0px -35% 0px",
+        threshold: 0,
+      },
+    );
+
+    Object.values(itemRefs.current).forEach((itemElement) => {
+      observer.observe(itemElement);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [data.items]);
 
   // Play only the active prototype video.
   useEffect(() => {
@@ -119,6 +161,13 @@ function PrototypeSection({ data, isPaused = false }) {
 
           return (
             <article
+              ref={(element) => {
+                if (element) {
+                  itemRefs.current[item.id] = element;
+                } else {
+                  delete itemRefs.current[item.id];
+                }
+              }}
               key={item.id}
               className={`prototype__item prototype__item--${item.device} ${
                 isActive ? "prototype__item--active" : ""
