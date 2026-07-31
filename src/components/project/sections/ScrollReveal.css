@@ -1,0 +1,23 @@
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(var(--scroll-reveal-distance, 1rem)) scale(0.98);
+
+  transition:
+    opacity 650ms ease,
+    transform 650ms ease;
+
+  transition-delay: var(--scroll-reveal-delay, 0ms);
+}
+
+.scroll-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

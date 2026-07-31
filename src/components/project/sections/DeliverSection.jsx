@@ -7,6 +7,8 @@ import CodedSolutionSection from "../CodedSolutionSection";
 import ImageGallery from "../ImageGallery";
 import ReflectionSection from "../ReflectionSection";
 
+import ScrollReveal from "./ScrollReveal";
+
 import "./ProcessSections.css";
 
 function DeliverSection({ data }) {
@@ -28,49 +30,68 @@ function DeliverSection({ data }) {
 
   return (
     <section id="deliver" className="deliver-section">
-      <SectionDivider />
+      <ScrollReveal>
+        <SectionDivider />
+      </ScrollReveal>
 
-      <ProcessMarker title="Deliver" number="04" progress={100} />
+      <ScrollReveal delay={75} distance="0.75rem">
+        <ProcessMarker title="Deliver" number="04" progress={100} />
+      </ScrollReveal>
 
       {data.prototype?.items?.length > 0 && (
-        <PrototypeSection
-          data={data.prototype}
-          isPaused={isCodedSolutionVisible}
-        />
+        <ScrollReveal delay={100}>
+          <PrototypeSection
+            data={data.prototype}
+            isPaused={isCodedSolutionVisible}
+          />
+        </ScrollReveal>
       )}
 
       {data.codedSolution?.media?.src && (
-        <CodedSolutionSection
-          data={data.codedSolution}
-          onVisibilityChange={handleCodedSolutionVisibility}
-        />
+        <ScrollReveal delay={100}>
+          <CodedSolutionSection
+            data={data.codedSolution}
+            onVisibilityChange={handleCodedSolutionVisibility}
+          />
+        </ScrollReveal>
       )}
 
       {data.socialMedia?.length > 0 && (
-        <ImageGallery title="Social media content" images={data.socialMedia} />
+        <ScrollReveal delay={100}>
+          <ImageGallery
+            title="Social media content"
+            images={data.socialMedia}
+          />
+        </ScrollReveal>
       )}
 
       {data.animations?.length > 0 && (
-        <ImageGallery title="Animations – Jitter" images={data.animations} />
+        <ScrollReveal delay={100}>
+          <ImageGallery title="Animations – Jitter" images={data.animations} />
+        </ScrollReveal>
       )}
 
       {data.mockup?.image && (
-        <ImageGallery
-          title={data.mockup.title}
-          description={data.mockup.description}
-          images={[
-            {
-              src: data.mockup.image,
-              alt: data.mockup.alt,
-            },
-          ]}
-          layout="single"
-          className={data.mockup.className}
-        />
+        <ScrollReveal delay={100}>
+          <ImageGallery
+            title={data.mockup.title}
+            description={data.mockup.description}
+            images={[
+              {
+                src: data.mockup.image,
+                alt: data.mockup.alt,
+              },
+            ]}
+            layout="single"
+            className={data.mockup.className}
+          />
+        </ScrollReveal>
       )}
 
       {data.reflection?.length > 0 && (
-        <ReflectionSection items={data.reflection} />
+        <ScrollReveal delay={100}>
+          <ReflectionSection items={data.reflection} />
+        </ScrollReveal>
       )}
     </section>
   );

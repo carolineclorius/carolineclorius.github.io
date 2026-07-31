@@ -41,11 +41,19 @@
   gap: 1.5rem;
 }
 
+/* Allow each reveal wrapper to fill its grid column */
+.project-process__reveal {
+  height: 100%;
+}
+
 .process-card {
   position: relative;
   display: grid;
   place-items: center;
+
   min-height: 19rem;
+  width: 100%;
+  height: 100%;
 
   color: inherit;
   text-decoration: none;
@@ -106,5 +114,10 @@
 
   .process-card__content {
     padding: 4rem 1.5rem 1.5rem;
+  }
+
+  .process-card:hover,
+  .process-card:focus-visible {
+    transform: scale(1.03);
   }
 }

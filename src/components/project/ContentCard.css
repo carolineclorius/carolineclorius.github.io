@@ -12,7 +12,7 @@
   inset-block: 0;
 
   left: calc(50% - 50vw);
-  width: calc(100% + 10rem);
+  right: calc(50% - 50vw);
 
   background-color: var(--sand);
   border-radius: 5.5rem;
@@ -42,9 +42,5 @@
 
   .content-card::before {
     border-radius: 3rem;
-  }
-
-  .content-card__inner {
-    gap: 1.5rem;
   }
 }
