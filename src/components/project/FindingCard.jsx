@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./FindingCard.css";
 
 import quoteFrame from "../../assets/images/shared/quote-frame.svg";
+import smallQuoteFrame from "../../assets/images/shared/small-quote-frame.svg";
 import arrowDown from "../../assets/images/shared/arrow-down.svg";
 import arrowUp from "../../assets/images/shared/arrow-up.svg";
 
@@ -36,12 +37,11 @@ function FindingCard({ finding }) {
           className="finding-card__quote"
           key={`${quote.participant ?? "anonymous"}-${quote.text}`}
         >
-          <img
-            className="finding-card__quote-frame"
-            src={quoteFrame}
-            alt=""
-            aria-hidden="true"
-          />
+          <picture className="finding-card__quote-frame">
+            <source media="(max-width: 720px)" srcSet={smallQuoteFrame} />
+
+            <img src={quoteFrame} alt="" aria-hidden="true" />
+          </picture>
 
           <div className="finding-card__quote-content">
             <p>{quote.text}</p>

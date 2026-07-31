@@ -61,6 +61,12 @@
   min-height: 7rem;
 }
 
+.finding-card__quote-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .finding-card__quote-content {
   position: absolute;
   inset: 1.75rem 2rem 1.5rem;
