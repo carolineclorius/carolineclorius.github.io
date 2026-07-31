@@ -57,44 +57,54 @@ function PrototypeSection({ data, isPaused = false }) {
     };
   }, []);
 
-  // Activate the prototype that reaches the middle of the screen on mobile.
+  // Activate the prototype closest to the center of the screen on mobile.
   useEffect(() => {
-    const mobileMediaQuery = window.matchMedia("(max-width: 720px)");
+    if (!data?.items || data.items.length < 2) return undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!mobileMediaQuery.matches) return;
+    const updateActiveItem = () => {
+      if (window.innerWidth > 720) return;
 
-        const visibleEntry = entries.find((entry) => entry.isIntersecting);
+      const viewportCenter = window.innerHeight / 2;
 
-        if (!visibleEntry) return;
+      const visibleItems = data.items
+        .map((item) => {
+          const element = itemRefs.current[item.id];
 
-        const itemId = visibleEntry.target.dataset.prototypeId;
+          if (!element) return null;
 
-        const visibleItem = data.items.find(
-          (item) => String(item.id) === itemId,
-        );
+          const rect = element.getBoundingClientRect();
+          const isInViewport = rect.bottom > 0 && rect.top < window.innerHeight;
 
-        if (visibleItem) {
-          setActiveItem(visibleItem.id);
-        }
-      },
-      {
-        /*
-         * Only observe the middle part of the viewport.
-         * The next video becomes active when it reaches this area.
-         */
-        rootMargin: "-35% 0px -35% 0px",
-        threshold: 0,
-      },
-    );
+          if (!isInViewport) return null;
 
-    Object.values(itemRefs.current).forEach((itemElement) => {
-      observer.observe(itemElement);
-    });
+          const itemCenter = rect.top + rect.height / 2;
+
+          return {
+            id: item.id,
+            distanceFromCenter: Math.abs(itemCenter - viewportCenter),
+          };
+        })
+        .filter(Boolean);
+
+      if (visibleItems.length === 0) return;
+
+      const closestItem = visibleItems.reduce((closest, current) =>
+        current.distanceFromCenter < closest.distanceFromCenter
+          ? current
+          : closest,
+      );
+
+      setActiveItem(closestItem.id);
+    };
+
+    updateActiveItem();
+
+    window.addEventListener("scroll", updateActiveItem, { passive: true });
+    window.addEventListener("resize", updateActiveItem);
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", updateActiveItem);
+      window.removeEventListener("resize", updateActiveItem);
     };
   }, [data.items]);
 
@@ -103,7 +113,8 @@ function PrototypeSection({ data, isPaused = false }) {
     Object.entries(videoRefs.current).forEach(([itemId, videoElement]) => {
       if (!videoElement) return;
 
-      const shouldPlay = isVisible && !isPaused && itemId === activeItem;
+      const shouldPlay =
+        isVisible && !isPaused && String(itemId) === String(activeItem);
 
       if (shouldPlay) {
         videoElement.play().catch(() => {});
