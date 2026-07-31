@@ -2,6 +2,7 @@
 import "./ComparisonSection.css";
 
 import quoteFrame from "../../assets/images/shared/long-quote-frame.svg";
+import smallQuoteFrame from "../../assets/images/shared/small-quote-frame.svg";
 
 function ComparisonSection({
   title,
@@ -51,12 +52,16 @@ function ComparisonSection({
 
       {quote && (
         <blockquote className="comparison-section__quote">
-          <img
-            className="comparison-section__quote-frame"
-            src={quoteFrame}
-            alt=""
-            aria-hidden="true"
-          />
+          <picture className="comparison-section__quote-frame">
+            <source media="(max-width: 720px)" srcSet={smallQuoteFrame} />
+
+            <img
+              className="comparison-section__quote-frame"
+              src={quoteFrame}
+              alt=""
+              aria-hidden="true"
+            />
+          </picture>
 
           <p className="comparison-section__quote-text">{quote}</p>
         </blockquote>
