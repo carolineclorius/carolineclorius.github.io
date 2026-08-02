@@ -6,7 +6,7 @@ This portfolio is built with React and Vite and showcases a selection of project
 
 ## Live portfolio
 
-https://eaa25cmc.github.io/
+https://carolineclorius.github.io/
 
 ## About
 
