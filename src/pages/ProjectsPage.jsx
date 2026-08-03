@@ -7,6 +7,8 @@ import projects from "../data/projects";
 // Import page styles
 import "./ProjectsPage.css";
 
+import ScrollReveal from "../components/project/sections/ScrollReveal";
+
 function ProjectsPage() {
   return (
     <div className="page">
@@ -25,16 +27,21 @@ function ProjectsPage() {
       {/* Display all projects using the reusable component */}
       <section className="featured-projects-section" aria-label="Project list">
         {projects.map((project, index) => (
-          <FeaturedProject
+          <ScrollReveal
             key={project.slug}
-            number={String(index + 1).padStart(2, "0")}
-            title={project.title}
-            description={project.summary}
-            image={project.image}
-            imageAlt={`Preview of ${project.title}`}
-            slug={project.slug}
-            reverse={index % 2 === 1}
-          />
+            delay={index * 100}
+            distance="1.5rem"
+          >
+            <FeaturedProject
+              number={String(index + 1).padStart(2, "0")}
+              title={project.title}
+              description={project.summary}
+              image={project.image}
+              imageAlt={`Preview of ${project.title}`}
+              slug={project.slug}
+              reverse={index % 2 === 1}
+            />
+          </ScrollReveal>
         ))}
       </section>
     </div>

@@ -1,6 +1,8 @@
 // Import page styles
 import "./HomePage.css";
 
+import ScrollReveal from "../components/project/sections/ScrollReveal";
+
 // Import project data
 import projects from "../data/projects";
 
@@ -30,54 +32,59 @@ function HomePage() {
       </section>
 
       {/* Designer introduction */}
-      <section className="designer-section">
-        <img
-          src={carolineImage}
-          alt="Caroline Majlandt Clorius"
-          className="designer-image"
-        />
+      <ScrollReveal delay={50} distance="0.75rem">
+        <section className="designer-section">
+          <img
+            src={carolineImage}
+            alt="Caroline Majlandt Clorius"
+            className="designer-image"
+          />
 
-        {/* Designer description */}
-        <div className="designer-content">
-          <h2>Designing with people in mind</h2>
-          <h3>
-            I’m passionate about{" "}
-            <span className="fed-h3">UX, UI and branding</span>, creating
-            intuitive and engaging digital experiences through{" "}
-            <span className="fed-h3">
-              research, visual design and interactive prototyping
-            </span>
-            . My goal is to design solutions that are both{" "}
-            <span className="fed-h3">meaningful and user-friendly.</span>
-          </h3>
-        </div>
-      </section>
+          {/* Designer description */}
+          <div className="designer-content">
+            <h2>Designing with people in mind</h2>
+            <h3>
+              I’m passionate about{" "}
+              <span className="fed-h3">UX, UI and branding</span>, creating
+              intuitive and engaging digital experiences through{" "}
+              <span className="fed-h3">
+                research, visual design and interactive prototyping
+              </span>
+              . My goal is to design solutions that are both{" "}
+              <span className="fed-h3">meaningful and user-friendly.</span>
+            </h3>
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Featured projects */}
       <section className="featured-projects-section">
         {/* Introduce the selected projects */}
-        <div className="featured-projects-intro">
-          <h2 className="projects-intro-title">Ideas I’ve brought to life</h2>
+        <ScrollReveal delay={50} distance="0.75rem">
+          <div className="featured-projects-intro">
+            <h2 className="projects-intro-title">Ideas I’ve brought to life</h2>
 
-          <h3>
-            A selection of my work, where strategy, design and content come
-            together to create <span className="fed-h3">meaningful</span>{" "}
-            digital platforms.
-          </h3>
-        </div>
+            <h3>
+              A selection of my work, where strategy, design and content come
+              together to create <span className="fed-h3">meaningful</span>{" "}
+              digital platforms.
+            </h3>
+          </div>
+        </ScrollReveal>
 
         {/* Generate a featured project for each project */}
         {featuredProjects.map((project, index) => (
-          <FeaturedProject
-            key={project.slug}
-            number={String(index + 1).padStart(2, "0")}
-            title={project.title}
-            description={project.summary}
-            image={project.image}
-            imageAlt={`Preview of ${project.title}`}
-            slug={project.slug}
-            reverse={index % 2 === 1}
-          />
+          <ScrollReveal key={project.slug} delay={50} distance="0.75rem">
+            <FeaturedProject
+              number={String(index + 1).padStart(2, "0")}
+              title={project.title}
+              description={project.summary}
+              image={project.image}
+              imageAlt={`Preview of ${project.title}`}
+              slug={project.slug}
+              reverse={index % 2 === 1}
+            />
+          </ScrollReveal>
         ))}
       </section>
     </div>

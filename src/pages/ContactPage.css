@@ -4,6 +4,22 @@
   overflow: hidden;
 }
 
+/* Calm entrance animation for the contact page */
+.contact-page__intro {
+  opacity: 0;
+  transform: translateY(1rem);
+
+  animation: contact-intro-enter 800ms ease forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes contact-intro-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Style the page heading */
 .contact h1 {
   margin: 0 0 2rem;
@@ -93,5 +109,13 @@
 
     width: min(100%, 20rem);
     margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-page__intro {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }

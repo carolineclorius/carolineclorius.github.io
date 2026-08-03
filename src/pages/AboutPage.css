@@ -1,4 +1,12 @@
 /* About Page */
+/* Calm entrance animation for the page introduction */
+.about-page__intro {
+  opacity: 0;
+  transform: translateY(1rem);
+
+  animation: about-intro-enter 800ms ease forwards;
+  animation-delay: 100ms;
+}
 
 /* Style the page heading */
 .about-page h1 {
@@ -6,8 +14,23 @@
   color: var(--lys-orange);
 }
 
+@keyframes about-intro-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 720px) {
   .about-page h1 {
     margin-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page__intro {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
