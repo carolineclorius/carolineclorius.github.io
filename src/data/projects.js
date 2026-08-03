@@ -10,9 +10,9 @@ const projects = [
     title: "Rumly",
     year: "2026",
     summary:
-      "A roommate-matching app that helps users find compatible roommates through a personalized quiz.",
+      "A roomie app that combines a compatibility quiz, detailed profiles and matching to help users find compatible roomies.",
     description:
-      "A roommate-matching app that helps users find compatible roommates through a personalized quiz.",
+      "A roomie app that combines a compatibility quiz, detailed profiles and matching to help users find compatible roomies.",
     tags: ["UX/UI", "Research", "Prototyping"],
     image: rumlyImage,
     links: [
@@ -31,9 +31,9 @@ const projects = [
     title: "Little Looms",
     year: "2026",
     summary:
-      "A retail concept bringing together carefully selected children's fashion brands.",
+      "A online retail concept bringing together carefully selected children's fashion brands.",
     description:
-      "A retail concept bringing together carefully selected children's fashion brands",
+      "A online retail concept bringing together carefully selected children's fashion brands",
     tags: ["Branding", "UI", "Visual design"],
     image: littleloomsImage,
     links: [

@@ -18,11 +18,14 @@ function HomePage() {
     <div className="page">
       {/* Homepage introduction */}
       <section className="hero-section">
-        <h3 className="hero-text">Caroline Majlandt Clorius</h3>
+        <h3 className="hero-text">I'm Caroline Majlandt Clorius</h3>
         <h1>
-          Designing <span className="fed-h1">intuitive</span> interfaces and
-          <br />
-          <span className="fed-h1">meaningful</span> experiences
+          <span className="hero-title__line hero-title__line--right">
+            Designing <span className="fed-h1">intuitive</span> interfaces and
+          </span>
+          <span className="hero-title__line hero-title__line--left">
+            <span className="fed-h1">meaningful</span> experiences
+          </span>
         </h1>
       </section>
 
@@ -36,16 +39,15 @@ function HomePage() {
 
         {/* Designer description */}
         <div className="designer-content">
-          <h2>Who am I as a UX/UI designer</h2>
+          <h2>Designing with people in mind</h2>
           <h3>
             I’m passionate about{" "}
-            <span className="fed-h3">UX, UI and branding</span>, with a
-            particular interest in transforming ideas into intuitive and
-            engaging digital experiences. Through{" "}
+            <span className="fed-h3">UX, UI and branding</span>, creating
+            intuitive and engaging digital experiences through{" "}
             <span className="fed-h3">
               research, visual design and interactive prototyping
             </span>
-            , I enjoy creating solutions that are both{" "}
+            . My goal is to design solutions that are both{" "}
             <span className="fed-h3">meaningful and user-friendly.</span>
           </h3>
         </div>

@@ -3,7 +3,8 @@
   display: grid;
   gap: 0.5rem;
   align-content: center;
-  padding-block: 1rem;
+  padding-block: 1rem 0;
+  overflow-x: clip;
 }
 
 /* Display the designer introduction in two columns */
@@ -12,20 +13,47 @@
   grid-template-columns: 40% 1fr;
   align-items: center;
   gap: 4rem;
-  min-height: 100vh;
+  min-height: auto;
+  padding-block: 1.5rem 5rem;
 }
 
 /* Scale the designer image */
 .designer-image {
   display: block;
   width: 100%;
-  max-width: 50rem;
+  max-width: 32rem;
   height: auto;
 }
 
 /* Limit the width of the designer description */
 .designer-content {
-  max-width: 40rem;
+  max-width: 46rem;
+}
+
+.hero-text {
+  color: var(--moerkegraa);
+  opacity: 0;
+  transform: translateY(1rem);
+
+  animation: hero-name-enter 650ms ease forwards;
+  animation-delay: 50ms;
+}
+
+@keyframes hero-name-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Give the body text slightly more breathing room */
+.designer-content h3 {
+  line-height: 1.5;
+}
+
+/* Add space below the designer heading */
+.designer-content h2 {
+  margin-bottom: 0.5rem;
 }
 
 /* Limit the width of the featured projects introduction */
@@ -36,6 +64,45 @@
 /* Highlight the featured projects heading */
 .projects-intro-title {
   color: var(--lys-orange);
+}
+
+/* Keep each part of the hero heading on its own line */
+.hero-title__line {
+  display: block;
+
+  opacity: 0;
+
+  animation-duration: 850ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* First line enters from the right */
+.hero-title__line--right {
+  transform: translateX(4rem);
+  animation-name: hero-enter-from-right;
+  animation-delay: 150ms;
+}
+
+/* Second line enters from the left */
+.hero-title__line--left {
+  transform: translateX(-4rem);
+  animation-name: hero-enter-from-left;
+  animation-delay: 300ms;
+}
+
+@keyframes hero-enter-from-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-enter-from-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Mobile layout */
@@ -53,5 +120,26 @@
 
   .designer-image {
     max-width: 100%;
+  }
+
+  .designer-content h3 {
+    line-height: 1.4;
+  }
+
+  .hero-title__line--right {
+    transform: translateX(1.5rem);
+  }
+
+  .hero-title__line--left {
+    transform: translateX(-1.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text,
+  .hero-title__line {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }

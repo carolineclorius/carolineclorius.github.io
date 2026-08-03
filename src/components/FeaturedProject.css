@@ -6,7 +6,7 @@
   align-items: center;
   gap: 5rem;
 
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 /* Reverse the project layout for alternating sections */
@@ -17,7 +17,7 @@
 /* Control the width of the project text */
 .featured-project__content {
   width: 40%;
-  max-width: 34rem;
+  max-width: 40rem;
   justify-self: end;
 }
 
