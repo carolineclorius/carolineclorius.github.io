@@ -16,6 +16,10 @@
   margin-bottom: 4rem;
 }
 
+.about-life__description {
+  line-height: 1.5rem;
+}
+
 /* Arrange the interest labels in a flexible row */
 .interest-list {
   display: flex;

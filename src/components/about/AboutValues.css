@@ -35,8 +35,8 @@
 
 /* Scale the icon to fill its container */
 .about-value-card__icon img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: auto;
   display: block;
 }
 

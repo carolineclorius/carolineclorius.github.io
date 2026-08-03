@@ -19,22 +19,18 @@ const Quotes = [
     role: "Head of department at Dybbøl-skolen",
   },
   {
-    quote:
-      "Caroline approaches design challenges with curiosity, structure and a strong focus on the people using the solution.",
-    secondParagraph:
-      "She is thoughtful in her process and contributes positively to collaborative work.",
-    recommendation: "She is a reliable and engaged designer.",
-    name: "- Example Name",
-    role: "Example role",
+    quote: "insert quote here",
+    secondParagraph: "insert quote here",
+    recommendation: "insert quote here",
+    name: "- insert Name",
+    role: "insert role",
   },
   {
-    quote:
-      "Caroline combines visual sensitivity with a strong ability to communicate ideas clearly.",
-    secondParagraph:
-      "She works independently while remaining open to feedback and new perspectives.",
-    recommendation: "I would gladly work with Caroline again.",
-    name: "- Example Name",
-    role: "Example role",
+    quote: "insert quote here",
+    secondParagraph: "insert quote here",
+    recommendation: "insert quote here",
+    name: "- insert Name",
+    role: "insert role",
   },
 ];
 

@@ -120,12 +120,13 @@
   margin: 0;
 }
 
-.visual-identity__font-name {
-  margin-top: 0.75rem !important;
+.visual-identity__type .visual-identity__font-name {
+  margin-top: 0.75rem;
+  line-height: 1.2;
 }
 
-.visual-identity__type-description {
-  margin-top: 1rem !important;
+.visual-identity__type .visual-identity__type-description {
+  margin-top: 1rem;
   max-width: 26rem;
 }
 

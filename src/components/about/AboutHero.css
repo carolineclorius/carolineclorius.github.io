@@ -9,18 +9,17 @@
 
 /* Image container */
 .about-hero__visual {
-  position: relative;
-  min-height: 44rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /* Hero image */
 .about-hero__image {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-
-  width: 82%;
-  transform: translateX(-50%);
+  display: block;
+  width: 65%;
+  max-width: 22rem;
+  height: auto;
 }
 
 /* Text content */
@@ -45,12 +44,16 @@
   /* Stack the content vertically */
   .about-hero {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   /* Reduce the image container height */
   .about-hero__visual {
-    min-height: 30rem;
+    justify-content: center;
+  }
+
+  .about-hero__image {
+    width: min(100%, 18rem);
   }
 
   .about-hero__content {

@@ -78,7 +78,7 @@ const littleLooms = {
   title: "Little Looms",
   heroImage: littleLoomsHero,
   summary:
-    "A retail concept bringing together carefully selected children's fashion brands.",
+    "A online retail concept bringing together carefully selected children's fashion brands.",
 
   overview: [
     {
@@ -119,16 +119,16 @@ const littleLooms = {
         "Problem and context",
         "Research approach",
         "Secondary research",
-        "Semi-structured interview",
+        "Primary research",
       ],
     },
     {
       title: "Define",
-      items: ["HMW questions", "Personas", "Insights", "Design requirements"],
+      items: ["Insights", "Persona", "HMW questions", "Design requirements"],
     },
     {
       title: "Develop",
-      items: ["Wireframes", "Visual identity", "Process", "Testing"],
+      items: ["Wireframes", "Visual identity", "Design process", "Testing"],
     },
     {
       title: "Deliver",
@@ -140,11 +140,11 @@ const littleLooms = {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "Shopping for children’s clothing online can make it difficult to assess quality, materials and sizing.",
-        "At the same time, purchase decisions are influenced by aesthetics, inspiration and trust.",
+        "Shopping for children's clothing online makes it difficult to evaluate quality, materials and sizing.",
+        "At the same time, parents expect an experience that feels inspiring, trustworthy and easy to navigate.",
       ],
       conclusion:
-        "This project explores how Little Looms can create a clear, inspiring and trustworthy shopping experience.",
+        "This project explores how Little Looms can create a shopping experience that feels inspiring, trustworthy and easy to navigate.",
     },
 
     researchApproach: {
@@ -210,15 +210,15 @@ const littleLooms = {
 
           quotes: [
             {
-              text: "I’m primarily the one who buys the clothes. My husband may buy something occasionally, but I’m usually the one keeping track of what they need.",
+              text: "I’m primarily the one who buys the clothes. My husband may buy something occasionally, but I’m usually the one keeping track of what they need",
               participant: "Participant 1",
             },
             {
-              text: "I do it most of the time. My husband only buys something occasionally if they urgently need it.",
+              text: "I do it most of the time. My husband only buys something occasionally if they urgently need it",
               participant: "Participant 3",
             },
             {
-              text: "I’m almost always the one who buys the clothes.",
+              text: "I’m almost always the one who buys the clothes",
               participant: "Participant 5",
             },
           ],
@@ -235,15 +235,15 @@ const littleLooms = {
 
           quotes: [
             {
-              text: "I’d say quality. If it’s well made and lasts a long time, I think the price is easier to justify.",
+              text: "I’d say quality. If it’s well made and lasts a long time, I think the price is easier to justify",
               participant: "Participant 1",
             },
             {
-              text: "Quality is important to me because the clothes get used a lot. I also care about materials, and design matters too.",
+              text: "Quality is important to me because the clothes get used a lot. I also care about materials, and design matters too",
               participant: "Participant 3",
             },
             {
-              text: "I think a lot about design, quality and how the material feels.",
+              text: "I think a lot about design, quality and how the material feels",
               participant: "Participant 2",
             },
           ],
@@ -259,15 +259,15 @@ const littleLooms = {
 
           quotes: [
             {
-              text: "Yes, but I also have to admit that I still choose something because I think it looks beautiful.",
+              text: "Yes, but I also have to admit that I still choose something because I think it looks beautiful",
               participant: "Participant 2",
             },
             {
-              text: "Yes, but I also choose a lot based on what I think looks beautiful.",
+              text: "Yes, but I also choose a lot based on what I think looks beautiful",
               participant: "Participant 6",
             },
             {
-              text: "Yes, but it still has to be something I think looks beautiful.",
+              text: "Yes, but it still has to be something I think looks beautiful",
               participant: "Participant 4",
             },
           ],
@@ -284,15 +284,15 @@ const littleLooms = {
 
           quotes: [
             {
-              text: "I almost always look at materials and the size guide.",
+              text: "I almost always look at materials and the size guide",
               participant: "Participant 1",
             },
             {
-              text: "I almost always look at materials and sizing.",
+              text: "I almost always look at materials and sizing",
               participant: "Participant 3",
             },
             {
-              text: "Yes, especially materials.",
+              text: "Yes, especially materials",
               participant: "Participant 4",
             },
           ],
@@ -343,7 +343,7 @@ const littleLooms = {
           ],
 
           quote:
-            "I want to find clothes that look beautiful and last — without spending too much time searching.",
+            "I want to find clothes that look beautiful and last — without spending too much time searching online",
 
           motivations: [
             "Find well-made clothes that last",
@@ -469,7 +469,7 @@ const littleLooms = {
     visualIdentity: {
       title: "Visual identity",
       description:
-        "The visual identity combines a playful, harmonious and naïve expression with a clear and easy-to-navigate shopping experience.",
+        "The visual identity combines a playful, harmonious and naive expression with a clear and easy-to-navigate shopping experience.",
 
       moodboard: {
         title: "Moodboard",
@@ -486,12 +486,14 @@ const littleLooms = {
           {
             label: "Heading",
             font: "Schoolbell",
+            fontFamily: '"Schoolbell", cursive',
             description:
               "Adds a playful and childlike feel to the visual identity.",
           },
           {
             label: "Body",
             font: "Inter",
+            fontFamily: '"Inter", sans-serif',
             description:
               "Keeps body text clear and easy to read throughout the shopping experience.",
           },
@@ -590,7 +592,7 @@ const littleLooms = {
       graphicElements: {
         title: "Graphic elements",
         description:
-          "Hand-drawn graphic elements used across the website and social media to support the playful and naïve visual identity.",
+          "Hand-drawn graphic elements used across the website and social media to support the playful and naive visual identity.",
 
         image: {
           src: littleLoomsGraphicElements,
@@ -735,7 +737,7 @@ const littleLooms = {
     codedSolution: {
       title: "Coded implementation",
       description:
-        "A functional proof of concept built with React. Due to the project scope, only selected features were implemented.",
+        "The project was developed as a coded React prototype. Due to the project scope, only selected features were implemented.",
 
       device: "desktop",
 

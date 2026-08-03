@@ -42,7 +42,12 @@ function VisualIdentitySection({ data, project }) {
                     <div className="visual-identity__type" key={item.label}>
                       <h4>{item.label}</h4>
 
-                      <p className="visual-identity__font-name">{item.font}</p>
+                      <p
+                        className="visual-identity__font-name"
+                        style={{ fontFamily: item.fontFamily }}
+                      >
+                        {item.font}
+                      </p>
 
                       {item.description && (
                         <p className="visual-identity__type-description">

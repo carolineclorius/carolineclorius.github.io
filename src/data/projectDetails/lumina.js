@@ -110,11 +110,11 @@ const lumina = {
     },
     {
       title: "Define",
-      items: ["HMW questions", "Personas", "Insights", "Design requirements"],
+      items: ["Insights", "Persona", "HMW questions", "Design requirements"],
     },
     {
       title: "Develop",
-      items: ["Wireframes", "Visual identity", "Process", "Testing"],
+      items: ["Wireframes", "Visual identity", "Design process", "Testing"],
     },
     {
       title: "Deliver",
@@ -167,8 +167,7 @@ const lumina = {
 
           statistic: "91% listen to music with friends",
 
-          summary:
-            "Music was strongly connected to shared moments, particularly with friends.",
+          summary: "Music was strongly connected to shared moments.",
 
           quotes: [
             {
@@ -326,7 +325,7 @@ const lumina = {
           ],
 
           quote:
-            "I want a speaker that looks good in my home and makes it easy to bring music into the moments I share with others.",
+            "I want a speaker that looks good in my home and makes it easy to bring music into the moments I share with others",
 
           motivations: [
             "Bring music into social moments",
@@ -426,6 +425,8 @@ const lumina = {
           {
             label: "Heading",
             font: "JetBrains Mono",
+            fontFamily: '"JetBrains Mono", monospace',
+            fontFamily: '"Jura", sans-serif',
             description:
               "Adds a modern and distinctive feel to the visual identity.",
           },
@@ -463,7 +464,7 @@ const lumina = {
 
         items: [
           {
-            title: "Primary button",
+            title: "Primary buttons",
             layout: "primary",
 
             image: {

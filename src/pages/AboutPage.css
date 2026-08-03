@@ -10,7 +10,7 @@
 
 /* Style the page heading */
 .about-page h1 {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   color: var(--lys-orange);
 }
 
@@ -23,7 +23,7 @@
 
 @media (max-width: 720px) {
   .about-page h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 

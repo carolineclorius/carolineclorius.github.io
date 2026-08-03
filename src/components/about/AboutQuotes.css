@@ -29,6 +29,10 @@
 
 /* Control the width and spacing of the recommendation */
 .quotes-card blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
   max-width: 50rem;
   margin: 1.5rem 0;
 }

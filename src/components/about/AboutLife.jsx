@@ -2,7 +2,6 @@
 import interestFrame1 from "../../assets/images/1interestframe.svg";
 import interestFrame2 from "../../assets/images/2interestframe.svg";
 import interestFrame3 from "../../assets/images/3interestframe.svg";
-import interestFrame4 from "../../assets/images/4interestframe.svg";
 import interestFrame5 from "../../assets/images/5interestframe.svg";
 import interestFrame6 from "../../assets/images/6interestframe.svg";
 
@@ -31,12 +30,11 @@ function AboutLife() {
         <div>
           <h2 className="title">Beyond design</h2>
 
-          <p>
-            Outside of design, I find inspiration in experiences, people and
-            culture. I enjoy travelling, exploring new places and spending time
-            with friends, family and my boyfriend. You’ll often find me reading
-            a good book, attending concerts, festivals, stand-up shows or
-            visiting museums.
+          <p className="about-life__description">
+            Outside of design, I find inspiration in people, culture and new
+            experiences. I enjoy travelling, reading, spending time with friends
+            and family, and exploring everything from concerts and museums to
+            festivals and stand-up.
           </p>
         </div>
 

@@ -68,7 +68,7 @@ const rumly = {
   title: "Rumly",
   heroImage: rumlyHero,
   summary:
-    "A roommate-matching app that helps users find compatible roommates through a personalised quiz.",
+    "A roomie app that combines a compatibility quiz, detailed profiles and matching to help users find compatible roomies.",
 
   overview: [
     {
@@ -109,20 +109,20 @@ const rumly = {
         "Problem and context",
         "Research approach",
         "Competitor analysis",
-        "Semi-structured interviews",
+        "Primary research",
       ],
     },
     {
       title: "Define",
-      items: ["HMW questions", "Personas", "Insights", "Design requirements"],
+      items: ["Insights", "Personas", "HMW questions", "Design requirements"],
     },
     {
       title: "Develop",
-      items: ["Wireframes", "Visual identity", "Process", "Testing"],
+      items: ["Wireframes", "Visual identity", "Design process", "Testing"],
     },
     {
       title: "Deliver",
-      items: ["Prototyping", "Coded prototype", "Animations", "Mockup"],
+      items: ["Prototyping", "Coded prototype", "Mockup"],
     },
   ],
 
@@ -130,11 +130,11 @@ const rumly = {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "Most roommate searches happen through Facebook groups or housing portals, where housing is prioritised over compatibility.",
+        "Most roomie searches happen through Facebook groups or housing portals, where housing is prioritised over compatibility.",
         "As a result, users spend time sorting through irrelevant posts and making important decisions with limited information.",
       ],
       conclusion:
-        "This project rethinks roommate search by putting compatibility first.",
+        "This project rethinks roomie search by putting compatibility first.",
     },
 
     researchApproach: {
@@ -169,7 +169,7 @@ const rumly = {
     primaryResearch: {
       title: "Primary research",
 
-      description: "Based on a semi-structured interviews",
+      description: "Based on semi-structured interviews",
 
       facts: [
         {
@@ -202,7 +202,7 @@ const rumly = {
               participant: "Participants 4 and 6",
             },
             {
-              text: "Finding the right roommate matters more than finding the cheapest place.",
+              text: "Finding the right roomie matters more than finding the cheapest place.",
               participant: "Participant 1",
             },
           ],
@@ -215,7 +215,7 @@ const rumly = {
           heading: "Users rely on Facebook despite a poor experience",
 
           summary:
-            "Despite describing Facebook as messy and time-consuming, every participant said they would still use it to find roommates.",
+            "Despite describing Facebook as messy and time-consuming, every participant said they would still use it to find roomies.",
 
           quotes: [
             {
@@ -265,7 +265,7 @@ const rumly = {
           heading: "Compatibility scores increase confidence",
 
           summary:
-            "Nearly every participant believed a compatibility score would make choosing a roommate easier.",
+            "Nearly every participant believed a compatibility score would make choosing a roomie easier.",
 
           quotes: [
             {
@@ -324,7 +324,7 @@ const rumly = {
           ],
 
           quote:
-            "I want to find people I genuinely fit with — and a home where I can feel comfortable from day one.",
+            "I want to find people I genuinely fit with — and a home where I can feel comfortable from day one",
 
           motivations: [
             "Find a welcoming shared home",
@@ -334,7 +334,7 @@ const rumly = {
 
           behaviours: [
             "Looks for shared housing online",
-            "Judges the atmosphere from photos and descriptions",
+            "Judges potentiel roomies from photos and descriptions",
             "Tries to understand who she would be living with",
           ],
 
@@ -363,10 +363,10 @@ const rumly = {
           ],
 
           quote:
-            "I don’t just need someone to fill a room — I want to find people who fit into the way we live.",
+            "I don’t just need someone to fill a room — I want to find people who fit into the way we live",
 
           motivations: [
-            "Find a compatible new roommate",
+            "Find a compatible new roomie",
             "Maintain a good atmosphere in the home",
             "Make a confident and informed choice",
           ],
@@ -374,18 +374,18 @@ const rumly = {
           behaviours: [
             "Creates and shares housing listings online",
             "Evaluates applicants through profiles and messages",
-            "Discusses potential roommates with the household",
+            "Discusses potential roomies with the household",
           ],
 
           frustrations: [
             "Applications provide too little relevant information",
-            "Difficult to compare potential roommates",
+            "Difficult to compare potential roomies",
             "Time-consuming communication with unsuitable applicants",
           ],
 
           needs: [
             "Clear information about habits and preferences",
-            "A simple way to compare potential roommates",
+            "A simple way to compare potential roomies",
             "Confidence that a person will fit into the household",
           ],
         },
@@ -413,12 +413,11 @@ const rumly = {
       },
       {
         title: "Easy communication",
-        description: "Enable quick contact after matching.",
+        description: "Enable quick contact after the connection is made.",
       },
       {
         title: "Support two user journeys",
-        description:
-          "Support both roommate-only and housing + roommate journeys.",
+        description: "Support both roomie-only and housing + roomie journeys.",
       },
     ],
   },
@@ -486,12 +485,14 @@ const rumly = {
           {
             label: "Heading",
             font: "Otomanopee One",
+            fontFamily: '"Otomanopee One", sans-serif',
             description:
               "Adds a friendly and approachable feel to the visual identity.",
           },
           {
             label: "Body",
             font: "Poppins",
+            fontFamily: '"Poppins", sans-serif',
             description:
               "Keeps information clear and easy to scan throughout the user journey.",
           },
@@ -659,12 +660,12 @@ const rumly = {
         "We conducted multiple Think Aloud tests with different participants throughout the design process.",
 
       feedback: [
-        "Users wanted to connect with potential roommates faster and more easily.",
-        "Users expected the Connect button to be visible directly on each profile card.",
+        "Users wanted to connect with potential roomies faster and more easily.",
+        "Users expected the connect button to be visible directly on each profile card.",
       ],
 
       changes: [
-        "Added a Connect button directly to each profile card.",
+        "Added a connect button directly to each profile card.",
         "Reduced the number of steps required to connect.",
         "Made the primary action more visible and accessible.",
       ],
@@ -728,18 +729,16 @@ const rumly = {
       ],
     },
 
-    animations: [],
-
     mockup: {
       title: "Real-life mockup",
       description:
-        "A campaign poster designed to introduce Rumly in a public space and help potential users understand how the app connects compatible roommates.",
+        "A campaign poster designed to introduce Rumly in a public space and help potential users understand how the app connects compatible roomies.",
       image: rumlyMockup,
       alt: "Rumly campaign poster displayed at a bus stop",
     },
 
     reflection: [
-      "Research showed me that roommate matching is not only about practical compatibility, but also about trust, personality and everyday habits.",
+      "Research showed me that roomie matching is not only about practical compatibility, but also about trust, personality and everyday habits.",
       "Translating user needs into the visual identity helped me understand how tone, colour and interaction design can make a sensitive process feel more reassuring.",
       "Designing the matching experience taught me to balance detailed information with a simple and approachable user journey.",
     ],

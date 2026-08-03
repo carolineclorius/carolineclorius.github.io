@@ -1,7 +1,7 @@
 /* Arrange the project hero */
 .project-hero {
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 /* Style the project number */
@@ -36,7 +36,7 @@
 
 /* Arrange the project information */
 .project-hero__information {
-  padding-top: 1rem;
+  padding-top: 0;
 }
 
 /* Add space below the project title */
@@ -47,7 +47,7 @@
 /* Style the project summary */
 .project-hero__information > p {
   max-width: 28rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Mobile layout */
