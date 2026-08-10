@@ -67,16 +67,21 @@ img {
   padding: 3rem 5rem 5rem;
 }
 
+.app {
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.app__main {
+  flex: 1;
+}
+
 #discover,
 #define,
 #develop,
 #deliver {
   scroll-margin-top: 6rem;
-}
-
-/* Limit the width of narrow content */
-.narrow {
-  width: min(100% - 2rem, 760px);
 }
 
 /* Limit the width of introductory content */
@@ -148,12 +153,6 @@ small,
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0;
-}
-
-/* Increase the size of introductory text */
-.lead {
-  max-width: 680px;
-  font-size: 1rem;
 }
 
 /* Global mobile layout */

@@ -1,0 +1,51 @@
+.not-found {
+  display: flex;
+  align-items: center;
+}
+
+.not-found_content {
+  max-width: 42rem;
+}
+
+.not-found_number {
+  margin-bottom: 1.5rem;
+  color: var(--lys-orange);
+}
+
+.not-found_content h1 {
+  margin-bottom: 1.5rem;
+}
+
+.not-found_text {
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Style the homepage link as a button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 3rem;
+  border: 0;
+  border-radius: 1rem;
+
+  color: var(--hvid);
+  background: var(--lys-orange);
+
+  text-decoration: none;
+  box-shadow: var(--box-shadow);
+
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+/* Add interaction to the button */
+.button:hover,
+.button:focus-visible {
+  transform: scale(1.03);
+  background: var(--moerk-orange);
+}

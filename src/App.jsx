@@ -12,10 +12,10 @@ import Footer from "./components/Footer";
 function App() {
   const location = useLocation();
   return (
-    <>
+    <div className="app">
       <Navbar />
       <ScrollToTop />
-      <main>
+      <main className="app__main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
@@ -24,9 +24,9 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        {location.pathname !== "/contact" && <Footer />}
       </main>
-    </>
+      {location.pathname !== "/contact" && <Footer />}
+    </div>
   );
 }
 
