@@ -44,7 +44,12 @@ function Footer() {
         </a>
 
         {/* Resume download */}
-        <a href="/resume.pdf" className="footer__item">
+        <a
+          href="/resume.pdf?v=2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer__item"
+        >
           <img src={resumeIcon} alt="" aria-hidden="true" />
           <span>Resume</span>
         </a>
