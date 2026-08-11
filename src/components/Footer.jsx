@@ -45,7 +45,7 @@ function Footer() {
 
         {/* Resume download */}
         <a
-          href="/resume.pdf?v=2"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="footer__item"
