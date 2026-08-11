@@ -58,7 +58,7 @@ import rumlyTestingAfter from "../../assets/images/rumly/testing-after.svg";
 
 //Deliver
 import rumlyFigmaVideo from "../../assets/images/rumly/deliver/rumly-figma.mov";
-import rumlyCodedVideo from "../../assets/images/rumly/deliver/rumly-figma.mov";
+import rumlyCodedVideo from "../../assets/images/rumly/deliver/rumly-coded.mov";
 import rumlyMockup from "../../assets/images/rumly/deliver/mockup.svg";
 
 const rumly = {
