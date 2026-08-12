@@ -1,14 +1,32 @@
+import { useNavigate } from "react-router";
+
 import "./ProjectHero.css";
+
+import backArrow from "../../assets/images/shared/back-arrow.svg";
 
 import ScrollReveal from "./sections/ScrollReveal";
 
 import ProjectOverview from "./ProjectOverview";
 
 function ProjectHero({ project }) {
+  const navigate = useNavigate();
+
   return (
     <header className="project-hero">
       <ScrollReveal>
-        <h1 className="project-hero__number">Work - {project.number}</h1>
+        <button
+          className="project-hero__back"
+          type="button"
+          onClick={() => navigate(-1)}
+          aria-label="Go back"
+        >
+          <img src={backArrow} alt="" aria-hidden="true" />
+          <p>Back</p>
+        </button>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <h1 className="project-hero__number">Project - {project.number}</h1>
       </ScrollReveal>
 
       <div className="project-hero__content">

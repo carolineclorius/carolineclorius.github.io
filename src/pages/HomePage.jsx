@@ -65,8 +65,8 @@ function HomePage() {
             <h2 className="projects-intro-title">Ideas I’ve brought to life</h2>
 
             <h3>
-              A selection of my work, where strategy, design and content come
-              together to create <span className="fed-h3">meaningful</span>{" "}
+              A selection of my projects, where strategy, design and content
+              come together to create <span className="fed-h3">meaningful</span>{" "}
               digital platforms.
             </h3>
           </div>

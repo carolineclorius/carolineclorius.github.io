@@ -18,7 +18,7 @@ function ProjectsPage() {
 
         <h2 className="below-title">Ideas I've brought to life</h2>
         <h3>
-          A selection of my work, where strategy, design and content come
+          A selection of my projects, where strategy, design and content come
           together to create{" "}
           <span className="fed-h3">meaningful digital platforms.</span>
         </h3>

@@ -19,11 +19,14 @@ const Quotes = [
     role: "Head of department at Dybbøl-skolen",
   },
   {
-    quote: "insert quote here",
-    secondParagraph: "insert quote here",
-    recommendation: "insert quote here",
-    name: "- insert Name",
-    role: "insert role",
+    quote:
+      "I have worked with Caroline on both Little Looms and Rumly. Caroline is a great team player and is highly skilled, perceptive, curious, and detail-oriented. In group settings, she is also very good at listening to others and giving their ideas room to develop.",
+    secondParagraph:
+      "She is equally capable of working independently, is not afraid to challenge established ideas, and does not give up when faced with difficulties.",
+    recommendation:
+      "In addition to her strong professional skills, she is sociable and contributes to a positive group dynamic, making her a truly valuable member of any team.",
+    name: "- Freia Mandrup Krog",
+    role: "Fellow student at EAAA Multimedia Design and project group member",
   },
   {
     quote: "insert quote here",
