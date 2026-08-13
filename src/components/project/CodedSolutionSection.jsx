@@ -57,6 +57,7 @@ function CodedSolutionSection({ data, onVisibilityChange }) {
           device={data.device}
           video={data.media.src}
           alt={data.media.alt}
+          variant={data.frameVariant}
         />
 
         {data.link?.href && (

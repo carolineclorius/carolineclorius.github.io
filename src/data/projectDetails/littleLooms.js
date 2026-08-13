@@ -735,6 +735,7 @@ const littleLooms = {
       ],
     },
     codedSolution: {
+      frameVariant: "little-looms",
       title: "Coded implementation",
       description:
         "The project was developed as a coded React prototype. Due to the project scope, only selected features were implemented.",
@@ -749,7 +750,7 @@ const littleLooms = {
 
       link: {
         label: "Open the programmed solution",
-        href: "https://eaa25cmc.github.io/customer-experience-exam/",
+        href: "https://carolineclorius.github.io/customer-experience-exam/",
       },
     },
     socialMedia: [],

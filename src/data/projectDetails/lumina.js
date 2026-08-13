@@ -673,7 +673,7 @@ const lumina = {
 
           link: {
             label: "Open programmed solution",
-            href: "https://eaa25cmc.github.io/LuminaEksamen/",
+            href: "https://carolineclorius.github.io/LuminaEksamen/",
           },
         },
       ],

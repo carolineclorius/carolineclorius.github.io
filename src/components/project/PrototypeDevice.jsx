@@ -6,13 +6,18 @@ import phoneFrame from "../../assets/images/shared/phone.svg";
 import "./PrototypeDevice.css";
 
 const PrototypeDevice = forwardRef(function PrototypeDevice(
-  { device, video, alt },
+  { device, video, alt, variant = "" },
   videoRef,
 ) {
   const frame = device === "desktop" ? desktopFrame : phoneFrame;
 
   return (
-    <div className={`prototype-device prototype-device--${device}`}>
+    <div
+      className={
+        `prototype-device prototype-device--${device}` +
+        (variant ? ` prototype-device--${variant}` : "")
+      }
+    >
       <img
         className="prototype-device__frame"
         src={frame}
