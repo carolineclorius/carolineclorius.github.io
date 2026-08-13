@@ -29,11 +29,14 @@ const Quotes = [
     role: "Fellow student at EAAA Multimedia Design and project group member",
   },
   {
-    quote: "insert quote here",
-    secondParagraph: "insert quote here",
-    recommendation: "insert quote here",
-    name: "- insert Name",
-    role: "insert role",
+    quote:
+      "I have had the pleasure of working with Caroline on our two most recent group projects. She is incredibly dedicated, positive, and a great team player. Caroline puts a great deal of effort into every project and is always focused on achieving a result that the entire group can be proud of.",
+    secondParagraph:
+      "She contributes many strong and creative ideas and, at the same time, has a great ability to turn them into concrete solutions. This makes her a valuable member of any project team.",
+    recommendation:
+      "I have especially appreciated her dedication, strong work ethic, and ability to make things happen.",
+    name: "- Mia Poder Olesen",
+    role: "Fellow student at EAAA Multimedia Design and project group member",
   },
 ];
 
