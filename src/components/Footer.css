@@ -20,6 +20,7 @@
 /* Position the footer heading */
 .footer__title {
   margin-top: 3rem;
+  margin-bottom: 1rem;
   grid-column: 1 / -1;
 }
 
@@ -38,18 +39,6 @@
 
 .footer__item:last-of-type {
   justify-self: end;
-}
-
-/* Style the footer heading */
-.footer__title h3 {
-  display: inline-block;
-
-  padding: 0.5rem;
-
-  border: 2px solid var(--lys-orange);
-  border-radius: 1rem;
-
-  margin: 0;
 }
 
 /* Align the footer icons and text */
@@ -87,6 +76,7 @@
   /* Reduce the spacing above the heading */
   .footer__title {
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   /* Align all footer items to the left */

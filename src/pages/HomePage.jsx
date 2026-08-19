@@ -62,7 +62,8 @@ function HomePage() {
         {/* Introduce the selected projects */}
         <ScrollReveal delay={50} distance="0.75rem">
           <div className="featured-projects-intro">
-            <h2 className="projects-intro-title">Ideas I’ve brought to life</h2>
+            <p className="projects-intro-title">PROJECTS</p>
+            <h2>Ideas I’ve brought to life</h2>
 
             <h3>
               A selection of my projects, where strategy, design and content
