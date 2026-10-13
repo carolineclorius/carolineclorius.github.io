@@ -1,15 +1,35 @@
 .mellemrum-develop {
+  position: relative;
+  isolation: isolate;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
   min-width: 0;
+
+  padding-block: 3rem;
+}
+
+.mellemrum-develop::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+
+  border: 1px solid var(--graa);
+  border-radius: 4rem;
+
+  pointer-events: none;
+  z-index: -1;
 }
 
 .mellemrum-develop__list {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   min-width: 0;
 }
 

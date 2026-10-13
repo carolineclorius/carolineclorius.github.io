@@ -8,7 +8,7 @@ import ImageGallery from "../ImageGallery";
 import ReflectionSection from "../ReflectionSection";
 
 import ScrollReveal from "./ScrollReveal";
-import MellemrumDeliver from "../MellemrumDeliver";
+import ProjectDeliver from "../ProjectDeliver";
 
 import "./ProcessSections.css";
 
@@ -20,7 +20,7 @@ function DeliverSection({ data }) {
   }, []);
 
   const hasContent =
-    Boolean(data.mellemrumDeliver) ||
+    Boolean(data.projectDeliver) ||
     Object.keys(data.prototype ?? {}).length > 0 ||
     Object.keys(data.codedSolution ?? {}).length > 0 ||
     data.socialMedia?.length > 0 ||
@@ -40,9 +40,9 @@ function DeliverSection({ data }) {
         <ProcessMarker title="Deliver" number="04" progress={100} />
       </ScrollReveal>
 
-      {data.mellemrumDeliver && (
+      {data.projectDeliver && (
         <ScrollReveal delay={100}>
-          <MellemrumDeliver data={data.mellemrumDeliver} />
+          <ProjectDeliver data={data.projectDeliver} />
         </ScrollReveal>
       )}
 

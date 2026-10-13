@@ -3,6 +3,7 @@ import rumlyImage from "../assets/images/rumly.svg";
 import littleloomsImage from "../assets/images/littlelooms.svg";
 import luminaImage from "../assets/images/lumina.svg";
 import mellemrumImage from "../assets/images/mellemrum.svg";
+import vuuhImage from "../assets/images/vuuh.svg";
 
 // Project data used across the portfolio
 const projects = [
@@ -76,6 +77,19 @@ const projects = [
       "A local event platform for discovering and signing up for cultural experiences in Aarhus.",
     tags: ["UX/UI", "Frontend", "React"],
     image: mellemrumImage,
+    links: [],
+  },
+
+  {
+    slug: "vuuh",
+    title: "Vuuh",
+    year: "2026",
+    summary:
+      "A UX optimization project focused on improving the onboarding experience for Vuuh, a Shopify plugin.",
+    description:
+      "A UX optimization project focused on improving the onboarding experience for Vuuh, a Shopify plugin.",
+    tags: ["UX/UI", "UX Evaluation", "Prototyping"],
+    image: vuuhImage,
     links: [],
   },
 ];

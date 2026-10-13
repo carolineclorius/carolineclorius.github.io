@@ -1,21 +1,29 @@
 import "./RequirementGrid.css";
 
-function RequirementGrid({ requirements }) {
+function RequirementGrid({
+  requirements,
+  title = "Design Requirements",
+  intro,
+  numbered = false,
+}) {
   if (!requirements?.length) return null;
 
   return (
     <section className="requirement-section">
-      <h2>Design Requirements</h2>
+      <h2>{title}</h2>
 
       <p className="requirement-section__intro">
-        The research was translated into {requirements.length} design
-        requirements.
+        {intro ??
+          `The research was translated into ${requirements.length} design requirements.`}
       </p>
 
       <div className="requirement-grid">
-        {requirements.map((requirement) => (
+        {requirements.map((requirement, index) => (
           <article className="requirement-card" key={requirement.title}>
-            <h3>{requirement.title}</h3>
+            <h3>
+              {numbered && `${String(index + 1).padStart(2, "0")} - `}
+              {requirement.title}
+            </h3>
             <small>{requirement.description}</small>
           </article>
         ))}

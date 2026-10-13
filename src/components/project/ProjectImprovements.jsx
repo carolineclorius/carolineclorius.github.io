@@ -1,11 +1,11 @@
-import "./MellemrumDevelop.css";
+import "./ProjectImprovements.css";
 
 import { useEffect, useRef, useState } from "react";
 
 import arrowDown from "../../assets/images/shared/arrow-down.svg";
 import arrowUp from "../../assets/images/shared/arrow-up.svg";
 
-function MellemrumDevelop({ data }) {
+function ProjectImprovements({ data }) {
   const loadingRef = useRef(null);
   const beforeVideoRef = useRef(null);
   const afterVideoRef = useRef(null);
@@ -85,6 +85,7 @@ function MellemrumDevelop({ data }) {
                           type="button"
                           ref={loadingRef}
                           className={`mellemrum-develop__video-button ${
+                            data.autoPlayVideos ||
                             activeLoadingVideo === "before"
                               ? "mellemrum-develop__video-button--active"
                               : ""
@@ -141,8 +142,9 @@ function MellemrumDevelop({ data }) {
                           aria-label="Play After loading video"
                         >
                           <video
-                            ref={afterVideoRef}
+                            ref={data.autoPlayVideos ? null : afterVideoRef}
                             src={image.video}
+                            autoPlay={data.autoPlayVideos}
                             muted
                             loop
                             playsInline
@@ -279,4 +281,4 @@ function MellemrumDevelop({ data }) {
   );
 }
 
-export default MellemrumDevelop;
+export default ProjectImprovements;

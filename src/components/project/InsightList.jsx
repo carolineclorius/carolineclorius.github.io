@@ -1,6 +1,6 @@
 import "./InsightList.css";
 
-function InsightList({ title, items }) {
+function InsightList({ title, description, items }) {
   if (!items?.length) return null;
 
   return (
@@ -8,8 +8,8 @@ function InsightList({ title, items }) {
       <h2>{title}</h2>
 
       <p className="insight-list__description">
-        The research revealed {items.length} key insights that shaped the design
-        direction.
+        {description ||
+          `The research revealed ${items.length} key insights that shaped the design direction.`}
       </p>
 
       <ul className="insight-list__grid">

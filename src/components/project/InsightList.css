@@ -43,11 +43,19 @@
   list-style: none;
 }
 
+.insight-list__grid:has(> :nth-child(3):last-child) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 /* Align icon and text */
 .insight-list__item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
+  background: var(--sand);
+  border-radius: 1rem;
+  padding: 1.5rem;
 }
 
 /* Style the insight icon */
@@ -71,16 +79,12 @@
     padding-block: 2rem;
     gap: 1.25rem;
   }
-
-  .insight-list__grid {
-    gap: 1.5rem;
-  }
-
   .insight-list::before {
     border-radius: 2rem;
   }
 
-  .insight-list__grid {
+  .insight-list__grid,
+  .insight-list__grid:has(> :nth-child(3):last-child) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
 
