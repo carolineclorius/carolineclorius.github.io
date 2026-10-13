@@ -1,12 +1,12 @@
 import "./ReflectionSection.css";
 import CheckIcon from "../../assets/images/shared/checkmark.svg";
 
-function ReflectionSection({ items }) {
+function ReflectionSection({ items, title = "Reflection" }) {
   if (!items?.length) return null;
 
   return (
     <section className="reflection">
-      <h2 className="reflection__title">Reflection</h2>
+      <h2 className="reflection__title">{title}</h2>
 
       <ul className="reflection__list">
         {items.map((item) => (

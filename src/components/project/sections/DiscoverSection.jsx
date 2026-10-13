@@ -1,9 +1,8 @@
 import SectionDivider from "../SectionDivider";
 import ProcessMarker from "../ProcessMarker";
-import ProjectSection from "../ProjectSection";
-import ContentCard from "../ContentCard";
 import ResearchSummary from "../ResearchSummary";
 import ResearchFindings from "../ResearchFindings";
+import MellemrumAudit from "../MellemrumAudit";
 
 import "./ProcessSections.css";
 import "./DiscoverSection.css";
@@ -20,28 +19,41 @@ function DiscoverSection({ data }) {
         <ProcessMarker title="Discover" number="01" progress={25} />
       </ScrollReveal>
 
-      {data.problem?.title && (
+      {(data.problem?.title || data.researchApproach?.title) && (
         <ScrollReveal delay={100}>
-          <ProjectSection
-            title={data.problem.title}
-            className="discover-section__problem"
-          >
-            {data.problem.paragraphs?.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+          <div className="discover-section__intro">
+            {data.problem?.title && (
+              <div className="discover-section__intro-column">
+                <h2>{data.problem.title}</h2>
 
-            {data.problem.conclusion && (
-              <p className="fed-h3">{data.problem.conclusion}</p>
+                <div className="discover-section__intro-text">
+                  {data.problem.paragraphs?.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+
+                  {data.problem.conclusion && (
+                    <p className="fed-h3">{data.problem.conclusion}</p>
+                  )}
+                </div>
+              </div>
             )}
-          </ProjectSection>
+
+            {data.researchApproach?.title && (
+              <div className="discover-section__intro-column">
+                <h2>{data.researchApproach.title}</h2>
+
+                {data.researchApproach.description && (
+                  <p>{data.researchApproach.description}</p>
+                )}
+              </div>
+            )}
+          </div>
         </ScrollReveal>
       )}
 
-      {data.researchApproach?.description && (
+      {data.codeAudit?.items?.length > 0 && (
         <ScrollReveal delay={100}>
-          <ContentCard title={data.researchApproach.title} variant="sand">
-            <p>{data.researchApproach.description}</p>
-          </ContentCard>
+          <MellemrumAudit data={data.codeAudit} />
         </ScrollReveal>
       )}
 

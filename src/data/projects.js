@@ -2,6 +2,7 @@
 import rumlyImage from "../assets/images/rumly.svg";
 import littleloomsImage from "../assets/images/littlelooms.svg";
 import luminaImage from "../assets/images/lumina.svg";
+import mellemrumImage from "../assets/images/mellemrum.svg";
 
 // Project data used across the portfolio
 const projects = [
@@ -63,6 +64,19 @@ const projects = [
         href: "https://github.com/username/username.github.io",
       },
     ],
+  },
+
+  {
+    slug: "mellemrum",
+    title: "Mellemrum",
+    year: "2026",
+    summary:
+      "A local event platform for discovering and signing up for cultural experiences in Aarhus.",
+    description:
+      "A local event platform for discovering and signing up for cultural experiences in Aarhus.",
+    tags: ["UX/UI", "Frontend", "React"],
+    image: mellemrumImage,
+    links: [],
   },
 ];
 

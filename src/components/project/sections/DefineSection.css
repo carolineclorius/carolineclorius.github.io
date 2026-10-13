@@ -1,0 +1,139 @@
+/* Fælles styling for de tre store sektioner */
+
+.define-section__findings,
+.define-section__areas,
+.define-section__goal {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 100%;
+  min-width: 0;
+  padding-block: 3rem;
+}
+
+.define-section__findings::before,
+.define-section__areas::before,
+.define-section__goal::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+
+  border: 1px solid var(--graa);
+  border-radius: 5.5rem;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Nøgletal */
+
+.define-section__stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-block: 1rem;
+}
+
+/* Findings – vandret scroll */
+
+.define-section__findings-scroll {
+  display: flex;
+  gap: 2rem;
+
+  width: calc(100% + 5rem);
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: auto;
+  scrollbar-color: var(--moerkegraa) transparent;
+
+  padding: 0.5rem 5rem 1.5rem 0;
+}
+
+.define-section__finding-card {
+  flex: 0 0 21rem;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem;
+  background: var(--sand);
+  border-radius: 1.5rem;
+}
+
+.define-section__finding-card p {
+  margin: 0;
+}
+
+/* Selected optimization areas */
+
+.define-section__areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.define-section__area-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 2rem;
+  background: var(--sand);
+  border-radius: 0.75rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* Optimization goal */
+
+.define-section__goal > p {
+  padding-block: 1rem;
+  border-top: 1px solid var(--graa);
+  border-bottom: 1px solid var(--graa);
+}
+
+/* Mobil */
+
+@media (max-width: 720px) {
+  .define-section__findings,
+  .define-section__areas,
+  .define-section__goal {
+    padding-block: 2rem;
+  }
+
+  .define-section__findings::before,
+  .define-section__areas::before,
+  .define-section__goal::before {
+    border-radius: 3rem;
+  }
+
+  .define-section__stats {
+    gap: 1.5rem;
+  }
+
+  .define-section__findings-scroll {
+    width: calc(100% + 2rem);
+    padding-right: 2rem;
+  }
+
+  .define-section__finding-card {
+    flex-basis: 18rem;
+    padding: 1.5rem;
+  }
+
+  .define-section__areas-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
