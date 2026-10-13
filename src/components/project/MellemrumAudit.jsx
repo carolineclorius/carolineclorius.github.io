@@ -14,6 +14,16 @@ function MellemrumAudit({ data }) {
           </article>
         ))}
       </div>
+      {data.auditLink && (
+        <a
+          className="mellemrum-audit__link"
+          href={data.auditLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View full Code & UX audit ↗
+        </a>
+      )}
     </div>
   );
 }

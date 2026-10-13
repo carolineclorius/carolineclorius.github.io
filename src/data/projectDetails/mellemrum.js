@@ -167,6 +167,9 @@ const mellemrum = {
       description:
         "I reviewed the solution across six technical and UX-related areas, documenting each finding based on its impact, potential solution, priority and method of verification.",
 
+      auditLink:
+        "https://www.figma.com/board/OJ5aIcl4a0RyCxsXuBujL6/Case-1---mellemrum---Teknisk-Audit?node-id=0-1&t=R1LryffcZx7penoZ-1",
+
       items: [
         {
           title: "Structure & naming",
