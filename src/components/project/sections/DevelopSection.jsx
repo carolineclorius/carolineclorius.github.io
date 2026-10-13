@@ -6,7 +6,7 @@ import WireframesSection from "../WireframesSection";
 import VisualIdentitySection from "../VisualIdentitySection";
 import DesignProcessSection from "../DesignProcessSection";
 
-import MellemrumDevelop from "../MellemrumDevelop";
+import ProjectImprovements from "../ProjectImprovements";
 
 import ScrollReveal from "./ScrollReveal";
 
@@ -24,7 +24,7 @@ function DevelopSection({ data = {}, project }) {
       </ScrollReveal>
 
       {data.wireframes?.groups?.length > 0 && (
-        <ScrollReveal delay={100}>
+        <ScrollReveal delay={0}>
           <WireframesSection data={data.wireframes} />
         </ScrollReveal>
       )}
@@ -36,9 +36,9 @@ function DevelopSection({ data = {}, project }) {
       )}
 
       {data.designProcess?.items?.length > 0 && (
-        <ScrollReveal delay={100}>
-          {project === "Mellemrum" ? (
-            <MellemrumDevelop data={data.designProcess} />
+        <ScrollReveal delay={0}>
+          {["Mellemrum", "Vuuh"].includes(project) ? (
+            <ProjectImprovements data={data.designProcess} />
           ) : (
             <DesignProcessSection data={data.designProcess} />
           )}

@@ -42,19 +42,12 @@ function DefineSection({ data }) {
 
       {data.optimizationAreas?.items?.length > 0 && (
         <ScrollReveal delay={100}>
-          <div className="define-section__areas">
-            <h2>{data.optimizationAreas.title}</h2>
-            <p>{data.optimizationAreas.description}</p>
-
-            <div className="define-section__areas-grid">
-              {data.optimizationAreas.items.map((item) => (
-                <article className="define-section__area-card" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
+          <RequirementGrid
+            requirements={data.optimizationAreas.items}
+            title={data.optimizationAreas.title}
+            intro={data.optimizationAreas.description}
+            numbered={data.optimizationAreas.numbered}
+          />
         </ScrollReveal>
       )}
 
@@ -69,7 +62,11 @@ function DefineSection({ data }) {
 
       {data.insights?.length > 0 && (
         <ScrollReveal delay={100}>
-          <InsightList title="Key insights" items={data.insights} />
+          <InsightList
+            title="Key insights"
+            description={data.insightsDescription}
+            items={data.insights}
+          />
         </ScrollReveal>
       )}
 

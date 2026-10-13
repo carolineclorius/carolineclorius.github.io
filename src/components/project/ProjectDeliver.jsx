@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 
 import PrototypeDevice from "./PrototypeDevice";
 
-import "./MellemrumDeliver.css";
+import "./ProjectDeliver.css";
 import ReflectionSection from "./ReflectionSection";
 
-export default function MellemrumDeliver({ data }) {
+export default function ProjectDeliver({ data }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function MellemrumDeliver({ data }) {
           ref={videoRef}
           device="desktop"
           video={data.video}
-          alt="The final optimized Mellemrum platform"
+          alt={data.title}
         />
 
         <div className="mellemrum-deliver__links">
@@ -51,28 +51,38 @@ export default function MellemrumDeliver({ data }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open the programmed solution
+            {data.githubLink ? "Open the programmed solution" : "Open in Figma"}
           </a>
-
-          <a
-            className="mellemrum-deliver__link mellemrum-deliver__link--secondary"
-            href={data.githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View on GitHub
-          </a>
+          {data.githubLink && (
+            <a
+              className="mellemrum-deliver__link mellemrum-deliver__link--secondary"
+              href={data.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          )}
+          {data.auditLink && (
+            <a
+              className="mellemrum-deliver__link mellemrum-deliver__link--secondary"
+              href={data.auditLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View UX Audit Summary
+            </a>
+          )}
         </div>
       </div>
 
-      {data.impactDescription && (
-        <ReflectionSection
-          items={[data.impactDescription]}
-          title={data.impactTitle}
-        />
-      )}
-
-      <ReflectionSection items={data.reflection} title={data.reflectionTitle} />
+      <ReflectionSection
+        title={data.impactTitle}
+        items={[
+          ...(data.impactDescription ? [data.impactDescription] : []),
+          ...(data.reflection || []),
+        ]}
+      />
     </div>
   );
 }

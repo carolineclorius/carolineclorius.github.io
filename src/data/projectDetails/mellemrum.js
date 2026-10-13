@@ -141,7 +141,7 @@ const mellemrum = {
       items: [
         "Final optimized solution",
         "Deployed application",
-        "Reflection & next steps",
+        "Impact & reflection",
       ],
     },
   ],
@@ -628,7 +628,7 @@ const mellemrum = {
     description:
       "The optimized React application includes clearer feedback, more reliable registration handling and reusable components.",
 
-    mellemrumDeliver: {
+    projectDeliver: {
       title: "Final optimized solution",
       description:
         "The final programmed solution brings together the implemented improvements, creating a more functional, reliable and user-friendly event platform. All improvements were retested in the deployed solution to verify that they worked as intended.",
@@ -636,16 +636,14 @@ const mellemrum = {
       link: "https://carolineclorius.github.io/Optimize-mellemrum/",
       githubLink: "https://github.com/carolineclorius/Optimize-mellemrum",
 
-      impactTitle: "Value & impact",
+      impactTitle: "Impact & reflection",
       impactDescription:
-        "The improvements create value for both users and organizers. Clearer feedback and more reliable registrations improve the user experience, while preventing duplicates gives organizers a more accurate overview. Reusable components also make the platform easier to maintain and develop further.",
+        "Clearer feedback and more reliable registrations improve the user experience, while preventing duplicates gives organizers a more accurate overview. Reusable components also make the platform easier to maintain.",
 
-      reflectionTitle: "Reflection and next steps",
       reflection: [
-        "I learned that optimizing an existing product is not about fixing everything, but identifying which improvements create the most value.",
-        "I gained a better understanding of how technical improvements, such as data structure and error handling, can contribute to a clearer and more reliable user experience.",
-        "Testing throughout the process taught me the importance of verifying that improvements work as intended, both during development and after deployment.",
-        "As a next step, I would conduct usability tests with actual users to evaluate how the improvements affect their experience beyond the functional testing.",
+        "I learned how prioritizing improvements can create more value than trying to fix everything at once.",
+        "Working with data structure, validation and error handling showed me how technical improvements contribute to a more reliable user experience.",
+        "Functional testing helped me verify that the improvements worked as intended. As a next step, I would conduct usability tests to evaluate the experience with actual users.",
       ],
     },
   },

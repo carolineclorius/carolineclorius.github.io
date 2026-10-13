@@ -1,3 +1,26 @@
+.requirement-section {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  padding-block: 3rem;
+}
+
+.requirement-section::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+
+  border: 1px solid var(--graa);
+  border-radius: 4rem;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
 .requirement-section__intro {
   margin-top: 1.5rem;
 }
@@ -57,6 +80,14 @@
 
 /* Mobile */
 @media (max-width: 720px) {
+  .requirement-section {
+    padding-block: 2rem;
+  }
+
+  .requirement-section::before {
+    border-radius: 3rem;
+  }
+
   .requirement-section__intro {
     margin-top: 1rem;
   }

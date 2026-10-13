@@ -1,7 +1,7 @@
 /* Add spacing around the footer */
 .footer {
-  margin-top: 1rem;
-  padding: 4rem 5rem;
+  margin-top: 0;
+  padding: 2rem 5rem 4rem;
 }
 
 /* Display the divider above the footer */

@@ -3,8 +3,9 @@ import rumly from "./rumly";
 import littleLooms from "./littleLooms";
 import lumina from "./lumina";
 import mellemrum from "./mellemrum";
+import vuuh from "./vuuh";
 
 // Detailed project data used on the project pages
-const projectDetails = [rumly, littleLooms, lumina, mellemrum];
+const projectDetails = [rumly, littleLooms, lumina, mellemrum, vuuh];
 
 export default projectDetails;

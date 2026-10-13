@@ -130,6 +130,20 @@
   border-radius: 0.5rem;
 }
 
+/* Mellemrum and Vuuh */
+.prototype-device--desktop .prototype-device__video {
+  top: 3.7%;
+  left: 11.5%;
+  width: 77%;
+  height: 88%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mellemrum-deliver .prototype-device--desktop .prototype-device__frame {
+  transform: scaleY(1);
+}
+
 /* Phone */
 .prototype-device--phone {
   width: 100%;

@@ -3,6 +3,7 @@ import ProcessMarker from "../ProcessMarker";
 import ResearchSummary from "../ResearchSummary";
 import ResearchFindings from "../ResearchFindings";
 import MellemrumAudit from "../MellemrumAudit";
+import VuuhFindings from "../VuuhFindings";
 
 import "./ProcessSections.css";
 import "./DiscoverSection.css";
@@ -54,6 +55,12 @@ function DiscoverSection({ data }) {
       {data.codeAudit?.items?.length > 0 && (
         <ScrollReveal delay={100}>
           <MellemrumAudit data={data.codeAudit} />
+        </ScrollReveal>
+      )}
+
+      {data.findings?.items?.length > 0 && (
+        <ScrollReveal delay={100}>
+          <VuuhFindings data={data.findings} />
         </ScrollReveal>
       )}
 
