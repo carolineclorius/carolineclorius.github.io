@@ -1,9 +1,12 @@
+import "./DefineSection.css";
+
 import SectionDivider from "../SectionDivider";
 import ProcessMarker from "../ProcessMarker";
 import InsightList from "../InsightList";
 import PersonaSection from "../PersonaSection";
 import QuestionList from "../QuestionList";
 import RequirementGrid from "../RequirementGrid";
+import PriorityFindings from "../PriorityFindings";
 
 import ScrollReveal from "./ScrollReveal";
 
@@ -14,7 +17,10 @@ function DefineSection({ data }) {
     data.insights?.length > 0 ||
     data.personas?.length > 0 ||
     data.questions?.length > 0 ||
-    data.requirements?.length > 0;
+    data.requirements?.length > 0 ||
+    data.findings?.items?.length > 0 ||
+    data.optimizationAreas?.items?.length > 0 ||
+    Boolean(data.optimizationGoal?.description);
 
   if (!hasContent) return null;
 
@@ -27,6 +33,39 @@ function DefineSection({ data }) {
       <ScrollReveal delay={75} distance="0.75rem">
         <ProcessMarker title="Define" number="02" progress={50} />
       </ScrollReveal>
+
+      {data.findings?.items?.length > 0 && (
+        <ScrollReveal delay={100}>
+          <PriorityFindings data={data.findings} />
+        </ScrollReveal>
+      )}
+
+      {data.optimizationAreas?.items?.length > 0 && (
+        <ScrollReveal delay={100}>
+          <div className="define-section__areas">
+            <h2>{data.optimizationAreas.title}</h2>
+            <p>{data.optimizationAreas.description}</p>
+
+            <div className="define-section__areas-grid">
+              {data.optimizationAreas.items.map((item) => (
+                <article className="define-section__area-card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+      )}
+
+      {data.optimizationGoal?.description && (
+        <ScrollReveal delay={100}>
+          <div className="define-section__goal">
+            <h2>{data.optimizationGoal.title}</h2>
+            <p>{data.optimizationGoal.description}</p>
+          </div>
+        </ScrollReveal>
+      )}
 
       {data.insights?.length > 0 && (
         <ScrollReveal delay={100}>

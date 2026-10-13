@@ -1,0 +1,45 @@
+.mellemrum-loading-videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.mellemrum-loading-videos__item {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  opacity: 0.35;
+  filter: blur(2px);
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+
+.mellemrum-loading-videos__item--active {
+  opacity: 1;
+  filter: none;
+}
+
+.mellemrum-loading-videos__item video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.mellemrum-loading-videos__item:focus-visible {
+  outline: 2px solid var(--lys-orange);
+  outline-offset: 4px;
+}
+
+@media (max-width: 720px) {
+  .mellemrum-loading-videos {
+    grid-template-columns: 1fr;
+  }
+}

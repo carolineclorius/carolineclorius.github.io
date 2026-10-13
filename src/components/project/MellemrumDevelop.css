@@ -1,0 +1,303 @@
+.mellemrum-develop {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.mellemrum-develop__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  min-width: 0;
+}
+
+.mellemrum-develop__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 4rem max(2rem, calc((100vw - 80rem) / 2));
+
+  background-color: var(--sand);
+  border-radius: 5.5rem;
+}
+
+.mellemrum-develop__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mellemrum-develop__comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  min-width: 0;
+}
+
+.mellemrum-develop__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.mellemrum-develop__panel h3,
+.mellemrum-develop__panel p {
+  text-align: center;
+}
+
+.mellemrum-develop__panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mellemrum-develop__before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mellemrum-develop__before h3,
+.mellemrum-develop__before p {
+  text-align: center;
+}
+
+.mellemrum-develop__before img {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.mellemrum-develop__after {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.mellemrum-develop__after > h3,
+.mellemrum-develop__after > p {
+  text-align: center;
+}
+
+.mellemrum-develop__scroll {
+  display: flex;
+  gap: 1.5rem;
+
+  width: calc(100% + (100vw - 100%) / 2);
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 0.5rem 0 1.5rem;
+
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--moerkegraa) transparent;
+}
+
+.mellemrum-develop__slide {
+  flex: 0 0 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.mellemrum-develop__slide > p {
+  text-align: center;
+}
+
+.mellemrum-develop__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.mellemrum-develop__code {
+  width: 100%;
+  min-width: 0;
+}
+
+.mellemrum-develop__code-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.75rem 0;
+  color: var(--lys-orange);
+  cursor: pointer;
+  list-style: none;
+}
+
+.mellemrum-develop__code-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.mellemrum-develop__code-toggle:focus-visible {
+  outline: 2px solid var(--lys-orange);
+  outline-offset: 4px;
+}
+
+.mellemrum-develop__code-show,
+.mellemrum-develop__code-hide {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.mellemrum-develop__code-arrow {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mellemrum-develop__code-hide,
+.mellemrum-develop__code-arrow--up {
+  display: none;
+}
+
+.mellemrum-develop__code[open] .mellemrum-develop__code-show,
+.mellemrum-develop__code[open] .mellemrum-develop__code-arrow--down {
+  display: none;
+}
+
+.mellemrum-develop__code[open] .mellemrum-develop__code-hide,
+.mellemrum-develop__code[open] .mellemrum-develop__code-arrow--up {
+  display: block;
+}
+
+.mellemrum-develop__code-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.mellemrum-develop__snippet {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 45rem;
+}
+
+.mellemrum-develop__snippet img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mellemrum-develop__comparison-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mellemrum-develop__comparison-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mellemrum-develop__panel video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.mellemrum-develop__video-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  opacity: 0.35;
+  filter: blur(2px);
+
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+
+.mellemrum-develop__video-button--active {
+  opacity: 1;
+  filter: none;
+}
+
+.mellemrum-develop__video-button video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.mellemrum-develop__video-button:focus-visible {
+  outline: 2px solid var(--lys-orange);
+  outline-offset: 4px;
+}
+
+.mellemrum-develop__snippet-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mellemrum-develop__snippet-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mellemrum-develop__snippet h3,
+.mellemrum-develop__snippet-image p {
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .mellemrum-develop__list {
+    gap: 3rem;
+  }
+
+  .mellemrum-develop__item {
+    padding: 2.5rem 1.5rem;
+    border-radius: 2.5rem;
+  }
+
+  .mellemrum-develop__comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .mellemrum-develop__slide {
+    flex-basis: 85%;
+  }
+}
