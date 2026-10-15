@@ -8,6 +8,10 @@ import DesignProcessSection from "../DesignProcessSection";
 
 import ProjectImprovements from "../ProjectImprovements";
 
+import BrandIdentitySection from "../BrandIdentitySection";
+
+import ProductDiscoverySection from "../ProductDiscoverySection";
+
 import ScrollReveal from "./ScrollReveal";
 
 import "./ProcessSections.css";
@@ -32,6 +36,28 @@ function DevelopSection({ data = {}, project }) {
       {data.visualIdentity && (
         <ScrollReveal delay={100}>
           <VisualIdentitySection data={data.visualIdentity} project={project} />
+        </ScrollReveal>
+      )}
+
+      {data.finalVisualIdentity && (
+        <ScrollReveal delay={100}>
+          <VisualIdentitySection
+            data={data.finalVisualIdentity}
+            project={project}
+            variant="final"
+          />
+        </ScrollReveal>
+      )}
+
+      {data.brandIdentity && (
+        <ScrollReveal delay={100}>
+          <BrandIdentitySection data={data.brandIdentity} />
+        </ScrollReveal>
+      )}
+
+      {data.productDiscovery && (
+        <ScrollReveal delay={100}>
+          <ProductDiscoverySection data={data.productDiscovery} />
         </ScrollReveal>
       )}
 

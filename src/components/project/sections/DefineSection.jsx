@@ -40,17 +40,6 @@ function DefineSection({ data }) {
         </ScrollReveal>
       )}
 
-      {data.optimizationAreas?.items?.length > 0 && (
-        <ScrollReveal delay={100}>
-          <RequirementGrid
-            requirements={data.optimizationAreas.items}
-            title={data.optimizationAreas.title}
-            intro={data.optimizationAreas.description}
-            numbered={data.optimizationAreas.numbered}
-          />
-        </ScrollReveal>
-      )}
-
       {data.optimizationGoal?.description && (
         <ScrollReveal delay={100}>
           <div className="define-section__goal">
@@ -83,6 +72,17 @@ function DefineSection({ data }) {
       {data.questions?.length > 0 && (
         <ScrollReveal delay={100}>
           <QuestionList questions={data.questions} />
+        </ScrollReveal>
+      )}
+
+      {data.optimizationAreas?.items?.length > 0 && (
+        <ScrollReveal delay={100}>
+          <RequirementGrid
+            requirements={data.optimizationAreas.items}
+            title={data.optimizationAreas.title}
+            intro={data.optimizationAreas.description}
+            numbered={data.optimizationAreas.numbered}
+          />
         </ScrollReveal>
       )}
 

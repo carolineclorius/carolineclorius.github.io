@@ -1,19 +1,26 @@
 import "./VuuhFindings.css";
 import arrowRight from "../../assets/images/shared/arrow-right.svg";
 
-function VuuhFindings({ data }) {
+function VuuhFindings({ data, variant }) {
   return (
-    <div className="vuuh-findings">
+    <div
+      className={`vuuh-findings ${
+        variant === "la-seconde" ? "vuuh-findings--la-seconde" : ""
+      }`}
+    >
       <h2>{data.title}</h2>
+      {data.description && <p>{data.description}</p>}
 
-      <div className="vuuh-findings__stats">
-        {data.stats?.map((stat, index) => (
-          <div key={index} className="vuuh-findings__stat">
-            {stat.icon && <img src={stat.icon} alt="" />}
-            <p className="fed-h3">{stat.value}</p>
-          </div>
-        ))}
-      </div>
+      {variant !== "la-seconde" && (
+        <div className="vuuh-findings__stats">
+          {data.stats?.map((stat, index) => (
+            <div key={index} className="vuuh-findings__stat">
+              {stat.icon && <img src={stat.icon} alt="" />}
+              <p className="fed-h3">{stat.value}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {data.evaluationLink && (
         <a
@@ -33,7 +40,10 @@ function VuuhFindings({ data }) {
               {finding.icon && <img src={finding.icon} alt="" />}
               <h3>{finding.title}</h3>
             </div>
-            <p className="vuuh-findings__priority">{finding.priority}</p>
+
+            {variant !== "la-seconde" && (
+              <p className="vuuh-findings__priority">{finding.priority}</p>
+            )}
 
             <div className="vuuh-findings__content">
               <div>
@@ -42,8 +52,12 @@ function VuuhFindings({ data }) {
               </div>
 
               <div>
-                <h4>Impact</h4>
-                <p>{finding.impact}</p>
+                <h4>{variant === "la-seconde" ? "Implication" : "Impact"}</h4>
+                <p>
+                  {variant === "la-seconde"
+                    ? finding.implication
+                    : finding.impact}
+                </p>
               </div>
             </div>
 
@@ -71,14 +85,15 @@ function VuuhFindings({ data }) {
                             className="vuuh-findings__screenshot-image"
                           />
 
-                          {imageIndex < group.images.length - 1 && (
-                            <img
-                              src={arrowRight}
-                              alt=""
-                              aria-hidden="true"
-                              className="vuuh-findings__arrow"
-                            />
-                          )}
+                          {variant !== "la-seconde" &&
+                            imageIndex < group.images.length - 1 && (
+                              <img
+                                src={arrowRight}
+                                alt=""
+                                aria-hidden="true"
+                                className="vuuh-findings__arrow"
+                              />
+                            )}
                         </div>
                       ))}
                     </div>

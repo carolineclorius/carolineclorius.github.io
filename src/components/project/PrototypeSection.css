@@ -1,3 +1,24 @@
+/* LA SECONDE – Rounded section border */
+.prototype--la-seconde {
+  position: relative;
+  padding-block: 4rem;
+}
+
+.prototype--la-seconde::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+
+  border: 1px solid var(--graa);
+  border-radius: 5.5rem;
+
+  pointer-events: none;
+}
+
+/* prototype section */
+
 .prototype {
   width: 100%;
 }
@@ -138,6 +159,63 @@
 .prototype--lumina .prototype__item:last-child .prototype-device__video {
   top: 4%;
   left: 12.2946%;
+}
+
+/* LA SECONDE – Larger phone prototypes */
+.prototype--la-seconde .prototype__devices {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+  align-items: start;
+  gap: 3rem;
+
+  width: 100%;
+  max-width: 75rem;
+  margin: 3rem auto 0;
+}
+
+.prototype--la-seconde .prototype__item {
+  width: 100%;
+  max-width: none;
+}
+
+.prototype--la-seconde .prototype__framed-video {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+/* Links below prototype videos */
+.prototype__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.prototype__footer-link {
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  color: var(--hvid);
+  background-color: var(--lys-orange);
+  text-decoration: none;
+}
+
+.prototype__footer-link--secondary {
+  background: transparent;
+  color: var(--sort);
+  border: 1px solid var(--graa);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.prototype__footer-link--secondary:hover {
+  background: var(--moerkegraa);
+  color: var(--hvid);
+  border-color: var(--moerkegraa);
 }
 
 @media (max-width: 720px) {

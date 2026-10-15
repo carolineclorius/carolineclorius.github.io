@@ -436,7 +436,7 @@ const vuuh = {
 
       impactTitle: "Impact & reflection",
       impactDescription:
-        "The redesigned onboarding aims to make the setup process clearer through better guidance, feedback and more visible next steps. This could help more merchants complete the setup successfully and start using Vuuh.",
+        "Clearer guidance, feedback and next steps can reduce uncertainty, help merchants complete onboarding and increase successful setups for Vuuh.",
 
       reflection: [
         "Through heuristic evaluation and cognitive walkthroughs, I learned how to identify usability issues and translate them into prioritized design improvements.",

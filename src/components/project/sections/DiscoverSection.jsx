@@ -4,6 +4,7 @@ import ResearchSummary from "../ResearchSummary";
 import ResearchFindings from "../ResearchFindings";
 import MellemrumAudit from "../MellemrumAudit";
 import VuuhFindings from "../VuuhFindings";
+import InsightList from "../InsightList";
 
 import "./ProcessSections.css";
 import "./DiscoverSection.css";
@@ -68,8 +69,23 @@ function DiscoverSection({ data }) {
         <ScrollReveal delay={100}>
           <ResearchSummary
             title={data.competitors.title}
+            description={data.competitors.description}
             items={data.competitors.items}
+            screenshots={data.competitors.screenshots}
+            variant={data.competitors.variant}
           />
+        </ScrollReveal>
+      )}
+
+      {data.performance?.items?.length > 0 && (
+        <ScrollReveal delay={100}>
+          <InsightList {...data.performance} variant="performance" />
+        </ScrollReveal>
+      )}
+
+      {data.findingsReview?.items?.length > 0 && (
+        <ScrollReveal delay={100}>
+          <VuuhFindings data={data.findingsReview} variant="la-seconde" />
         </ScrollReveal>
       )}
 

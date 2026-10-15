@@ -55,6 +55,7 @@
 .vuuh-findings__priority {
   text-align: center;
   margin-top: 0.5rem;
+  max-width: none;
 }
 
 .vuuh-findings__content {
@@ -202,6 +203,54 @@
   border-color: var(--moerkegraa);
 }
 
+/* LA SECONDE */
+
+.vuuh-findings--la-seconde .vuuh-findings__heading {
+  justify-content: flex-start;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__card h3 {
+  text-align: left;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__content > div {
+  width: 100%;
+  max-width: 38rem;
+  margin-inline: auto;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__screenshots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__screenshot-group {
+  min-width: 0;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__screenshot-row {
+  width: 100%;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__screenshot-item {
+  flex: 1;
+}
+
+.vuuh-findings--la-seconde .vuuh-findings__screenshot-image {
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 720px) {
   .vuuh-findings {
     padding-block: 2rem;
@@ -261,5 +310,15 @@
   .vuuh-findings__arrow {
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  /* LA SECONDE*/
+  .vuuh-findings--la-seconde .vuuh-findings__screenshots {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .vuuh-findings--la-seconde .vuuh-findings__content {
+    grid-template-columns: 1fr;
   }
 }
