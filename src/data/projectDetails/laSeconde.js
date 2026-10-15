@@ -49,14 +49,14 @@ const laSeconde = {
   number: "06",
   title: "LA SECONDE",
   summary:
-    "Redesigning LA ROUGE’s secondhand experience through a dedicated subbrand and improved buying and selling journeys.",
+    "Redesigning LA ROUGE's secondhand experience through a dedicated subbrand and improved buying and selling journeys.",
   heroImage: lasecondeImage,
 
   overview: [
     { label: "Client", value: "Semester project" },
     { label: "Duration", value: "2 weeks" },
     { label: "Team", value: "2 designers" },
-    { label: "My role", value: "UX/UI & Brand Designer" },
+    { label: "My role", value: "UX/UI and Brand Designer" },
     {
       label: "Design tools",
       value: "Figma, FigJam, Photoshop, Illustrator",
@@ -72,7 +72,7 @@ const laSeconde = {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "LA ROUGE’s existing secondhand experience lacked visibility and a distinct identity.",
+        "LA ROUGE's existing secondhand experience lacked visibility and a distinct identity.",
       ],
       conclusion:
         "We aimed to strengthen it through a subbrand connected to LA ROUGE.",
@@ -81,7 +81,7 @@ const laSeconde = {
     researchApproach: {
       title: "Optimization approach",
       description:
-        "We reviewed LA ROUGE’s secondhand experience, brand identity and competitors to guide the redesign.",
+        "We reviewed LA ROUGE's secondhand experience, brand identity and competitors to guide the redesign.",
     },
 
     competitors: {
@@ -94,7 +94,7 @@ const laSeconde = {
           title: "Vinted",
         },
         {
-          title: "Tise & Marketplace",
+          title: "Tise and Marketplace",
         },
       ],
 

@@ -49,7 +49,7 @@ const vuuh = {
   project: "Vuuh",
 
   number: "05",
-  title: "Vuuh.",
+  title: "Vuuh",
   heroImage: vuuhImage,
 
   summary:
@@ -216,7 +216,7 @@ const vuuh = {
           image: personaImage,
 
           quote:
-            "I want to feel confident that I’m setting up Vuuh correctly, without having to figure everything out on my own.",
+            "I want to feel confident that I'm setting up Vuuh correctly, without having to figure everything out on my own.",
 
           motivations: [
             "Set up Vuuh correctly",
