@@ -71,6 +71,7 @@ import finalSolutionVideo from "../../assets/images/mellemrum/deliver/final-solu
 
 const mellemrum = {
   slug: "mellemrum",
+  hideProcessVisuals: true,
   project: "Mellemrum",
 
   number: "04",
@@ -94,7 +95,7 @@ const mellemrum = {
     },
     {
       label: "My role",
-      value: "UX/UI Designer & Frontend Developer",
+      value: "UX/UI Designer and Frontend Developer",
     },
     {
       label: "Design tools",
@@ -106,43 +107,7 @@ const mellemrum = {
     },
     {
       label: "Methods",
-      value: "Code audit, functional testing, accessibility checks, Lighthouse",
-    },
-  ],
-
-  process: [
-    {
-      title: "Discover",
-      items: [
-        "Code & UX audit",
-        "Lighthouse analysis",
-        "Issues & opportunities",
-      ],
-    },
-    {
-      title: "Define",
-      items: [
-        "Key challenges",
-        "Prioritized improvements",
-        "Technical requirements",
-      ],
-    },
-    {
-      title: "Develop",
-      items: [
-        "Registration flow",
-        "Feedback & error handling",
-        "Loading & UI states",
-        "Testing & verification",
-      ],
-    },
-    {
-      title: "Deliver",
-      items: [
-        "Final optimized solution",
-        "Deployed application",
-        "Impact & reflection",
-      ],
+      value: "Code and UX Audit, Functional Testing and Lighthouse",
     },
   ],
 
@@ -150,22 +115,22 @@ const mellemrum = {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "Mellemrum was an existing React-based event platform for discovering and registering for local events in Aarhus. The solution had opportunities for improvement in usability, functionality, performance and code maintainability.",
+        "Mellemrum is a React-based event platform for discovering and registering for local events in Aarhus.",
       ],
       conclusion:
-        "My task was to identify and implement improvements to the existing solution through code.",
+        "My task was to improve its usability, functionality, performance and code maintainability.",
     },
 
     researchApproach: {
       title: "Optimization approach",
       description:
-        "I evaluated the existing solution across UX, code structure, data model and performance. Through a code and UX audit, Lighthouse testing and functional testing, I identified and prioritized improvements based on their impact.",
+        "I conducted a code and UX audit, Lighthouse analysis and functional testing to prioritize improvements in UX, code, data and performance.",
     },
 
     codeAudit: {
       title: "Code & UX audit",
       description:
-        "I reviewed the solution across six technical and UX-related areas, documenting each finding based on its impact, potential solution, priority and method of verification.",
+        "I documented findings across six areas, including their impact, priority, potential solutions and verification methods.",
 
       auditLink:
         "https://www.figma.com/board/OJ5aIcl4a0RyCxsXuBujL6/Case-1---mellemrum---Teknisk-Audit?node-id=0-1&t=R1LryffcZx7penoZ-1",
@@ -204,8 +169,7 @@ const mellemrum = {
 
     findings: {
       title: "From findings to priorities",
-      description:
-        "I evaluated 34 findings based on their impact on usability, functionality and the core user flows. Each finding was rated on a scale from 1-5, helping me identify the most critical issues and prioritize improvements.The findings highlighted below were all rated 5/5 (high priority).",
+      description: "Five of the most critical findings are highlighted below.",
 
       stats: [
         {
@@ -256,32 +220,6 @@ const mellemrum = {
         },
       ],
     },
-
-    optimizationAreas: {
-      title: "Selected optimization areas",
-      description: "The findings were grouped into three optimization areas.",
-
-      items: [
-        {
-          title: "01 - Registration flow",
-          description: "Data persistence and duplicate prevention.",
-        },
-        {
-          title: "02 - Feedback & error handling",
-          description: "Validation, success and error feedback.",
-        },
-        {
-          title: "03 - Loading & UI states",
-          description: "Feedback while data is being fetched.",
-        },
-      ],
-    },
-
-    optimizationGoal: {
-      title: "Optimization goal",
-      description:
-        "How might I turn the existing React prototype into a more robust and reliable solution with a functional registration flow and clear feedback throughout the user journey?",
-    },
   },
 
   develop: {
@@ -289,14 +227,14 @@ const mellemrum = {
       title: "Improvements",
 
       intro:
-        "Based on the prioritized findings, I implemented the improvements iteratively in separate feature branches. Each change was tested and verified before being merged, allowing me to improve the solution without losing sight of the existing user flows.",
+        "I implemented and tested the prioritized improvements in separate feature branches before merging.",
 
       items: [
         {
           title: "Improving the registration flow",
           layout: "comparison",
           description:
-            "The original form only logged the submitted data to the console. I connected the form to Supabase through a dedicated service function, allowing registrations to be persisted in Supabase.",
+            "Previously, registrations were only logged to the console. I connected the form to Supabase through a service function to persist registration data.",
 
           before: {
             title: "Registration data was only logged to the console",
@@ -362,7 +300,7 @@ const mellemrum = {
           title: "Improving registration validation and feedback",
           layout: "scroll",
           description:
-            "The original registration flow lacked form validation and visible feedback, leaving users unsure whether their registration was successful or if something went wrong. I implemented input validation, clear error messages and a success state to guide users through the registration process.",
+            "I added form validation, error messages and success feedback to make the registration process clearer.",
 
           before: feedbackBefore,
           beforeDescription: "No validation or feedback",
@@ -418,7 +356,7 @@ const mellemrum = {
           title: "Registration error handling",
           layout: "comparison",
           description:
-            "The registration flow could display a success message even when Supabase rejected the request. I improved the error handling to ensure failed registrations display a clear error message instead of a false confirmation.",
+            "I improved error handling to prevent false success confirmations when Supabase requests fail.",
 
           before: {
             title: "A failed registration could still appear successful",
@@ -490,7 +428,7 @@ const mellemrum = {
           title: "Preventing duplicate registrations",
           layout: "scroll",
           description:
-            "Previously, the same email could register for an event multiple times, creating duplicate registrations. I implemented a check to prevent duplicates while allowing users to register for different events. I also prevented repeated submissions from double-clicking the registration button.",
+            "I prevented duplicate registrations for the same email and event, as well as repeated submissions from double-clicking.",
 
           before: duplicateBefore,
           beforeDescription: "The same user could register twice",
@@ -547,7 +485,7 @@ const mellemrum = {
           title: "Reusable loading state",
           layout: "comparison",
           description:
-            "Pages could appear empty while fetching data, leaving users unsure if content was loading. I created a reusable loading component to provide clear visual feedback across multiple pages.",
+            "I created a reusable loading component to provide feedback while data is fetched across multiple pages.",
 
           before: {
             title: "No feedback while data was loading",
@@ -557,7 +495,7 @@ const mellemrum = {
                 image: loadingNetworkTest,
               },
               {
-                title: "Tested across Home, Event and Registrations pages",
+                title: "Tested across all pages",
                 video: loadingBefore,
               },
             ],
@@ -571,7 +509,7 @@ const mellemrum = {
                 image: loadingNetworkTest,
               },
               {
-                title: "Tested across Home, Event and Registrations pages",
+                title: "Tested across all pages",
                 video: loadingAfter,
               },
             ],
@@ -629,26 +567,19 @@ const mellemrum = {
   deliver: {
     title: "Deliver",
     description:
-      "The optimized React application includes clearer feedback, more reliable registration handling and reusable components.",
+      "The optimized solution was retested in deployment to verify the implemented improvements.",
 
     projectDeliver: {
       title: "Final optimized solution",
       description:
-        "The final programmed solution brings together the implemented improvements, creating a more functional, reliable and user-friendly event platform. All improvements were retested in the deployed solution to verify that they worked as intended.",
+        "All improvements were retested in the deployed solution to verify their functionality.",
       video: finalSolutionVideo,
       link: "https://carolineclorius.github.io/Optimize-mellemrum/",
       githubLink: "https://github.com/carolineclorius/Optimize-mellemrum",
-
-      impactTitle: "Impact & reflection",
-      impactDescription:
-        "Clearer feedback and more reliable registrations improve the user experience, while preventing duplicates gives organizers a more accurate overview. Reusable components also make the platform easier to maintain.",
-
-      reflection: [
-        "I learned how prioritizing improvements can create more value than trying to fix everything at once.",
-        "Working with data structure, validation and error handling showed me how technical improvements contribute to a more reliable user experience.",
-        "Functional testing helped me verify that the improvements worked as intended. As a next step, I would conduct usability tests to evaluate the experience with actual users.",
-      ],
     },
+    reflection: [
+      "Reliable registrations and clearer feedback improved usability and made sign-ups more dependable for users and organizers. Reusable components improved maintainability. I learned to prioritize high-impact improvements and build more reliable solutions. Functional testing verified the changes, but usability testing would be the next step.",
+    ],
   },
 };
 

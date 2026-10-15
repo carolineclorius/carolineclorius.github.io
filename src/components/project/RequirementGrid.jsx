@@ -12,10 +12,12 @@ function RequirementGrid({
     <section className="requirement-section">
       <h2>{title}</h2>
 
-      <p className="requirement-section__intro">
-        {intro ??
-          `The research was translated into ${requirements.length} design requirements.`}
-      </p>
+      {intro !== "" && (
+        <p className="requirement-section__intro">
+          {intro ??
+            `The research was translated into ${requirements.length} design requirements.`}
+        </p>
+      )}
 
       <div className="requirement-grid">
         {requirements.map((requirement, index) => (

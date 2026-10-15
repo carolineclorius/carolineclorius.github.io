@@ -31,19 +31,40 @@ function ProjectPage() {
     <main className="page project-page">
       <ProjectHero project={project} />
 
-      {project.process?.length > 0 && (
-        <ProjectProcess steps={project.process} />
+      {!["mellemrum", "vuuh", "la-seconde"].includes(slug) &&
+        project.process?.length > 0 && (
+          <ProjectProcess steps={project.process} />
+        )}
+
+      {project.discover && (
+        <DiscoverSection
+          data={project.discover}
+          hideProcessMarker={["mellemrum", "vuuh", "la-seconde"].includes(slug)}
+        />
       )}
 
-      {project.discover && <DiscoverSection data={project.discover} />}
-
-      {project.define && <DefineSection data={project.define} />}
+      {project.define && (
+        <DefineSection
+          data={project.define}
+          hideProcessMarker={["mellemrum", "vuuh", "la-seconde"].includes(slug)}
+        />
+      )}
 
       {project.develop && (
-        <DevelopSection data={project.develop} project={project.project} />
+        <DevelopSection
+          data={project.develop}
+          project={project.project}
+          hideProcessMarker={["mellemrum", "vuuh", "la-seconde"].includes(slug)}
+        />
       )}
 
-      {project.deliver && <DeliverSection data={project.deliver} />}
+      {project.deliver && (
+        <DeliverSection
+          data={project.deliver}
+          hideIcon={["mellemrum", "vuuh", "la-seconde"].includes(slug)}
+          hideProcessMarker={["mellemrum", "vuuh", "la-seconde"].includes(slug)}
+        />
+      )}
 
       <ScrollToTopButton />
     </main>

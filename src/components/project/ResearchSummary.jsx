@@ -14,14 +14,14 @@ function ResearchSummary({ title, description, items, screenshots, variant }) {
         {variant === "la-seconde" ? (
           <div className="research-summary__groups">
             <div className="research-summary__group">
-              <h3 className="fed-h3">{items[0].title}</h3>
+              <h4 className="fed-h3">{items[0].title}</h4>
               <p>{items[0].description}</p>
 
               <img src={screenshots[0].image} alt={screenshots[0].alt} />
             </div>
 
             <div className="research-summary__group">
-              <h3 className="fed-h3">{items[1].title}</h3>
+              <h4 className="fed-h3">{items[1].title}</h4>
               <p>{items[1].description}</p>
 
               <div className="research-summary__group-images">

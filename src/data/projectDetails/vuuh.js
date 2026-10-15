@@ -26,10 +26,6 @@ import connection2 from "../../assets/images/vuuh/discover/connection-2.png";
 import ordersImage from "../../assets/images/vuuh/discover/orders.png";
 
 /* Define */
-import overviewIcon from "../../assets/images/vuuh/define/lack-of-overview.svg";
-import feedbackIcon from "../../assets/images/mellemrum/define/finding-2.svg";
-import systemStatusIcon from "../../assets/images/vuuh/define/unclear-system-status.svg";
-
 import personaImage from "../../assets/images/vuuh/define/persona-maria.svg";
 
 /* Develop */
@@ -49,6 +45,7 @@ import finalSolutionVideo from "../../assets/images/vuuh/deliver/final-solution.
 
 const vuuh = {
   slug: "vuuh",
+  hideProcessVisuals: true,
   project: "Vuuh",
 
   number: "05",
@@ -56,7 +53,7 @@ const vuuh = {
   heroImage: vuuhImage,
 
   summary:
-    "A semester project in collaboration with Vuuh, focused on improving the onboarding experience of their Shopify plugin through usability evaluations and interactive prototyping.",
+    "A semester project with Vuuh, focused on improving their Shopify plugin's onboarding through usability evaluations and interactive prototyping.",
 
   overview: [
     {
@@ -89,33 +86,14 @@ const vuuh = {
     },
   ],
 
-  process: [
-    {
-      title: "Discover",
-      items: ["Heuristic evaluation", "Cognitive walkthrough", "UX findings"],
-    },
-    {
-      title: "Define",
-      items: ["Optimization areas", "Key insights", "persona", "HMW questions"],
-    },
-    {
-      title: "Develop",
-      items: ["UI improvements", "Interactive prototyping"],
-    },
-    {
-      title: "Deliver",
-      items: ["Final Figma prototype", "Impact & reflection"],
-    },
-  ],
-
   discover: {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "Vuuh is a Shopify plugin designed to help merchants manage product data and imagery. The existing onboarding experience presented usability challenges that could make it difficult for users to understand and complete the setup process.",
+        "Vuuh helps Shopify users manage product data and imagery, but usability issues made the onboarding process difficult to navigate.",
       ],
       conclusion:
-        "The goal was to identify usability issues and improve the onboarding experience through UX/UI design.",
+        "Our goal was to identify usability issues and redesign the onboarding experience.",
     },
 
     researchApproach: {
@@ -152,10 +130,10 @@ const vuuh = {
           priority: "5/5 - HIGH PRIORITY",
 
           observation:
-            "After installation and connection trial, the user reaches a success page, but it is unclear how to continue the onboarding process in Vuuh.",
+            "After installation and connection trial, users lacked clear guidance on how to continue in Vuuh.",
 
           impact:
-            "The user may think the onboarding is complete or become unsure where to continue.",
+            "Users could mistake the success page for the end of onboarding.",
 
           screenshots: [
             {
@@ -174,11 +152,9 @@ const vuuh = {
           title: "Finding 2 - Lack of confirmation after installation",
           priority: "5/5 - HIGH PRIORITY",
 
-          observation:
-            "The user does not receive clear feedback confirming that the installation was completed successfully.",
+          observation: "Installation lacked clear success confirmation.",
 
-          impact:
-            "This can create uncertainty about whether the installation was successful and whether the user can safely continue.",
+          impact: "Users could be unsure whether setup was successful.",
 
           screenshots: [
             {
@@ -194,10 +170,9 @@ const vuuh = {
           priority: "5/5 - HIGH PRIORITY",
 
           observation:
-            "The Shopify integration can be accessed from multiple places, but it is unclear whether the connection has been successfully completed.",
+            "Shopify connection status was unclear across the interface.",
 
-          impact:
-            "The user may be unsure whether Shopify is connected correctly and may repeat actions or interrupt the onboarding process.",
+          impact: "Users could repeat actions or abandon setup.",
 
           screenshots: [
             {
@@ -212,11 +187,9 @@ const vuuh = {
           title: "Finding 4 - Lack of guidance when downloading demo orders",
           priority: "5/5 - HIGH PRIORITY",
 
-          observation:
-            "The user receives limited guidance and reassurance when downloading the demo order.",
+          observation: "Downloading demo orders lacked clear guidance.",
 
-          impact:
-            "The user may hesitate to complete the task because they are unsure what the download will do or whether it could affect their live store.",
+          impact: "Users could worry about affecting their live store.",
 
           screenshots: [
             {
@@ -230,28 +203,10 @@ const vuuh = {
   },
 
   define: {
-    insightsDescription:
-      "The evaluation highlighted three recurring usability issues affecting the onboarding experience.",
-
-    insights: [
-      {
-        icon: overviewIcon,
-        text: "Lack of overview",
-      },
-      {
-        icon: feedbackIcon,
-        text: "Insufficient feedback",
-      },
-      {
-        icon: systemStatusIcon,
-        text: "Unclear system status",
-      },
-    ],
-
     personas: {
       title: "Persona",
       intro:
-        "Based on one of Vuuh's existing personas, we adapted the user profile to highlight the needs and frustrations relevant to the onboarding experience.",
+        "We adapted an existing Vuuh persona to focus on onboarding needs and frustrations.",
 
       items: [
         {
@@ -266,55 +221,22 @@ const vuuh = {
           motivations: [
             "Set up Vuuh correctly",
             "Manage her webshop with confidence",
-            "Make digital tasks feel manageable",
           ],
 
           behaviours: [
             "Runs a physical fashion store and a small webshop",
-            "Has extensive retail experience",
             "Relies on an external partner for her webshop",
           ],
 
           frustrations: [
             "Complex onboarding can feel overwhelming",
-            "Unsure where to find specific information",
             "Switching between Shopify and Vuuh can be confusing",
           ],
 
           needs: [
             "Clear step-by-step instructions",
             "Easy access to help when needed",
-            "Clear guidance across Vuuh and Shopify",
           ],
-        },
-      ],
-    },
-
-    questions: [
-      "How might we help users understand where they are and what comes next during onboarding?",
-      "How might we make completed actions and their outcomes clearer to users?",
-      "How might we create a more seamless transition between Vuuh and Shopify during setup?",
-    ],
-
-    optimizationAreas: {
-      title: "Selected optimization areas",
-      description: "The findings were grouped into three optimization areas.",
-      numbered: true,
-      items: [
-        {
-          title: "Clearer guidance",
-          description:
-            "Make next steps and progress clear throughout the onboarding flow.",
-        },
-        {
-          title: "Feedback & status",
-          description:
-            "Use clear loading and success states to show users what is happening and confirm completed actions.",
-        },
-        {
-          title: "Simpler setup flow",
-          description:
-            "Reduce uncertainty between Vuuh and Shopify with clearer transitions and a more intuitive setup flow.",
         },
       ],
     },
@@ -330,11 +252,11 @@ const vuuh = {
 
       items: [
         {
-          title: "01 — Clarifying the transition after installation",
+          title: "1 - Clarifying the transition after installation",
           layout: "comparison",
 
           description:
-            "After installing Vuuh, users reached a success page without clear guidance on how to continue. We redesigned the transition to make the next step more visible and help users continue their onboarding in Vuuh.",
+            "We redesigned the success page to highlight the next step and guide users into Vuuh.",
 
           before: {
             title: "Unclear next steps after installation",
@@ -358,11 +280,11 @@ const vuuh = {
         },
 
         {
-          title: "02 — Improving the Shopify connection flow",
+          title: "2 - Improving the Shopify connection flow",
           layout: "comparison",
 
           description:
-            "The original flow for connecting a Shopify store to Vuuh lacked clear guidance and feedback on the connection status. We redesigned the flow to make the steps easier to follow and the connection status more visible.",
+            "We redesigned the connection flow with clearer instructions, feedback and connection status.",
 
           before: {
             title: "Unclear guidance and connection status",
@@ -390,11 +312,11 @@ const vuuh = {
         },
 
         {
-          title: "03 — Making the next steps in Vuuh clearer",
+          title: "3 - Making the next steps in Vuuh clearer",
           layout: "comparison",
 
           description:
-            "The existing Vuuh interface did not clearly guide users towards their next action after connecting Shopify. We redesigned the dashboard experience to highlight the next step and help users understand how to get started with Vuuh.",
+            "We redesigned the dashboard to make the next onboarding action more visible.",
 
           before: {
             title: "Unclear next steps in the Vuuh dashboard",
@@ -422,28 +344,18 @@ const vuuh = {
 
   deliver: {
     title: "Deliver",
-    description:
-      "The final Figma prototype brings together the UX improvements to create a clearer and more intuitive onboarding experience.",
-
     projectDeliver: {
       title: "Final optimized solution",
       description:
-        "The final interactive prototype brings together the improvements to the installation process, Shopify connection and Vuuh dashboard. The redesigned flow provides clearer guidance, better feedback and a more structured onboarding experience.",
+        "The interactive Figma prototype demonstrates the redesigned installation, Shopify connection and dashboard experience.",
       video: finalSolutionVideo,
       link: "https://www.figma.com/proto/qxEHsDMTggVACqGxY0fOVG/Case-2---Vuuh?node-id=363-118&p=f&t=goJU3xDwbqx7sC6I-1&scaling=contain&content-scaling=fixed&page-id=269%3A8183&starting-point-node-id=363%3A118",
       auditLink:
         "https://www.figma.com/proto/qxEHsDMTggVACqGxY0fOVG/Case-2---Vuuh?node-id=53-2&scaling=scale-down-width&content-scaling=fixed&page-id=41%3A18",
-
-      impactTitle: "Impact & reflection",
-      impactDescription:
-        "Clearer guidance, feedback and next steps can reduce uncertainty, help merchants complete onboarding and increase successful setups for Vuuh.",
-
-      reflection: [
-        "Through heuristic evaluation and cognitive walkthroughs, I learned how to identify usability issues and translate them into prioritized design improvements.",
-        "I gained a better understanding of how feedback, visual hierarchy and clear guidance can reduce uncertainty during onboarding.",
-        "As a next step, I would test the prototype with users to evaluate whether the improvements make onboarding easier to complete.",
-      ],
     },
+    reflection: [
+      "Clearer onboarding could increase successful setups and reduce support needs, creating business value for Vuuh. I learned to translate usability findings into design improvements through clearer feedback, visual hierarchy and guidance. Next, I would test the prototype with users to validate whether onboarding has become easier to complete.",
+    ],
   },
 };
 

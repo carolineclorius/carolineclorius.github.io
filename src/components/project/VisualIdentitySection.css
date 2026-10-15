@@ -71,7 +71,7 @@
 
 .visual-identity__graphic-elements p {
   max-width: 65rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .visual-identity__graphic-elements-image {
@@ -270,7 +270,7 @@
 }
 
 .visual-identity__logos > p {
-  margin: 0 0 2.5rem;
+  margin: 0 0 3rem;
 }
 
 .visual-identity__logo-grid {
@@ -556,7 +556,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 
 .visual-identity__direction {
@@ -574,7 +574,7 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   align-items: center;
 }
 
@@ -630,6 +630,10 @@
   justify-content: flex-start;
 }
 
+.visual-identity__main .visual-identity__card > p {
+  margin-bottom: 2.5rem;
+}
+
 /* Color palette */
 
 .visual-identity--final .visual-identity__color-group {
@@ -654,6 +658,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8rem;
+  margin-top: 1.5rem;
 }
 
 .visual-identity--final .visual-identity__color-group {
@@ -685,7 +690,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem 4rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .visual-identity--final .visual-identity__type {
@@ -693,7 +698,7 @@
 }
 
 .visual-identity--final .visual-identity__font-name {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 720px) {

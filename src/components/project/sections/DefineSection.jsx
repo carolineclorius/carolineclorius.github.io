@@ -12,7 +12,7 @@ import ScrollReveal from "./ScrollReveal";
 
 import "./ProcessSections.css";
 
-function DefineSection({ data }) {
+function DefineSection({ data, hideProcessMarker = false }) {
   const hasContent =
     data.insights?.length > 0 ||
     data.personas?.length > 0 ||
@@ -26,26 +26,21 @@ function DefineSection({ data }) {
 
   return (
     <section id="define" className="define-section">
-      <ScrollReveal>
-        <SectionDivider />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal>
+          <SectionDivider />
+        </ScrollReveal>
+      )}
 
-      <ScrollReveal delay={75} distance="0.75rem">
-        <ProcessMarker title="Define" number="02" progress={50} />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal delay={75} distance="0.75rem">
+          <ProcessMarker title="Define" number="02" progress={50} />
+        </ScrollReveal>
+      )}
 
       {data.findings?.items?.length > 0 && (
         <ScrollReveal delay={100}>
           <PriorityFindings data={data.findings} />
-        </ScrollReveal>
-      )}
-
-      {data.optimizationGoal?.description && (
-        <ScrollReveal delay={100}>
-          <div className="define-section__goal">
-            <h2>{data.optimizationGoal.title}</h2>
-            <p>{data.optimizationGoal.description}</p>
-          </div>
         </ScrollReveal>
       )}
 

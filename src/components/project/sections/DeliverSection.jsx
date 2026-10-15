@@ -12,7 +12,7 @@ import ProjectDeliver from "../ProjectDeliver";
 
 import "./ProcessSections.css";
 
-function DeliverSection({ data }) {
+function DeliverSection({ data, hideProcessMarker = false, hideIcon = false }) {
   const [isCodedSolutionVisible, setIsCodedSolutionVisible] = useState(false);
 
   const handleCodedSolutionVisibility = useCallback((isVisible) => {
@@ -32,13 +32,17 @@ function DeliverSection({ data }) {
 
   return (
     <section id="deliver" className="deliver-section">
-      <ScrollReveal>
-        <SectionDivider />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal>
+          <SectionDivider />
+        </ScrollReveal>
+      )}
 
-      <ScrollReveal delay={75} distance="0.75rem">
-        <ProcessMarker title="Deliver" number="04" progress={100} />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal delay={75} distance="0.75rem">
+          <ProcessMarker title="Deliver" number="04" progress={100} />
+        </ScrollReveal>
+      )}
 
       {data.projectDeliver && (
         <ScrollReveal delay={100}>
@@ -101,6 +105,7 @@ function DeliverSection({ data }) {
           <ReflectionSection
             items={data.reflection}
             title="Impact & reflection"
+            hideIcon={hideIcon}
           />
         </ScrollReveal>
       )}

@@ -25,19 +25,9 @@ function ProjectHero({ project }) {
         </button>
       </ScrollReveal>
 
-      <ScrollReveal>
-        <h1 className="project-hero__number">Project - {project.number}</h1>
-      </ScrollReveal>
-
       <div className="project-hero__content">
-        <ScrollReveal delay={100}>
-          <div className="project-hero__visual">
-            <img
-              className="project-hero__image"
-              src={project.heroImage}
-              alt={`Preview of ${project.title}`}
-            />
-          </div>
+        <ScrollReveal>
+          <h1 className="project-hero__number">Project - {project.number}</h1>
         </ScrollReveal>
 
         <ScrollReveal delay={175}>
@@ -46,6 +36,16 @@ function ProjectHero({ project }) {
             <p>{project.summary}</p>
 
             <ProjectOverview items={project.overview} />
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
+          <div className="project-hero__visual">
+            <img
+              className="project-hero__image"
+              src={project.heroImage}
+              alt={`Preview of ${project.title}`}
+            />
           </div>
         </ScrollReveal>
       </div>

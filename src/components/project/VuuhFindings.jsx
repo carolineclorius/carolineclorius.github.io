@@ -22,17 +22,6 @@ function VuuhFindings({ data, variant }) {
         </div>
       )}
 
-      {data.evaluationLink && (
-        <a
-          className="vuuh-findings__evaluation-link"
-          href={data.evaluationLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View full UX evaluation
-        </a>
-      )}
-
       <div className="vuuh-findings__list">
         {data.items.map((finding, index) => (
           <article className="vuuh-findings__card" key={index}>
@@ -68,9 +57,9 @@ function VuuhFindings({ data, variant }) {
                     className="vuuh-findings__screenshot-group"
                     key={groupIndex}
                   >
-                    <p className="vuuh-findings__screenshot-title">
+                    <h4 className="vuuh-findings__screenshot-title">
                       {group.title}
-                    </p>
+                    </h4>
 
                     <div className="vuuh-findings__screenshot-row">
                       {group.images.map((image, imageIndex) => (
@@ -104,6 +93,16 @@ function VuuhFindings({ data, variant }) {
           </article>
         ))}
       </div>
+      {data.evaluationLink && (
+        <a
+          className="vuuh-findings__evaluation-link"
+          href={data.evaluationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View full UX evaluation
+        </a>
+      )}
     </div>
   );
 }

@@ -1,8 +1,7 @@
 /* Fælles styling for de tre store sektioner */
 
 .define-section__findings,
-.define-section__areas,
-.define-section__goal {
+.define-section__areas {
   position: relative;
   isolation: isolate;
 
@@ -16,8 +15,7 @@
 }
 
 .define-section__findings::before,
-.define-section__areas::before,
-.define-section__goal::before {
+.define-section__areas::before {
   content: "";
   position: absolute;
   inset-block: 0;
@@ -95,26 +93,16 @@
   box-shadow: var(--box-shadow);
 }
 
-/* Optimization goal */
-
-.define-section__goal > p {
-  padding-block: 1rem;
-  border-top: 1px solid var(--graa);
-  border-bottom: 1px solid var(--graa);
-}
-
 /* Mobil */
 
 @media (max-width: 720px) {
   .define-section__findings,
-  .define-section__areas,
-  .define-section__goal {
+  .define-section__areas {
     padding-block: 2rem;
   }
 
   .define-section__findings::before,
-  .define-section__areas::before,
-  .define-section__goal::before {
+  .define-section__areas::before {
     border-radius: 3rem;
   }
 
