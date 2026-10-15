@@ -98,7 +98,10 @@ function DeliverSection({ data }) {
 
       {data.reflection?.length > 0 && (
         <ScrollReveal delay={100}>
-          <ReflectionSection items={data.reflection} />
+          <ReflectionSection
+            items={data.reflection}
+            title="Impact & reflection"
+          />
         </ScrollReveal>
       )}
     </section>

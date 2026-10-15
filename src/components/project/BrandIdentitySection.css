@@ -1,0 +1,59 @@
+/* Brand identity section */
+.brand-identity {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  padding-block: 3rem;
+}
+
+/* Sand-colored background */
+.brand-identity::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+
+  background: var(--sand);
+  border-radius: 5.5rem;
+  z-index: -1;
+}
+
+/* Inner gray card */
+.brand-identity__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 2rem;
+  background: var(--lysegraa);
+  border-radius: 3rem;
+}
+
+/* Brand identity image */
+.brand-identity__card img {
+  width: 100%;
+  max-width: 55rem;
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .brand-identity {
+    padding-block: 2rem;
+  }
+
+  .brand-identity::before {
+    border-radius: 3rem;
+  }
+
+  .brand-identity__card {
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+}

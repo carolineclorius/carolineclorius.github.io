@@ -1,14 +1,14 @@
 // Import component styles
 import "./VisualIdentitySection.css";
 
-function VisualIdentitySection({ data, project }) {
+function VisualIdentitySection({ data, project, variant }) {
   if (!data) return null;
 
   return (
     <section
       className={`visual-identity ${
         project ? `visual-identity--${project}` : ""
-      }`}
+      } ${variant ? `visual-identity--${variant}` : ""}`}
     >
       <div className="visual-identity__inner">
         <div className="visual-identity__header">
@@ -19,11 +19,49 @@ function VisualIdentitySection({ data, project }) {
           )}
         </div>
 
+        {data.directions?.items?.length > 0 && (
+          <article className="visual-identity__card">
+            <h3>{data.directions.title}</h3>
+
+            {data.directions.description && (
+              <p>{data.directions.description}</p>
+            )}
+
+            <div className="visual-identity__directions">
+              {data.directions.items.map((item) => (
+                <div className="visual-identity__direction" key={item.title}>
+                  <p className="fed-h3">{item.title}</p>
+                  <img src={item.image} alt={item.title} />
+                </div>
+              ))}
+            </div>
+          </article>
+        )}
+
+        {data.naming && (
+          <article className="visual-identity__card">
+            <h3>{data.naming.title}</h3>
+
+            {data.naming.description && <p>{data.naming.description}</p>}
+
+            <div className="visual-identity__naming">
+              {data.naming.items?.map((item, index) => (
+                <div key={item.title || index}>
+                  <img src={item.image} alt={item.title} />
+                </div>
+              ))}
+            </div>
+          </article>
+        )}
+
         <div className="visual-identity__layout">
           <div className="visual-identity__main">
             {data.moodboard && (
               <article className="visual-identity__card">
                 <h3>{data.moodboard.title}</h3>
+                {data.moodboard.description && (
+                  <p>{data.moodboard.description}</p>
+                )}
 
                 <img
                   className="visual-identity__image"
@@ -36,18 +74,31 @@ function VisualIdentitySection({ data, project }) {
             {data.typography?.items?.length > 0 && (
               <article className="visual-identity__card">
                 <h3>{data.typography.title}</h3>
-
+                {data.typography.description && (
+                  <p>{data.typography.description}</p>
+                )}
                 <div className="visual-identity__typography">
                   {data.typography.items.map((item) => (
                     <div className="visual-identity__type" key={item.label}>
                       <h4>{item.label}</h4>
 
-                      <p
-                        className="visual-identity__font-name"
-                        style={{ fontFamily: item.fontFamily }}
-                      >
-                        {item.font}
-                      </p>
+                      {item.image ? (
+                        <img
+                          className="visual-identity__font-image"
+                          src={item.image}
+                          alt={item.font}
+                        />
+                      ) : (
+                        <h3
+                          className="visual-identity__font-name"
+                          style={{
+                            fontFamily: item.fontFamily,
+                            fontWeight: item.fontWeight,
+                          }}
+                        >
+                          {item.font}
+                        </h3>
+                      )}
 
                       {item.description && (
                         <p className="visual-identity__type-description">
@@ -115,28 +166,67 @@ function VisualIdentitySection({ data, project }) {
 
           {data.colors && (
             <aside className="visual-identity__colors">
-              {data.colors.primary && (
-                <section className="visual-identity__color-group">
-                  <h3>{data.colors.primary.title}</h3>
+              {variant === "final" ? (
+                <>
+                  {data.colors.title && <h3>{data.colors.title}</h3>}
 
-                  <img
-                    className="visual-identity__color-image"
-                    src={data.colors.primary.image.src}
-                    alt={data.colors.primary.image.alt}
-                  />
-                </section>
-              )}
+                  {data.colors.description && <p>{data.colors.description}</p>}
 
-              {data.colors.secondary && (
-                <section className="visual-identity__color-group">
-                  <h3>{data.colors.secondary.title}</h3>
+                  <div className="visual-identity__color-palette">
+                    {["primary", "secondary"].map((type) => {
+                      const group = data.colors[type];
 
-                  <img
-                    className="visual-identity__color-image"
-                    src={data.colors.secondary.image.src}
-                    alt={data.colors.secondary.image.alt}
-                  />
-                </section>
+                      if (!group) return null;
+
+                      return (
+                        <section
+                          className="visual-identity__color-group"
+                          key={type}
+                        >
+                          <h3>{group.title}</h3>
+
+                          <div className="visual-identity__swatches">
+                            {group.values?.map((color) => (
+                              <div
+                                className="visual-identity__swatch"
+                                key={color}
+                                style={{ backgroundColor: color }}
+                                title={color}
+                                aria-label={color}
+                              />
+                            ))}
+                          </div>
+                        </section>
+                      );
+                    })}
+                  </div>
+                </>
+              ) : (
+                <>
+                  {data.colors.primary && (
+                    <section className="visual-identity__color-group">
+                      <h3>{data.colors.primary.title}</h3>
+
+                      <img
+                        className="visual-identity__color-image"
+                        src={data.colors.primary.image.src}
+                        alt={data.colors.primary.image.alt}
+                      />
+                    </section>
+                  )}
+
+                  {data.colors.secondary && (
+                    <section className="visual-identity__color-group">
+                      <h3>{data.colors.secondary.title}</h3>
+
+                      <img
+                        className="visual-identity__color-image"
+                        src={data.colors.secondary.image.src}
+                        alt={data.colors.secondary.image.alt}
+                      />
+                    </section>
+                  )}
+                </>
               )}
             </aside>
           )}
@@ -162,6 +252,8 @@ function VisualIdentitySection({ data, project }) {
           {data.logos?.items?.length > 0 && (
             <article className="visual-identity__logos">
               <h3>{data.logos.title}</h3>
+
+              {data.logos.description && <p>{data.logos.description}</p>}
 
               <div className="visual-identity__logo-grid">
                 {data.logos.items.map((item) => (

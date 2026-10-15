@@ -4,6 +4,7 @@ import littleloomsImage from "../assets/images/littlelooms.svg";
 import luminaImage from "../assets/images/lumina.svg";
 import mellemrumImage from "../assets/images/mellemrum.svg";
 import vuuhImage from "../assets/images/vuuh.svg";
+import laSecondeImage from "../assets/images/laseconde.svg";
 
 // Project data used across the portfolio
 const projects = [
@@ -90,6 +91,19 @@ const projects = [
       "A UX optimization project focused on improving the onboarding experience for Vuuh, a Shopify plugin.",
     tags: ["UX/UI", "UX Evaluation", "Prototyping"],
     image: vuuhImage,
+    links: [],
+  },
+
+  {
+    slug: "la-seconde",
+    title: "LA SECONDE",
+    year: "2026",
+    summary:
+      "Redesigning LA ROUGE’s secondhand experience through a distinct subbrand and improved buying and selling journeys.",
+    description:
+      "Redesigning LA ROUGE’s secondhand experience through a distinct subbrand and improved buying and selling journeys.",
+    tags: ["UX/UI", "Branding", "Prototyping"],
+    image: laSecondeImage,
     links: [],
   },
 ];

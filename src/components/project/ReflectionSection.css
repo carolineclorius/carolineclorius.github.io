@@ -26,9 +26,9 @@
 }
 
 .reflection__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 
   margin: 0;
   padding: 0;
@@ -40,6 +40,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--sand);
 }
 
 .reflection__icon {
@@ -63,6 +67,7 @@
   }
 
   .reflection__list {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 

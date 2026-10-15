@@ -54,7 +54,7 @@
   justify-content: center;
   gap: 1.25rem;
   background: var(--sand);
-  border-radius: 1rem;
+  border-radius: 5.5rem;
   padding: 1.5rem;
 }
 
@@ -71,6 +71,20 @@
 /* Prevent text overflow */
 .insight-list__item p {
   margin: 0;
+}
+
+/* LA SECONDE performance */
+.insight-list--performance .insight-list__item {
+  flex-direction: column;
+  text-align: center;
+}
+
+.insight-list--performance .insight-list__value {
+  color: var(--lys-orange);
+}
+
+.insight-list--performance .insight-list__conclusion {
+  margin-top: 1rem;
 }
 
 /* Mobile */

@@ -186,6 +186,10 @@ function PrototypeSection({ data, isPaused = false }) {
               onMouseEnter={() => activateItem(item.id)}
               onFocus={() => activateItem(item.id)}
             >
+              {data.layout === "la-seconde" && (
+                <h3 className="prototype__item-title">{item.title}</h3>
+              )}
+
               <button
                 className="prototype__device-button"
                 type="button"
@@ -227,6 +231,24 @@ function PrototypeSection({ data, isPaused = false }) {
           );
         })}
       </div>
+
+      {data.links?.length > 0 && (
+        <div className="prototype__footer">
+          {data.links.map((link, index) => (
+            <a
+              key={link.href}
+              className={`prototype__footer-link ${
+                index === 1 ? "prototype__footer-link--secondary" : ""
+              }`}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
