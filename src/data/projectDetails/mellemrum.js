@@ -9,7 +9,6 @@ import finding1Icon from "../../assets/images/mellemrum/define/finding-1.svg";
 import finding2Icon from "../../assets/images/mellemrum/define/finding-2.svg";
 import finding3Icon from "../../assets/images/mellemrum/define/finding-3.svg";
 import finding4Icon from "../../assets/images/mellemrum/define/finding-4.svg";
-import finding5Icon from "../../assets/images/mellemrum/define/finding-5.svg";
 
 /* develop */
 /* 1. optimaztion */
@@ -55,16 +54,6 @@ import duplicateDoubleClickForm from "../../assets/images/mellemrum/develop/dupl
 import duplicateCheckCode from "../../assets/images/mellemrum/develop/duplicate-check-code.png";
 import duplicateSubmitCode from "../../assets/images/mellemrum/develop/duplicate-submit-code.png";
 import duplicateButtonCode from "../../assets/images/mellemrum/develop/duplicate-button-code.png";
-
-/* 5. optimaztion */
-import loadingNetworkTest from "../../assets/images/mellemrum/develop/loading-network-test.png";
-import loadingBefore from "../../assets/images/mellemrum/develop/loading-before.mp4";
-import loadingAfter from "../../assets/images/mellemrum/develop/loading-after.mp4";
-
-import loadingStateCode from "../../assets/images/mellemrum/develop/loading-state-code.png";
-import loadingHomeCode from "../../assets/images/mellemrum/develop/loading-home-code.png";
-import loadingEventCode from "../../assets/images/mellemrum/develop/loading-event-code.png";
-import loadingRegistrationsCode from "../../assets/images/mellemrum/develop/loading-registrations-code.png";
 
 /* Deliver */
 import finalSolutionVideo from "../../assets/images/mellemrum/deliver/final-solution.mov";
@@ -211,12 +200,6 @@ const mellemrum = {
           title: "Finding 4 - Duplicate registrations were possible",
           priority: "5/5 - HIGH PRIORITY",
           description: "The same email could register the same event twice.",
-        },
-        {
-          icon: finding5Icon,
-          title: "Finding 5 - Missing loading feedback",
-          priority: "5/5 - HIGH PRIORITY",
-          description: "Pages appeared empty while fetching data.",
         },
       ],
     },
@@ -474,86 +457,6 @@ const mellemrum = {
                     description:
                       "Disables the submit button while saving to prevent repeated submissions.",
                     image: duplicateButtonCode,
-                  },
-                ],
-              },
-            ],
-          },
-        },
-
-        {
-          title: "Reusable loading state",
-          layout: "comparison",
-          description:
-            "I created a reusable loading component to provide feedback while data is fetched across multiple pages.",
-
-          before: {
-            title: "No feedback while data was loading",
-            images: [
-              {
-                title: "Tested with 3G network throttling",
-                image: loadingNetworkTest,
-              },
-              {
-                title: "Tested across all pages",
-                video: loadingBefore,
-              },
-            ],
-          },
-
-          after: {
-            title: "Clear feedback while data is loading",
-            images: [
-              {
-                title: "Tested with 3G network throttling",
-                image: loadingNetworkTest,
-              },
-              {
-                title: "Tested across all pages",
-                video: loadingAfter,
-              },
-            ],
-          },
-
-          code: {
-            snippets: [
-              {
-                title: "LoadingState.jsx",
-                images: [
-                  {
-                    description:
-                      "Creates a reusable Lottie loading state that appears after a short delay.",
-                    image: loadingStateCode,
-                  },
-                ],
-              },
-              {
-                title: "HomePage.jsx",
-                images: [
-                  {
-                    description:
-                      "Displays the loading state while events are being fetched.",
-                    image: loadingHomeCode,
-                  },
-                ],
-              },
-              {
-                title: "EventPage.jsx",
-                images: [
-                  {
-                    description:
-                      "Displays the loading state while event details are being fetched.",
-                    image: loadingEventCode,
-                  },
-                ],
-              },
-              {
-                title: "RegistrationsPage.jsx",
-                images: [
-                  {
-                    description:
-                      "Reuses the loading component while fetching registrations.",
-                    image: loadingRegistrationsCode,
                   },
                 ],
               },
