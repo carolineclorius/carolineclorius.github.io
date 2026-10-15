@@ -13,10 +13,6 @@ import laRougeSortingScreenshot from "../../assets/images/laseconde/discover/la-
 import vintedFilteringScreenshot from "../../assets/images/laseconde/discover/vinted-filtering.png";
 
 /* Define */
-import visibilityIcon from "../../assets/images/mellemrum/define/finding-2.svg";
-import transparencyIcon from "../../assets/images/laseconde/define/lack-finding.svg";
-import discoveryIcon from "../../assets/images/littlelooms/define/search.svg";
-
 import christinaPersona from "../../assets/images/laseconde/define/persona-christina.svg";
 import mathildePersona from "../../assets/images/laseconde/define/persona-mathilde.svg";
 
@@ -48,11 +44,12 @@ import sellingVideo from "../../assets/images/laseconde/deliver/selling.mp4";
 
 const laSeconde = {
   slug: "la-seconde",
+  hideProcessVisuals: true,
   project: "LA SECONDE by LA ROUGE",
   number: "06",
-  title: "LA SECONDE by LA ROUGE",
+  title: "LA SECONDE",
   summary:
-    "Redesigning LA ROUGE’s secondhand experience through a distinct subbrand and improved buying and selling journeys.",
+    "Redesigning LA ROUGE’s secondhand experience through a dedicated subbrand and improved buying and selling journeys.",
   heroImage: lasecondeImage,
 
   overview: [
@@ -64,29 +61,10 @@ const laSeconde = {
       label: "Design tools",
       value: "Figma, FigJam, Photoshop, Illustrator",
     },
-    { label: "Technologies", value: "Figma prototype" },
+    { label: "Technologies", value: "Figma prototyping" },
     {
       label: "Methods",
       value: "Brand analysis, competitor review, prototyping",
-    },
-  ],
-
-  process: [
-    {
-      title: "Discover",
-      items: ["Existing experience", "Brand analysis", "Competitor research"],
-    },
-    {
-      title: "Define",
-      items: ["Key insights", "Personas", "Optimization areas"],
-    },
-    {
-      title: "Develop",
-      items: ["Visual exploration", "Brand identity", "UX/UI design"],
-    },
-    {
-      title: "Deliver",
-      items: ["Interactive prototype", "Buying & selling flows", "Reflection"],
     },
   ],
 
@@ -94,31 +72,29 @@ const laSeconde = {
     problem: {
       title: "Problem and context",
       paragraphs: [
-        "LA ROUGE already offers a secondhand concept, but its visual identity and visibility leave room for improvement.",
+        "LA ROUGE’s existing secondhand experience lacked visibility and a distinct identity.",
       ],
       conclusion:
-        "The challenge was to create a distinct subbrand that strengthens the secondhand experience while maintaining a clear connection to LA ROUGE.",
+        "We aimed to strengthen it through a subbrand connected to LA ROUGE.",
     },
 
     researchApproach: {
       title: "Optimization approach",
       description:
-        "We explored LA ROUGE’s existing secondhand experience, brand identity and competitors to identify opportunities for improvement. These insights guided the development of LA SECONDE.",
+        "We reviewed LA ROUGE’s secondhand experience, brand identity and competitors to guide the redesign.",
     },
 
     competitors: {
       variant: "la-seconde",
       title: "Competitor research",
-      description: "We compared Vinted, Tise and Marketplace.",
+      description:
+        "Vinted, Tise and Marketplace informed our approach to filtering, pricing and product presentation.",
       items: [
         {
           title: "Vinted",
-          description:
-            "Vinted inspired clearer pricing, photos and product details.",
         },
         {
           title: "Tise & Marketplace",
-          description: "Tise and Marketplace inspired filtering and browsing.",
         },
       ],
 
@@ -143,7 +119,7 @@ const laSeconde = {
 
     performance: {
       title: "Existing secondhand performance",
-      description: "LA ROUGE’s secondhand activity, year to date.",
+      description: "LA ROUGE's secondhand activity this year.",
       items: [
         { value: "5,722", label: "Secondhand visitors YTD" },
         { value: "101", label: "Secondhand orders YTD" },
@@ -158,9 +134,9 @@ const laSeconde = {
       description: "We reviewed visibility, product details and browsing.",
       items: [
         {
-          title: "01 Limited visibility & identity",
+          title: "1 Limited visibility & identity",
           observation:
-            "Secondhand had limited visibility and visual distinction.",
+            "Secondhand had limited visibility and lacked its own visual identity.",
           implication: "The offer could be easy to overlook.",
           screenshots: [
             {
@@ -174,9 +150,8 @@ const laSeconde = {
           ],
         },
         {
-          title: "02 Missing transparency & trust",
-          observation:
-            "Price comparisons and photos of flaws were unclear or missing.",
+          title: "2 Missing transparency & trust",
+          observation: "Price comparisons and photos of flaws were missing.",
           implication:
             "Buyers had less information to assess value and condition.",
           screenshots: [
@@ -191,7 +166,7 @@ const laSeconde = {
           ],
         },
         {
-          title: "03 Limited product discovery",
+          title: "3 Limited product discovery",
           observation:
             "LA ROUGE offered sorting options, but lacked detailed product filters.",
           implication:
@@ -212,28 +187,10 @@ const laSeconde = {
   },
 
   define: {
-    insightsDescription:
-      "The research revealed three key insights that shaped the design direction.",
-
-    insights: [
-      {
-        text: "Limited visibility & identity",
-        icon: visibilityIcon,
-      },
-      {
-        text: "Lack of transparency & trust",
-        icon: transparencyIcon,
-      },
-      {
-        text: "Limited product discovery",
-        icon: discoveryIcon,
-      },
-    ],
-
     personas: {
       title: "Personas",
       intro:
-        "We developed two personas to represent the different motivations and needs of people selling and buying pre-owned LA ROUGE clothing.",
+        "Two personas represent the different needs of secondhand buyers and sellers.",
 
       items: [
         {
@@ -247,7 +204,6 @@ const laSeconde = {
 
           motivations: [
             "Give unused clothing a new life",
-            "Keep the quality she values",
             "Receive fair value for her items",
           ],
 
@@ -259,14 +215,9 @@ const laSeconde = {
           frustrations: [
             "Unsure how the buy-back works",
             "Unclear value information",
-            "Uncertainty about next steps",
           ],
 
-          needs: [
-            "Simple selling instructions",
-            "Transparent gift-card value",
-            "Reassurance throughout the process",
-          ],
+          needs: ["Simple selling instructions", "Transparent gift-card value"],
         },
 
         {
@@ -279,7 +230,6 @@ const laSeconde = {
             "I want to discover timeless LA ROUGE pieces at a better price and feel confident about what I'm buying.",
 
           motivations: [
-            "Discover timeless styles",
             "Shop quality at a lower price",
             "Make more conscious purchases",
           ],
@@ -287,7 +237,6 @@ const laSeconde = {
           behaviours: [
             "Browses secondhand fashion",
             "Compares prices and condition",
-            "Looks for unique wardrobe pieces",
           ],
 
           frustrations: [
@@ -304,49 +253,28 @@ const laSeconde = {
         },
       ],
     },
-
-    optimizationAreas: {
-      title: "Selected optimization areas",
-      description: "The findings were grouped into three optimization areas.",
-      numbered: true,
-      items: [
-        {
-          title: "Visibility & identity",
-          description: "Build a distinct identity linked to LA ROUGE.",
-        },
-        {
-          title: "Transparency & trust",
-          description: "Show prices, condition and any flaws clearly.",
-        },
-        {
-          title: "Product discovery",
-          description:
-            "Improve browsing with filters, sorting and condition labels.",
-        },
-      ],
-    },
   },
 
   develop: {
     visualIdentity: {
       title: "Visual exploration",
-      description: "Exploring the identity through moodboards and naming.",
+      description: "Exploring the subbrand through moodboards and naming.",
 
       directions: {
         title: "Exploring three directions",
         description:
-          "We explored three visual directions to find the right identity.",
+          "We explored three visual directions before selecting the final identity.",
         items: [
           {
-            title: "Direction 01",
+            title: "Direction 1",
             image: firstDirection,
           },
           {
-            title: "Direction 02",
+            title: "Direction 2",
             image: secondDirection,
           },
           {
-            title: "Direction 03",
+            title: "Direction 3",
             image: thirdDirection,
           },
         ],
@@ -355,7 +283,7 @@ const laSeconde = {
       naming: {
         title: "Naming & logo exploration",
         description:
-          "We explored different names and logo directions before choosing LA SECONDE.",
+          "We explored names and logo directions before choosing LA SECONDE.",
         items: [
           {
             image: firstLogo,
@@ -378,7 +306,7 @@ const laSeconde = {
 
     finalVisualIdentity: {
       title: "Visual identity",
-      description: "A distinct identity rooted in LA ROUGE.",
+      description: "An identity of its own, connected to LA ROUGE.",
 
       moodboard: {
         title: "Moodboard",
@@ -392,7 +320,7 @@ const laSeconde = {
       colors: {
         title: "Color palette",
         description:
-          "While LA ROUGE is known for its red identity, we chose green to give LA SECONDE a distinct look and symbolize new life for pre-owned clothing. Neutral tones maintain a balanced, timeless aesthetic that connects to the main brand.",
+          "While LA ROUGE is known for its red identity, we chose green to give LA SECONDE its own identity and symbolize new life for pre-owned clothing. Neutral tones create a balanced, timeless aesthetic that connects to the main brand.",
         primary: {
           title: "Primary colors",
           values: ["#A6A140", "#383610"],
@@ -406,7 +334,7 @@ const laSeconde = {
       typography: {
         title: "Typography",
         description:
-          "We reused Italiana and Assistant to maintain a connection to LA ROUGE. Figma Hand adds a personal, handwritten feel that reflects the secondhand concept.",
+          "Italiana and Assistant connect to LA ROUGE, while Figma Hand adds a personal touch.",
 
         items: [
           {
@@ -485,7 +413,7 @@ const laSeconde = {
     productDiscovery: {
       title: "Product discovery & trust",
       description:
-        "We designed filtering and product cards to make browsing easier and provide clearer information about pricing and garment condition.",
+        "We designed filtering and product cards to make browsing easier and provide clearer information about pricing and condition.",
       items: [
         {
           title: "Filtering component",
@@ -546,13 +474,7 @@ const laSeconde = {
       ],
     },
     reflection: [
-      "Clearer product information and filtering can build buyer trust, while a simpler selling journey can benefit sellers and strengthen LA ROUGE’s secondhand concept.",
-
-      "I learned how to translate research findings into concrete UX/UI improvements while balancing a new subbrand identity with an established brand.",
-
-      "The project strengthened my understanding of how visual identity, transparency and product discovery work together to create a more cohesive secondhand shopping experience.",
-
-      "As a next step, I would test the prototype with potential buyers and sellers to evaluate whether the redesigned journeys are intuitive and meet their needs.",
+      "Clearer product information and simpler buying and selling journeys could build trust and strengthen LA ROUGE's secondhand business. The project taught me to balance brand identity with UX improvements. Next, I would test the prototype with buyers and sellers to validate the redesigned journeys.",
     ],
   },
 };

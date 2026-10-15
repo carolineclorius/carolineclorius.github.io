@@ -43,7 +43,7 @@
 
 .vuuh-findings__card {
   background: var(--sand);
-  border-radius: 2rem;
+  border-radius: 3rem;
   padding: 2rem;
 }
 
@@ -62,7 +62,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0 3rem;
   text-align: center;
 }
 
@@ -74,17 +74,18 @@
 .vuuh-findings__screenshots {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .vuuh-findings__screenshot-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0rem;
 }
 
 .vuuh-findings__screenshot-title {
+  margin: 0 0 0.5rem;
   text-align: center;
 }
 
@@ -125,7 +126,7 @@
 
 .vuuh-findings__screenshot-row:has(.vuuh-findings__screenshot-item:only-child)
   .vuuh-findings__screenshot-item {
-  flex: 0 1 33.333%;
+  flex: 0 1 75%;
 }
 
 .vuuh-findings__arrow {
@@ -139,7 +140,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0;
 }
 
 .vuuh-findings__heading img {
@@ -182,10 +183,11 @@
   display: block;
   width: fit-content;
   margin: 0 auto 2rem;
+  margin-top: 2rem;
   padding: 1rem 1.5rem;
 
   border: 1px solid var(--graa);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
 
   background: transparent;
   color: var(--sort);
@@ -232,6 +234,9 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 4rem;
+
+  width: 60%;
+  margin-inline: auto;
 }
 
 .vuuh-findings--la-seconde .vuuh-findings__screenshot-group {

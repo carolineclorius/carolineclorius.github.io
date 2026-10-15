@@ -10,16 +10,20 @@ import "./ProcessSections.css";
 import "./DiscoverSection.css";
 import ScrollReveal from "./ScrollReveal";
 
-function DiscoverSection({ data }) {
+function DiscoverSection({ data, hideProcessMarker = false }) {
   return (
     <section id="discover" className="discover-section">
-      <ScrollReveal>
-        <SectionDivider />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal>
+          <SectionDivider />
+        </ScrollReveal>
+      )}
 
-      <ScrollReveal delay={75} distance="0.75rem">
-        <ProcessMarker title="Discover" number="01" progress={25} />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal delay={75} distance="0.75rem">
+          <ProcessMarker title="Discover" number="01" progress={25} />
+        </ScrollReveal>
+      )}
 
       {(data.problem?.title || data.researchApproach?.title) && (
         <ScrollReveal delay={100}>

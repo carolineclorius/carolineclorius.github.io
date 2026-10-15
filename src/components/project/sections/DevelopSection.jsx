@@ -16,16 +16,20 @@ import ScrollReveal from "./ScrollReveal";
 
 import "./ProcessSections.css";
 
-function DevelopSection({ data = {}, project }) {
+function DevelopSection({ data = {}, project, hideProcessMarker = false }) {
   return (
     <section id="develop" className="develop-section">
-      <ScrollReveal>
-        <SectionDivider />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal>
+          <SectionDivider />
+        </ScrollReveal>
+      )}
 
-      <ScrollReveal delay={75} distance="0.75rem">
-        <ProcessMarker title="Develop" number="03" />
-      </ScrollReveal>
+      {!hideProcessMarker && (
+        <ScrollReveal delay={75} distance="0.75rem">
+          <ProcessMarker title="Develop" number="03" />
+        </ScrollReveal>
+      )}
 
       {data.wireframes?.groups?.length > 0 && (
         <ScrollReveal delay={0}>

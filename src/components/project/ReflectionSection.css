@@ -8,6 +8,7 @@
 
   width: 100%;
   padding-block: 5rem;
+  margin-top: -1rem;
 }
 
 .reflection::before {
@@ -56,14 +57,25 @@
   margin: 0;
 }
 
+.reflection__list--full {
+  grid-template-columns: 1fr;
+}
+
+.reflection__list--full .reflection__item {
+  width: 100%;
+  grid-column: auto;
+  border-radius: 3rem;
+}
+
 @media (max-width: 720px) {
   .reflection {
     gap: 2rem;
     padding-block: 3rem;
+    margin-top: -4rem;
   }
 
   .reflection::before {
-    border-radius: 3rem;
+    border-radius: 5rem;
   }
 
   .reflection__list {

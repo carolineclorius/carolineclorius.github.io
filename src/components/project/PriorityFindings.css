@@ -64,13 +64,19 @@
   display: flex;
   gap: 5rem;
 
-  width: calc(100% + 5rem);
+  width: 100vw;
+  margin-left: calc(-1 * max(2rem, (100vw - 80rem) / 2));
   min-width: 0;
 
   overflow-x: auto;
   overflow-y: hidden;
 
-  padding: 0.5rem 5rem 1.5rem 0;
+  padding: 0.5rem 2rem 1.5rem max(2rem, calc((100vw - 80rem) / 2));
+
+  box-sizing: border-box;
+
+  scroll-snap-type: x proximity;
+  scroll-padding-left: max(2rem, calc((100vw - 80rem) / 2));
 
   scrollbar-width: auto;
   scrollbar-color: var(--moerkegraa) transparent;
@@ -158,9 +164,10 @@
   }
 
   .priority-findings__scroll {
-    width: calc(100% + 2rem);
     gap: 1rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    scroll-padding-left: 1.5rem;
   }
 
   .priority-findings__card {
