@@ -71,7 +71,7 @@
   .reflection {
     gap: 2rem;
     padding-block: 3rem;
-    margin-top: -4rem;
+    margin-top: 0;
   }
 
   .reflection::before {
